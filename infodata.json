@@ -1,0 +1,581 @@
+﻿var infoJSON = {
+	"70":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2025.06",
+		"explain" : "千葉県匝瑳市から企業版ふるさと納税に寄附したことに対する感謝状をいただきました",
+		"link" : "/pdf/2025sosa_furusato_nozei.pdf"
+	},
+
+	"69":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2025.06",
+		"explain" : "千葉県横芝光町から企業版ふるさと納税に寄附したことに対する感謝状をいただきました",
+		"link" : "/pdf/2025yokoshibahikari_furusato_nozei.pdf"
+	},
+
+	"68":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2025.06",
+		"explain" : "千葉県山武市に企業版ふるさと納税に寄附したことに対する懇談会を開催していただきました",
+		"link" : "/pdf/2025sammu_furusato_nozei.pdf"
+	},
+
+	"67":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2025.06",
+		"explain" : "インターンシップ制度を導入しました",
+		"link" : "/pdf/2025internship.pdf"
+	},
+
+	"66":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2025.04",
+		"explain" : "下村特殊精工の全社ＪＫ活動成果発表会が開催されました",
+		"link" : "/pdf/zensya_48jk.pdf"
+	},
+
+	"65":{
+		"class" : "news",
+		"subtitle" : "お知らせ",
+		"date" : "2025.03",
+		"explain" : "健康経営優良法人2025　中小規模法人部門の認定を受けました",
+		"link" : "/pdf/202503kenkokeiei.pdf"
+	},
+
+	"64":{
+		"class" : "topics",
+		"subtitle" : "トピックス",
+		"date" : "2025.02",
+		"explain" : "当社は『ちばダイバーシティ宣言』に賛同します",
+		"link" : "/pdf/202502chiba_diversity.pdf"
+	},
+
+	"63":{
+		"class" : "topics",
+		"subtitle" : "トピックス",
+		"date" : "2025.02",
+		"explain" : "当社ホームページ　採用情報サイトをリニューアルしました",
+		"link" : "/pdf/202502recruit-renewal.pdf"
+	},
+
+	"62":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2024.06",
+		"explain" : "2024年度版にデータを更新しました",
+		"link" : ""
+	},
+
+	"61":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2024.04",
+		"explain" : "千葉県山武市から企業版ふるさと納税に寄附したことに対する感謝状をいただきました",
+		"link" : "/pdf/2024furusato_nozei.pdf"
+	},
+
+	"60":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2024.04",
+		"explain" : "下村特殊精工の全社ＪＫ活動成果発表会が開催されました",
+		"link" : "/pdf/zensya_47jk.pdf"
+	},
+
+	"59":{
+		"class" : "news",
+		"subtitle" : "お知らせ",
+		"date" : "2024.03",
+		"explain" : "健康経営優良法人2024　中小規模法人部門の認定を受けました",
+		"link" : "/pdf/202403kenkokeiei.pdf"
+	},
+
+	"58":{
+		"class" : "topics",
+		"subtitle" : "トピックス",
+		"date" : "2024.03",
+		"explain" : "富士見工場に自家消費型太陽光発電設備を開所しました",
+		"link" : "/pdf/202403fujimi_solar.pdf"
+	},
+
+	"57":{
+		"class" : "news",
+		"subtitle" : "お知らせ",
+		"date" : "2024.03",
+		"explain" : "企業倫理憲章を改定しました",
+		"link" : "/company/ethic.html"
+	},
+
+	"56":{
+		"class" : "news",
+		"subtitle" : "お知らせ",
+		"date" : "2023.12",
+		"explain" : "TIME誌(APAC版)に掲載されました",
+		"link" : "/pdf/202312time.pdf"
+	},
+
+	"55":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2023.11",
+		"explain" : "<a href='/pdf/202312jinken.pdf'>下村特殊精工グループ人権方針</a>および<a href='/pdf/202312zousyuwai.pdf'>下村特殊精工グループ贈収賄防止方針</a>を制定しました",
+		"link" : ""
+	},
+
+	"54":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2023.09",
+		"explain" : "安全経営あいち賛同事業場 に登録されました",
+		"link" : "/pdf/202309anzenkeieiaichi.pdf"
+	},
+
+	"53":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2023.08",
+		"explain" : "おかげさまで当社中国工場が２０周年を迎えました",
+		"link" : "/pdf/202308stss_20th annibersary.pdf"
+	},
+
+	"52":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2023.07",
+		"explain" : "下村特殊精工は２０２３年７月１日付で健康経営宣言をしました",
+		"link" : "/pdf/202307kenkosengen.pdf"
+	},
+
+	"51":{
+		"class" : "news",
+		"subtitle" : "お知らせ",
+		"date" : "2023.07",
+		"explain" : "適格請求書発行事業者登録番号のお知らせ",
+		"link" : "/pdf/tekikakuseikyusyo_bango.pdf"
+	},
+
+	"50":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2023.06",
+		"explain" : "2023年度版にデータを更新しました",
+		"link" : ""
+	},
+
+	"49":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2023.04",
+		"explain" : "千葉県山武市から企業版ふるさと納税に寄附したことに対する感謝状をいただきました",
+		"link" : "/pdf/2023furusato_nozei.pdf"
+	},
+
+	"48":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2023.04",
+		"explain" : "下村特殊精工の全社ＪＫ活動成果発表会が開催されました",
+		"link" : "/pdf/zensya_46jk.pdf"
+	},
+
+	"47":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2022.11",
+		"explain" : "マスコットキャラクター「シモッティー」ＬＩＮＥスタンプができました",
+		"link" : "/pdf/202211shimotty line sticker.pdf"
+	},
+
+	"46":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2022.09",
+		"explain" : "千葉県の「“社員いきいき！元気な会社”宣言企業に登録されました",
+		"link" : "/pdf/202208chiba_ikiiki.pdf"
+	},
+
+	"45":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2022.07",
+		"explain" : "下村グループのタイ工場(DSST)が2022年7月に開所式を開催しました",
+		"link" : "/pdf/202207dsst opening ceremony.pdf"
+	},
+
+	"44":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2022.06",
+		"explain" : "2022年度版にデータを更新しました",
+		"link" : ""
+	},
+
+	"43":{
+		"class" : "news",
+		"subtitle" : "お知らせ",
+		"date" : "2022.05",
+		"explain" : "千葉県山武市の「さんむＳＤＧｓパートナー」に認定されました",
+		"link" : "/pdf/sammu_sdgs.pdf"
+	},
+
+	"42":{
+		"class" : "news",
+		"subtitle" : "お知らせ",
+		"date" : "2022.04",
+		"explain" : "特殊鋼製品の販売価格改定について",
+		"link" : "/pdf/202204baseup.pdf"
+	},
+
+	"41":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2022.04",
+		"explain" : "千葉県山武市から企業版ふるさと納税に寄附したことに対する感謝状をいただきました",
+		"link" : "/pdf/2022furusato_nozei.pdf"
+	},
+
+	"40":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2022.04",
+		"explain" : "下村グループのタイ工場(DSST)が2022年1月から営業運転を開始しました",
+		"link" : "/pdf/2022dssteigyo.pdf"
+	},
+
+	"39":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2022.04",
+		"explain" : "下村特殊精工の全社ＪＫ活動成果発表会が開催されました",
+		"link" : "/pdf/zensya_45jk.pdf"
+	},
+
+	"38":{
+		"class" : "topics",
+		"subtitle" : "トピックス",
+		"date" : "2022.04",
+		"explain" : "プライバシーポリシーを更新しました",
+		"link" : "/privacy.html"
+	},
+
+	"37":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2022.02",
+		"explain" : "下村特殊精工は「ちばＳＤＧｓパートナー制度」に登録されました",
+		"link" : "/pdf/chiba_sdgs.pdf"
+	},
+
+	"36":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2021.09",
+		"explain" : "下村特殊精工グループの連携強化バッチを製作しました",
+		"link" : "/pdf/80batch.pdf"
+	},
+
+	"35":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2021.07",
+		"explain" : "新社長　森義昭からの挨拶",
+		"link" : "/company/greeting.html"
+	},
+
+	"34":{
+		"class" : "news",
+		"subtitle" : "お知らせ",
+		"date" : "2021.06",
+		"explain" : "[重要]下村特殊精工株式会社の名前をかたった「架空請求(詐欺)」にご注意ください",
+		"link" : "/pdf/beware of fake and spoof emails.pdf"
+	},
+
+	"33":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2021.06",
+		"explain" : "下村特殊精工は2021年6月1日に創業80周年を迎えました",
+		"link" : "/pdf/80news.pdf"
+	},
+
+	"32":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2021.06",
+		"explain" : "2021年度版にデータを更新しました",
+		"link" : ""
+	},
+
+	"31":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2021.05",
+		"explain" : "「残留応力」低減磨棒鋼の製造技術開発、提供体制を整えました",
+		"link" : "/products/residual-stress.html"
+	},
+
+	"30":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2021.05",
+		"explain" : "海外拠点 Daido Shimomura Steel Manufacturing (DSST) 社を追加しました",
+		"link" : "/global/"
+	},
+	
+	"29":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2021.05",
+		"explain" : "析出硬化系ステンレス鋼 SUS630-Sを製品カタログと共に追加しました",
+		"link" : "/products/pdf/sus630-s.pdf" 
+	},
+
+	"28":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2020.12",
+		"explain" : "松尾工場に「シモムラ安全教室」を開校しました",
+		"link" : "/pdf/shimomurasafetyschool.pdf"
+	},
+
+
+	"27":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2020.06",
+		"explain" : "<a href='/products/catalogue.html'>製品カタログを4種類（ＤＳＨ４００Ｆ、ＳＧＦ０３Ｅ、ＳＧＦ０４Ｆ、ＳＧＦ０５Ｅ）</a>追加しました",
+		"link" : ""
+	},
+
+
+	"26":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2020.06",
+		"explain" : "取扱い鋼種を2鋼種（<a href='/products/stainless.html'>ＤＳＨ４００Ｆ</a>、<a href='/products/structual.html'>ＳＧＦ０４Ｆ</a>）追加しました",
+		"link" : ""
+	},
+
+
+	"25":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2020.05",
+		"explain" : "国内事業所に名古屋工場(第2工場)を追加しました",
+		"link" : "/company/location.html"
+	},
+
+
+	"24":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2020.05",
+		"explain" : "製品在庫一覧表を最新版に更新しました",
+		"link" : "/products/stock_list.pdf"
+	},
+
+
+	"23":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2020.04",
+		"explain" : "2020年度版にデータを更新しました",
+		"link" : ""
+	},
+
+
+	"22":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2020.03",
+		"explain" : "下村特殊精工はインド向け製品規格「ＢＩＳライセンス」を取得しました",
+		"link" : "/products/bis.html"
+	},
+
+
+	"21":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2019.10",
+		"explain" : "下村特殊精工が取り扱う非鉛快削鋼シリーズのサイトを立ち上げました",
+		"link" : "/products/leadfree.html"
+	},
+
+
+	"20":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2019.08",
+		"explain" : "タイにおける新会社設立に関するお知らせ",
+		"link" : "/pdf/thainews.pdf"
+	},
+
+
+	"19":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2019.05",
+		"explain" : "2019年度版にデータを更新しました",
+		"link" : ""
+	},
+
+
+	"18":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2018.12",
+		"explain" : "非鉛鋼取り扱い鋼種に新たな鋼種（ＳＦ１３－ＥＳ、ＳＫ４Ｆ－Ｅ）を追加しました",
+		"link" : ""
+	},
+
+
+	"17":{
+		"class" : "topics",
+		"subtitle" : "トピックス",
+		"date" : "2018.07",
+		"explain" : "下村特殊精工の特集企画「賢者の選択 Leaders」ＴＶ放映と日経ビジネス掲載のお知らせ",
+		"link" : "/pdf/leaders.pdf"
+	},
+
+
+	"16":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2018.04",
+		"explain" : "2018年度版にデータを更新しました",
+		"link" : ""
+	},
+
+
+	"15":{
+		"class" : "topics",
+		"subtitle" : "トピックス",
+		"date" : "2018.01",
+		"explain" : "下村特殊精工の企業広告をＪＲ、名鉄の各駅に掲載しました",
+		"link" : "/pdf/2018kotukokoku.pdf"
+	},
+
+
+	"14":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2017.11",
+		"explain" : "製品在庫一覧表を最新版に更新しました",
+		"link" : "/products/stock_list.pdf"
+	},
+
+
+	"13":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2017.07",
+		"explain" : "ＴＯＰバナーを更新し、マスコットキャラクター紹介ページを追加しました",
+		"link" : "/company/characterprofile.html"
+	},
+
+
+	"12":{
+		"class" : "topics",
+		"subtitle" : "トピックス",
+		"date" : "2017.06",
+		"explain" : "松尾工場のエントランスをリニューアルしました",
+		"link" : "/pdf/entrance.pdf"
+	},
+
+
+	"11":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2017.04",
+		"explain" : "第63回オール関東特殊鋼親善野球大会で下村特殊精工が優勝しました",
+		"link" : "/pdf/63baseball.pdf"
+	},
+
+
+	"10":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2017.04",
+		"explain" : "2017年度版にデータを更新しました",
+		"link" : ""
+	},
+
+
+	"9":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2016.11",
+		"explain" : "企業倫理憲章の内容を修正しました。組織改訂に伴い一部内容を更新しました",
+		"link" : ""
+	},
+
+
+	"8":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2016.10",
+		"explain" : "英語版/中国語版のホームページを公開しました",
+		"link" : ""
+	},
+
+	"7":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2016.08",
+		"explain" : "新社長　安田保馬からの挨拶",
+		"link" : ""
+	},
+
+	"6":{
+		"class" : "topics",
+		"subtitle" : "トピックス",
+		"date" : "2016.07",
+		"explain" : "製品紹介:フェライト系 SF20Fの製品カタログを変更",
+		"link" : ""
+	},
+
+	"5":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2016.06",
+		"explain" : "下村特殊精工は2016年6月1日に創業75周年を迎えました",
+		"link" : "/pdf/75news.pdf"
+	},
+
+	"4":{
+		"class" : "topics",
+		"subtitle" : "トピックス",
+		"date" : "2016.03",
+		"explain" : "ホームページリニューアル",
+		"link" : ""
+	},
+
+	"3":{
+		"class" : "news",
+		"subtitle" : "ニュース",
+		"date" : "2016.03",
+		"explain" : "下村特殊精工は2016年6月に創業75周年を迎えます",
+		"link" : ""
+	},
+
+	"2":{
+		"class" : "topics",
+		"subtitle" : "トピックス",
+		"date" : "2015.12",
+		"explain" : "太陽光発電を松尾工場に導入",
+		"link" : ""
+	},
+
+	"1":{
+		"class" : "topics",
+		"subtitle" : "トピックス",
+		"date" : "2015.10",
+		"explain" : "下村特殊精鋼（蘇州）有限公司にてTS16949認証を取得",
+		"link" : ""
+	}
+} 

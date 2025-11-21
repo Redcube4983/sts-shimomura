@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Protocol</key>
+	<string>ftp</string>
+	<key>Provider</key>
+	<string>iterate GmbH</string>
+	<key>Nickname</key>
+	<string>下村特殊精工</string>
+	<key>UUID</key>
+	<string>320a33e8-f393-4f6e-867c-b420fabf19c1</string>
+	<key>Hostname</key>
+	<string>s200.coreserver.jp</string>
+	<key>Port</key>
+	<string>21</string>
+	<key>Username</key>
+	<string>here2.shimomura</string>
+	<key>Path</key>
+	<string>/public_html/wp/wp-content/themes/shinmei/images/preservation_method</string>
+	<key>Access Timestamp</key>
+	<string>1619508942582</string>
+</dict>
+</plist>

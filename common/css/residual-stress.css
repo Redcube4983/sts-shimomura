@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+.merit-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+.merit-box-li {
+  width: 200px;
+}
+.li-tittle {
+  text-align: center;
+  color: #fff;
+  background-color: #00A1FF;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
