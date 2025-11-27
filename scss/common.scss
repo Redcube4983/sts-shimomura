@@ -1,0 +1,10 @@
+@charset "utf-8";
+// モジュールの読み込み
+// Foundation
+@use 'foundation/base' as base;
+// component
+@use 'component/button' as button;
+
+// Layout
+@use 'layout/header';
+@use 'layout/footer';

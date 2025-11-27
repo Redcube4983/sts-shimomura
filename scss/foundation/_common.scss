@@ -95,7 +95,7 @@ table th { white-space: nowrap !important; }
 	text-align:center;
 	height:45px;
 	color:#FFF;
-	background: url(../../common/images/pc_nav_bg.png) no-repeat 0 0;
+	background: url(../common/images/pc_nav_bg.png) no-repeat 0 0;
 	-webkit-transition: 0.4s ease-in-out;
 	   -moz-transition: 0.4s ease-in-out;
 	     -o-transition: 0.4s ease-in-out;
@@ -129,7 +129,7 @@ span.slicknav_menutxt { display:none; }
 
 .indexPage .breadcrumbs { position:absolute;bottom:0;left:0;font-size:12px;width:100%;text-align:left;z-index:100;margin:0; }
 
-.indexPage .breadcrumbs { padding:10px 0 ;font-size:12px;background: url(../../common/images/breadcrumbs_bg.png) top left;color:#FFF; }
+.indexPage .breadcrumbs { padding:10px 0 ;font-size:12px;background: url(../common/images/breadcrumbs_bg.png) top left;color:#FFF; }
 .indexPage .breadcrumbs .container { padding:0 20px; }
 .indexPage .breadcrumbs a { color:#FFF; }
 
@@ -152,9 +152,9 @@ span.slicknav_menutxt { display:none; }
 #sideBar h2 { background:#000;color:#FFF;font-size:15px;padding:15px 20px; }
 #sideBar h2 a { color:#FFF; }
 #sideBar li  { margin:0 0 0 -40px;padding:0; }
-#sideBar li a { display:block;text-decoration:none;color:#333;background: url(../../common/images/side_list.png) no-repeat center left  #EEE;padding:15px 0 15px 30px;border-bottom:1px dotted #B4B4B4; }
-#sideBar li a:hover { background: url(../../common/images/side_list.png) no-repeat center left  #FFF; }
-#sideBar li.active a { background: url(/../../ommon/images/side_list_active.png) no-repeat center left  #FFF; }
+#sideBar li a { display:block;text-decoration:none;color:#333;background: url(../common/images/side_list.png) no-repeat center left  #EEE;padding:15px 0 15px 30px;border-bottom:1px dotted #B4B4B4; }
+#sideBar li a:hover { background: url(../common/images/side_list.png) no-repeat center left  #FFF; }
+#sideBar li.active a { background: url(../common/images/side_list_active.png) no-repeat center left  #FFF; }
 
 @media (max-width: 767px){
 	#sideBar { display:none; }
@@ -168,9 +168,9 @@ span.slicknav_menutxt { display:none; }
 #spLocalNav h2 { background:#000;color:#FFF;font-size:13px;padding:15px 20px; }
 #spLocalNav h2 a { color:#FFF; }
 #spLocalNav li  { margin:0 0 0 -40px;padding:0; }
-#spLocalNav li a { display:block;text-decoration:none;color:#333;background: url(../../common/images/side_list.png) no-repeat center left  #EEE;padding:15px 0 15px 30px;border-bottom:1px dotted #B4B4B4; }
-#spLocalNav li a:hover { background: url(../../common/images/side_list.png) no-repeat center left  #FFF; }
-#spLocalNav li.active a { background: url(../../common/images/side_list_active.png) no-repeat center left  #FFF; }
+#spLocalNav li a { display:block;text-decoration:none;color:#333;background: url(../common/images/side_list.png) no-repeat center left  #EEE;padding:15px 0 15px 30px;border-bottom:1px dotted #B4B4B4; }
+#spLocalNav li a:hover { background: url(../common/images/side_list.png) no-repeat center left  #FFF; }
+#spLocalNav li.active a { background: url(../common/images/side_list_active.png) no-repeat center left  #FFF; }
 
 @media (min-width: 768px){
 	#spLocalNav { display:none; }

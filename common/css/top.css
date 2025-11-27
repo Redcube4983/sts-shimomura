@@ -4,6 +4,7 @@
 #topContent { 
 	width:100%;
 	height:auto;
+	padding: 60px 0 0;
 }
 .sliderMain li { 
 	position:relative;
@@ -232,9 +233,9 @@
 	padding:4px 0; 
 }
 
-@media (min-width: 767px){
+@media (min-width: 768px){
 	.sliderNav  { 
-		widht:100%; 
+		width:100%; 
 	}
 	.sliderNav .slick-active .box { 
 		border-top:4px solid #000; 
@@ -251,6 +252,11 @@
 	}
 }
 @media (min-width: 920px){
+	#topContent { 
+		width:100%;
+		height:auto;
+		padding: 0;
+	}
 	.container {
 		width: 720px;
   }
