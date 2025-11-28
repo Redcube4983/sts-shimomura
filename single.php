@@ -19,7 +19,7 @@ Template Name: single
     	<div class="wrapper">
         	<h2><a href="/information/">インフォメーション</a></h2>
             <ul class="sideMenu">
-
+                <?php  wp_list_categories('title_li=&show_count=0');?>
             </ul>
         </div>
     </div>
@@ -31,6 +31,7 @@ Template Name: single
 					<div class="infoBox" id="infomationBlock">	
                     <?php if (have_posts()): ?>
                         <?php while (have_posts()) : the_post(); ?>
+                        <time><?php the_date('Y.m.d'); ?></time>
                         <?php the_content(); ?>
                         <?php endwhile; ?>
                     <?php else: ?>
@@ -44,10 +45,11 @@ Template Name: single
 </div>
 </div>
 </section>
-
-
 <div id="spLocalNav">
-
+    <h2><a href="/information/">インフォメーション</a></h2>
+    <ul class="sideMenu">
+        <?php  wp_list_categories('title_li=&show_count=0');?>
+    </ul>
 </div>
 </main>
 <?php get_footer(); ?>

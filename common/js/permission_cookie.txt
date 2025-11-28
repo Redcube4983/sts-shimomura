@@ -1,0 +1,65 @@
+<div class="cookiebox" style="display: none; opacity: 0; bottom: -50px;">
+    <p class="cookiebox-text">
+        当ウェブサイトでは、お客さまによりよいサービスをご提供するため、Cookieを使用しています。Cookieを無効にする方法を含め、当社のCookieの使用については「<a href="/sitepolicy/" class="link">サイトのご利用について</a>」をお読みください。Cookieの利用に同意いただける場合は、「同意する」ボタンを押してください。同意いただけない場合は、閲覧を中止してください。
+    </p> 
+    <p class="cookiebox-btn">同意する</p>
+</div>
+<style>
+.cookiebox {
+  display: none;
+  z-index: 99999;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  border-top: 2px solid #0097E0;
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.cookiebox-text {
+  margin-right: 80px;
+  width: 75%;
+  line-height: 1.875;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+.cookiebox-btn {
+  position: relative;
+  background: #0097E0;
+  display: block;
+  color: #fff;
+  padding: 20px;
+  width: 180px;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.cookiebox-btn:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 850px) {
+  .cookiebox {
+    padding: 10px 20px;
+  }
+  .cookiebox-text {
+    display: block;
+    margin: 0 0 20px;
+    width: 100%;
+    font-size: 12px;
+  }
+  .cookiebox-btn {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+</style>

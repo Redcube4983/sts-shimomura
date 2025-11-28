@@ -75,6 +75,7 @@
 			color: #FFF; 
 			text-align:center;
 			padding: 4px 8px; 
+			width: 90px;
 			&:hover{
 				opacity: .7;
 			}
@@ -95,13 +96,9 @@
 		}
 	}
 }
-.p-infoBlock__box .release {
-	font-size:10px;
-}
 .p-infoBlock__box .release,
 .p-infoBlock__box .topics,
 .p-infoBlock__box .news {
-	min-width: 70px;
 	display: inline-block;
 	padding: 4px 10px;
 	margin-bottom: 4px;
@@ -122,4 +119,10 @@
 }
 .p-infoBlock__box .news { 
 	background:#db6a1e;
+}
+#sideBar li.current-cat a {
+  background: url(../common/images/side_list_active.png) no-repeat center left #fff;
+}
+#spLocalNav li.current-cat a {
+  background: url(../common/images/side_list_active.png) no-repeat center left #fff;
 }

@@ -19,18 +19,23 @@ a:focus {
 
 #loadingLayer{
   position:fixed;
-  top:0px;
-  left:0px;
-  z-index:999;
-  width:100%;
-  height:100%;
-  background:#000B3E;
+  margin: auto;
+  inset: 0;
+  z-index:10000;
 }
-#loadingWrap {
-	background-blend-mode: multiply;
-	width: 100%;
-	height: 100%;
-	position:absolute;
+#loadingLayer #box{
+	position:fixed;
+	margin: auto;
+	inset: 0;
+	background: rgba(38, 142, 234, 0.95);
+}
+#loading {
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  width: 70vw;
+  height: auto;
+  max-width: 900px;
 }
 /*-------video------ */
 #loadingWrap video {
@@ -66,12 +71,6 @@ a:focus {
 #loadingWrap .zoomIn2.zoomIn {
     top: 40%;
     font-size: 60px;
-}
-#loadingWrap #box{
-	height: 100%;
-	width: 100%;
-	z-index:100;
-	background: rgba(0,135,255,0.5);
 }
 .zoomIn2 {
   animation: translate 2s; 

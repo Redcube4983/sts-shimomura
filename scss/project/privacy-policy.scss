@@ -1,0 +1,11 @@
+@charset "utf-8";
+.p-privacy-policy{
+    width: 100%;
+    p{
+        font-size: 1.4rem;
+        line-height: 1.8;
+        @media (min-width: 920px){
+            font-size: 1.6rem;
+        }
+    }
+}

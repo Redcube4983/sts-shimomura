@@ -1,15 +1,21 @@
 <?php
 /*
-Template Name: home
+Template Name: archive
 */
 ?>
 <?php get_header(); ?>
+ <?php
+    // カテゴリーのデータを取得
+    $cat = get_the_category();
+    $cat = $cat[0];
+    $slug = $cat->slug;
+?>
 <main>
 <section id="pages" class="information indexPage">
 <h1 class="indexH1">
 	<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/information/ttl_bg.jpg" class="img-responsive block-center"></div>
 	<div class="copy">インフォメーション<em>Information</em></div>
-	<div class="breadcrumbs"><div class="container"><a href="/">TOP</a> &gt; インフォメーション</div></div>
+	<div class="breadcrumbs"><div class="container"><a href="/">TOP</a> &gt; <a href="/infomation/">インフォメーション</a> &gt; <?php echo $cat->cat_name; ?></div>
 </h1>
 <div class="container infoContent">
 <div class="row">
@@ -17,13 +23,13 @@ Template Name: home
     	<div class="wrapper">
         	<h2><a href="/information/">インフォメーション</a></h2>
             <ul class="sideMenu">
-                <?php  wp_list_categories('title_li=&show_count=0');?>
+               <?php  wp_list_categories('title_li=&show_count=0');?>
             </ul>
         </div>
     </div>
     <div id="pageContents" class="col-xs-12 col-sm-9 col-md-9">
 		<div class="wrapper informationIndex">
-			<h2><span>Information</span>インフォメーション</h2>
+			<h2><span><?php echo $cat->slug; ?></span><?php echo $cat->cat_name; ?>一覧</h2>
 			<div class="p-infoBlock">
 				<div class="container">
 					<div class="infoBox" id="infomationBlock">	
@@ -34,6 +40,7 @@ Template Name: home
                             'post_status' => 'publish',
                             'orderby' => 'date',
                             'order' => 'DESC',
+                            'category_name' => $slug ,
                         );
                         $news_query = new WP_Query($args);
                     ?>

@@ -135,9 +135,9 @@ Template Name: front-page
 						<div class="p-infoBlock__top"><a class="icon <?php echo $cat->slug; ?> p-news__cat" href="/category/<?php echo $cat->category_nicename; ?>"><?php echo $cat->cat_name; ?></a></div>
 						<div class="p-infoBlock__bottom">
 							<?php if( get_field('pdf') ):?>
-								<time><?php the_date('Y.M'); ?></time><a href="<?php the_field('pdf');?>" target="_blank"><?php the_title(); ?></a>
+								<time><?php the_date('Y.m'); ?></time><a href="<?php the_field('pdf');?>" target="_blank"><?php the_title(); ?></a>
 							<?php else: ?>
-								<time><?php the_date('Y.M'); ?></time><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+								<time><?php the_date('Y.m'); ?></time><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 							<?php endif; ?>
 						</div>
 					</div>

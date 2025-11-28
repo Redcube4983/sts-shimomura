@@ -1,0 +1,47 @@
+.c-icon__arrow {
+	&--accent::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		width: 8px;
+		height: 8px;
+		transform: rotate(45deg);
+		border-top: 2px solid #000;
+		border-right: 2px solid #000;
+
+		@media screen and (min-width: 920px) {
+			width: 6px;
+			height: 6px;
+			border-top-width: 1px;
+			border-right-width: 1px;
+            border-top: 2px solid #fff;
+		    border-right: 2px solid #fff;
+		}
+	}
+
+	&--white::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		width: 8px;
+		height: 8px;
+		transform: rotate(45deg);
+		border-top: 2px solid #fff;
+		border-right: 2px solid #fff;
+
+		@media screen and (min-width: 920px) {
+			width: 6px;
+			height: 6px;
+			border-top-width: 1px;
+			border-right-width: 1px;
+            border-top: 2px solid #fff;
+		    border-right: 2px solid #fff;
+		}
+	}
+}

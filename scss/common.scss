@@ -2,9 +2,10 @@
 // モジュールの読み込み
 // Foundation
 @use 'foundation/base' as base;
+@use 'foundation/loading' as loading;
 // component
 @use 'component/button' as button;
-
+@use 'component/component' as component;
 // Layout
 @use 'layout/header';
 @use 'layout/footer';

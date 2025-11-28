@@ -185,22 +185,21 @@ $(window).load(function() {
     $('.cataBlock .box').tile();
 });
 
-$(function(){
-	if ( window.screen.width < 768 ) {
-		$('#loadingLayer').remove();
-	} else {
-		setTimeout(function() {
-			$('#loadingLayer').fadeOut(400);
-		}, 1000);
-	}
-	
-//    if($.cookie("access")){
-//        $('#loadingLayer').css({display:'none'});
-//    }
-//    $(window).load(function(){
-//        $.cookie("access",$('#loadingLayer').addClass('access'));
-//    })
 
+$(function(){
+  // 1回目のアクセス
+  if($.cookie("access") == undefined) {
+    //最初にアクセスしたときにはここに書いたアニメーションのJSが動く
+    $.cookie("access","onece");
+    $("#loadingLayer").css("display","block");
+    setTimeout(function() {
+			$('#loadingLayer').fadeOut(400);
+		}, 6500);
+  // 2回目以降は動かないようにするけど最初は動かす
+  } else {
+    $("#loadingLayer").css("display","none");
+        // 2回目以降は動かないようにする
+  }
 });
 
 // モーダル youtube 停止
