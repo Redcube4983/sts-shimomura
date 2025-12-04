@@ -2,38 +2,16 @@
 /*=========================================================*/
 /* footer */
 /*=========================================================*/
-footer { background:#000;color:#FFF;font-size:12px; }
+footer { background:#000;color:#FFF; }
 footer a,footer a:hover { color:#FFF; }
-footer ul { padding:0 0 0 15px; }
 
-
-@media (min-width: 768px){
-	footer .footerNavi { padding:10px 0; }
-	footer .footerNavi li { padding:3px 0; }
-	footer .footerNavi li a { font-size:11px; }
-	footer .footerNavi li.parent a { font-weight:bold; }
-	
-	.footerNavi .col-xs-1, .footerNavi .col-sm-1, .footerNavi .col-md-1, .footerNavi .col-lg-1, .footerNavi .col-xs-2, .footerNavi .col-sm-2, .footerNavi .col-md-2, .footerNavi .col-lg-2, .footerNavi .col-xs-3, .footerNavi .col-sm-3, .footerNavi .col-md-3, .footerNavi .col-lg-3, .footerNavi .col-xs-4, .footerNavi .col-sm-4, .footerNavi .col-md-4, .footerNavi .col-lg-4, .footerNavi .col-xs-5, .footerNavi .col-sm-5, .footerNavi .col-md-5, .footerNavi .col-lg-5, .footerNavi .col-xs-6, .footerNavi .col-sm-6, .footerNavi .col-md-6, .footerNavi .col-lg-6, .footerNavi .col-xs-7, .footerNavi .col-sm-7, .footerNavi .col-md-7, .footerNavi .col-lg-7, .footerNavi .col-xs-8, .footerNavi .col-sm-8, .footerNavi .col-md-8, .footerNavi .col-lg-8, .footerNavi .col-xs-9, .footerNavi .col-sm-9, .footerNavi .col-md-9, .footerNavi .col-lg-9, .footerNavi .col-xs-10, .footerNavi .col-sm-10, .footerNavi .col-md-10, .footerNavi .col-lg-10, .footerNavi .col-xs-11, .footerNavi .col-sm-11, .footerNavi .col-md-11, .footerNavi .col-lg-11, .footerNavi .col-xs-12, .footerNavi .col-sm-12, .footerNavi .col-md-12, .footerNavi .col-lg-12 {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-
-}
-footer .footerBottom { 
-    padding:20px 0;
-    border-top:1px solid #959595; 
-    .container{
-        width: 100%;
-        max-width: 1100px;
-    }
-}
 /* page top */
 #page-top { 
 	width:100%;
     margin: 0;
     padding: 0;
     border-bottom:0px solid #959595;
-    @media screen and (min-width: 920px) {
+    @media screen and (min-width: 1024px) {
         padding:5px 0;
 	    border-bottom:1px solid #959595;
     }
@@ -42,32 +20,25 @@ footer .footerBottom {
 	display:block;
 	padding: 10px 0 5px 0;
 }
-
-@media (max-width: 767px){
-	.footerNavi { display:none !important; }
-	footer .footerBottom { padding:20px 0;border-top:none; }
-	footer .text-right,	footer .text-left { text-align:center; }
-	footer .footerBottom .copyright { font-size: 10px; text-align:center;}
-	footer .textLink { text-align:center !important;margin:0 0 20px 0; }
-}
 .l-footer {
 	&__nav {
 		display: flex;
 		flex-flow: column;
         padding: 10px 0;
-		@media screen and (min-width: 920px) {
-			flex-flow: row wrap;
-			gap: 20px;
+		@media screen and (min-width: 1024px) {
+			flex-flow: row nowrap;
+			gap: 15px;
 			justify-content: space-between;
 			max-width: 100%;
 			margin: 0 auto;
-			padding: 10px 30px 10px;
+			padding: 30px;
 			box-sizing: content-box;
+			max-width: 1100px;
 		}
-		@media screen and (min-width: 1200px) {
+		@media screen and (min-width: 1280px) {
             flex-flow: row nowrap;
             justify-content: space-between;
-            max-width: 1100px;
+			gap: 20px;
 		}
 	}
 
@@ -81,7 +52,7 @@ footer .footerBottom {
 			}
 		}
 
-		@media screen and (min-width: 920px) {
+		@media screen and (min-width: 1024px) {
 			width: auto;
    			white-space: nowrap;
 			&:first-child{
@@ -100,7 +71,7 @@ footer .footerBottom {
 		align-items: center;
 		justify-content: space-between;
 		border-bottom: 1px solid #999;
-        @media screen and (min-width: 920px) {
+        @media screen and (min-width: 1024px) {
             border-bottom: 0px solid #999;
         }
 	}
@@ -116,7 +87,7 @@ footer .footerBottom {
 		width: calc(100% - 60px);
         .pc{
             display: none;
-            @media screen and (min-width: 920px) {
+            @media screen and (min-width: 1024px) {
                 display: block;
             }
         }
@@ -129,7 +100,7 @@ footer .footerBottom {
 		}
 		&.c-icon__arrow--white::before { left: 10px; }
 
-		@media screen and (min-width: 920px) {
+		@media screen and (min-width: 1024px) {
 			color: #fff;
 			padding: 0;
 			font-size: 1.4rem;
@@ -163,20 +134,25 @@ footer .footerBottom {
 					color: #fff;
 				}
 			}
+			&.towlines{
+				&::before {
+					top: -22px;
+				}
+			}
 			&-parent{
 				&.c-icon__arrow--white{
-					margin-bottom: 15px;
+					margin-bottom: 10px;
 				}
 			}
 			&::after { content: none; }
 		}
 
-		@media screen and (min-width: 1200px) {
+		@media screen and (min-width: 1280px) {
 			font-size: 1.6rem;
 			margin-bottom: 30px;
 			&-parent{
 				&.c-icon__arrow--white{
-					margin-bottom: 20px;
+					
 				}
 			}
 		}
@@ -184,7 +160,7 @@ footer .footerBottom {
 		&.is-open::after { transform: translateY(-50%) rotate(180deg); }
 
 		&-arrow {
-			@media screen and (min-width: 920px) { display: none; }
+			@media screen and (min-width: 1024px) { display: none; }
 		}
 	}
 
@@ -196,7 +172,7 @@ footer .footerBottom {
         background-color: #fff;
         padding: 0;
 
-		@media screen and (min-width: 920px) {
+		@media screen and (min-width: 1024px) {
 			display: block;
             background-color: transparent;
 			font-size: 1.3rem;
@@ -204,7 +180,7 @@ footer .footerBottom {
 			display: block !important;
 		}
 
-		@media screen and (min-width: 1200px) {
+		@media screen and (min-width: 1280px) {
 			font-size: 1.4rem;
 		}
 
@@ -221,7 +197,7 @@ footer .footerBottom {
 				display: block;
 				color: #000;
 				text-decoration: none;
-                @media screen and (min-width: 920px) {
+                @media screen and (min-width: 1024px) {
                     color: #fff;
                     opacity: 1;
                     transition: opacity .5s ease-in-out;
@@ -232,8 +208,8 @@ footer .footerBottom {
                 }
 			}
 
-			@media screen and (min-width: 920px) {
-				margin-bottom: 15px;
+			@media screen and (min-width: 1024px) {
+				margin-bottom: 10px;
 				padding: 0 0 0 15px ;
 				border: none;
 				position: relative;
@@ -242,16 +218,15 @@ footer .footerBottom {
 				  left: 0px;
 				}	
 			}
-			@media screen and (min-width: 1200px) {
-				font-size: 1.4rem;
-				margin-bottom: 20px;
+			@media screen and (min-width: 1280px) {
+				font-size: 1.5rem;
 			}
 		}
 		&.sub {
 			display: block;
 			background-color: #000;
 
-			@media screen and (min-width: 920px) {
+			@media screen and (min-width: 1024px) {
 				background-color: transparent;
 			}
 
@@ -281,7 +256,7 @@ footer .footerBottom {
 						border-right: 2px solid #fff;
 					}
 
-					@media screen and (min-width: 920px) {
+					@media screen and (min-width: 1024px) {
 						font-size: 1.3rem;
 						padding: 0;
 						border: none;
@@ -296,7 +271,7 @@ footer .footerBottom {
 						}
 					}
 
-					@media screen and (min-width: 1200px) {
+					@media screen and (min-width: 1280px) {
 						font-size: 1.5rem;
 					}
 				}
@@ -305,6 +280,33 @@ footer .footerBottom {
 
 		&__nav-title.is-open + .l-footer__nav-list {
 			display: block;
+		}
+	}
+	&__bottom { 
+		padding:20px 0;
+		border-top: 0px solid #959595; 
+		@media (min-width: 1024px){
+			border-top:1px solid #959595; 
+		}
+		&__inner{
+			width: 100%;
+			max-width: 1100px;
+			&__flex{
+				display: flex;
+				flex-flow: column;
+				gap: 5px;
+				.text-left { 
+					text-align:center; 
+				}
+				.textLink { 
+					text-align:center;
+					margin:0 0 20px 0; 
+				}
+				.copyright { 
+					font-size: 10px; 
+					text-align:center;
+				}
+			}
 		}
 	}
 }

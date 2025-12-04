@@ -11,8 +11,8 @@ Template Name: front-page
       <div class="swiper-slide">
 		<a class="swiper-link" href="/products/leadfree/">
 			<picture>
-				<source media="(max-width: 919px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_09.jpg" type="image/jpg">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_09_bg.jpg" type="image/jpg">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_09_bg.jpg" type="image/jpg">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_09.jpg" type="image/jpg">
 				<img src="<?php echo get_template_directory_uri(); ?>/common/images/main_09_bg.jpg" alt="" class="mainImg img-responsive mainImg">
 			</picture>
 		</a>
@@ -21,8 +21,8 @@ Template Name: front-page
       <div class="swiper-slide">
         <a class="swiper-link" href="/company/characterprofile/">
 			<picture>
-				<source media="(max-width: 919px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_07.jpg" type="image/jpg">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_07_bg_80ver.jpg" type="image/jpg">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_07_bg_80ver.jpg" type="image/jpg">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_07.jpg" type="image/jpg">
 				<img src="<?php echo get_template_directory_uri(); ?>/common/images/main_07_bg_80ver.jpg" alt="" class="mainImg img-responsive mainImg">
 			</picture>	
 		</a>
@@ -31,8 +31,8 @@ Template Name: front-page
       <div class="swiper-slide">
         <a class="swiper-link" href="/company/">
 			<picture>
-				<source media="(max-width: 919px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_01.jpg" type="image/jpg">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_01_bg.jpg" type="image/jpg">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_01_bg.jpg" type="image/jpg">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_01.jpg" type="image/jpg">
 				<img src="<?php echo get_template_directory_uri(); ?>/common/images/main_01_bg.jpg" alt="" class="mainImg img-responsive mainImg">
 			</picture>	
 		</a>
@@ -41,8 +41,8 @@ Template Name: front-page
       <div class="swiper-slide">
         <a class="swiper-link" href="/mono/smk/">
 			<picture>
-				<source media="(max-width: 919px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_04.jpg" type="image/jpg">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_04_bg.jpg" type="image/jpg">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_04_bg.jpg" type="image/jpg">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_04.jpg" type="image/jpg">
 				<img src="<?php echo get_template_directory_uri(); ?>/common/images/main_04_bg.jpg" alt="" class="mainImg img-responsive mainImg">
 			</picture>	
 		</a>
@@ -51,8 +51,8 @@ Template Name: front-page
       <div class="swiper-slide">
         <a class="swiper-link" href="//kenja.jp/8144_20180724" target="_blank">
 			<picture>
-				<source media="(max-width: 919px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_08.png" type="image/png">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_08_bg.png" type="image/png">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_08_bg.png" type="image/png">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_08.png" type="image/png">
 				<img src="<?php echo get_template_directory_uri(); ?>/common/images/main_08_bg.png" alt="" class="mainImg img-responsive mainImg">
 			</picture>	
 		</a>
@@ -60,8 +60,8 @@ Template Name: front-page
       <div class="swiper-slide">
         <a class="swiper-link" href="/recruit/">
 			<picture>
-				<source media="(max-width: 919px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_slideimage.jpg" type="image/png">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/mainvisual.jpg" type="image/png">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/mainvisual.jpg" type="image/png">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_slideimage.jpg" type="image/png">
 				<img src="<?php echo get_template_directory_uri(); ?>/common/images/mainvisual.jpg" alt="" class="mainImg img-responsive mainImg">
 			</picture>	
 		<div class="copyWrapper"><a href="/recruit/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/main_05_copy.png" class="img-responsive alpha"></a></div>

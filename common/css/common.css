@@ -208,7 +208,7 @@ span.slicknav_menutxt { display:none; }
 
 /*=========================================================*/
 /* footer */
-/*=========================================================*/
+/*=========================================================
 footer { background:#000;color:#FFF;font-size:12px; }
 footer a,footer a:hover { color:#FFF; }
 footer ul { padding:0 0 0 15px; }
@@ -226,8 +226,8 @@ footer ul { padding:0 0 0 15px; }
 	}
 
 }
-footer .footerBottom { padding:20px 0;border-top:1px solid #959595; }
-/* page top */
+footer .footerBottom { padding:20px 0;border-top:1px solid #959595; }*/
+/* page top 
 #page-top { width:100%;padding:5px 0;border-bottom:1px solid #959595;  }
 #page-top a { display:block;padding: 10px 0 5px 0;}
 
@@ -238,7 +238,7 @@ footer .footerBottom { padding:20px 0;border-top:1px solid #959595; }
 	footer .footerBottom .copyright { font-size: 10px; text-align:center;}
 	footer .textLink { text-align:center !important;margin:0 0 20px 0; }
 }
-
+*/
 
 
 

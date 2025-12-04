@@ -4,7 +4,7 @@ body {
 	height: 100%;
 	&.fixed{
 		position: fixed;
-		@media screen and (min-width: 920px) {
+		@media screen and (min-width: 1024px) {
 			position: static;
 		}
 	}
@@ -37,14 +37,28 @@ a:focus {
   height: auto;
   max-width: 900px;
 }
-
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
 @media (min-width: 992px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
   .container {
     width: 960px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-
+     width: 960px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+     width: 1100px;
   }
 }

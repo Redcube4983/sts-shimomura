@@ -4,7 +4,7 @@
         <nav class="l-footer__nav">
 			<div class="l-footer__nav-block">
 				<div class="l-footer__nav-title-area">
-					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/service/">会社案内</a>
+					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/company/">会社案内</a>
 					<span class="c-btn__arrow l-footer__nav-title-arrow"></span>
 				</div>
 				<ul class="l-footer__nav-list">
@@ -40,10 +40,10 @@
 			</div>
 			<div class="l-footer__nav-block">
 				<div class="l-footer__nav-title-area">
-					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/csr/environment/">CSR活動<br class="pc">環境への取り組み</a>
+					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white towlines" href="/csr/environment/">CSR活動<br class="pc">環境への取り組み</a>
 				</div>
 				<div class="l-footer__nav-title-area">
-					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/global/">グローバルネットワーク<br class="pc">｢シモムラ品質｣を世界へ</a>
+					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white towlines" href="/global/">グローバルネットワーク<br class="pc">｢シモムラ品質｣を世界へ</a>
 				</div>
 			</div>
 			<div class="l-footer__nav-block">
@@ -54,10 +54,13 @@
 				<ul class="l-footer__nav-list">
 					<li class="c-icon__arrow--accent"><a href="/mono/material/">素材・サービス</a></li>
 					<li class="c-icon__arrow--accent"><a href="/mono/process/">製造・生産</a></li>
-					<li class="c-icon__arrow--accent"><a href="/mono/quality/">品質管理体制</a></li>
+					<li class="c-icon__arrow--accent"><a href="/mono/quality-control/">品質管理体制</a></li>
 					<li class="c-icon__arrow--accent"><a href="/mono/smk/">SMK Project</a></li>
 					<li class="c-icon__arrow--accent"><a href="/mono/sss/">シモムラ安全教室</a></li>
 				</ul>
+                <div class="l-footer__nav-title-area">
+					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/sustainability/">サスティナビリティ</a>
+				</div>
 			</div>
             <div class="l-footer__nav-block">
 				<div class="l-footer__nav-title-area">
@@ -65,11 +68,13 @@
 					<span class="c-btn__arrow l-footer__nav-title-arrow"></span>
 				</div>
 				<ul class="l-footer__nav-list">
-					<li class="c-icon__arrow--accent"><a href="/recruit/outline/">募集要項</a></li>
-					<li class="c-icon__arrow--accent"><a href="/recruit/outline/">社員紹介</a></li>
-					<li class="c-icon__arrow--accent"><a href="/recruit/environment/">仕事紹介</a></li>
-					<li class="c-icon__arrow--accent"><a href="/recruit/qa/">Ｑ＆Ａ</a></li>
-                    <li class="c-icon__arrow--accent"><a href="/recruit/contact/">応募フォーム</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/recruit/aboutus/">会社を知る</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/recruit/environment/">働く環境を知る</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/recruit/ourwork/">仕事を知る</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/recruit/internship/">インターンシップ制度</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/recruit/outline/">募集要項</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/recruit/qa/">よくあるご質問</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/recruit/contact/">エントリーフォーム</a></li>
 				</ul>
                 <div class="l-footer__nav-title-area">
 					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/contact/">お問い合わせ</a>
@@ -77,11 +82,11 @@
 			</div>
 		</nav>
 
-    <div class="footerBottom">
-        <div class="container">
-            <div class="row">
-                <div class="textLink text-left col-xs-12 col-sm-6 col-md-6"><a href="/privacy-policy/">プライバシーポリシー</a>　<a href="/site-policy/">サイトポリシー</a></div>
-                <div class="copyright text-right col-xs-12 col-sm-6 col-md-6">&copy; Copyright by SHIMOMURA TOKUSHU SEIKO Co.,Ltd.</div>
+    <div class="footerBottom l-footer__bottom">
+        <div class="l-footer__bottom__inner">
+            <div class="l-footer__bottom__inner__flex">
+                <div class="textLink text-left"><a href="/privacy-policy/">プライバシーポリシー</a>　<a href="/site-policy/">サイトポリシー</a></div>
+                <div class="copyright text-right">&copy; Copyright by SHIMOMURA TOKUSHU SEIKO Co.,Ltd.</div>
             </div>
         </div>
     </div>
@@ -175,6 +180,20 @@
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.tmpl.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.tmplPlus.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/common/js/newsimulation.js"></script>
+    <?php elseif (is_page(array('process','quality-control','smk'))) : ?>
+        <script src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.magnific-popup.min.js"></script> 
+        <script>
+            $(function() {
+                jQuery('.popup-movie').magnificPopup({
+                    // disableOn: null,
+                    type: 'iframe',
+                    // mainClass: 'mfp-fade',
+                    removalDelay: 200,
+                    // preloader: false,
+                    // fixedContentPos: false
+                });
+                });
+        </script>
     <?php endif; ?>
 <script>
 // グローバルナビ　アクティブ化
@@ -190,5 +209,6 @@ $(function(){
 });
 </script> 
 <?php endif; ?>
+<?php wp_footer(); ?>
 </body>
 </html>

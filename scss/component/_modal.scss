@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* オーバーレイ表示開始 */
+.mfp-bg {
+  z-index: 10000;
+}
+.mfp-wrap {
+  z-index: 10000;
+}
+.mfp-container{
+    padding: 0 30px;
+    @media (max-width: 900px) {
+        padding: 0 30px;
+    }
+}
+.mfp-image-holder .mfp-content {
+    max-width: 100%;
+    opacity: 1;
+    animation: modal 1s ease-in-out both;
+    @media (min-width: 768px) {
+        max-width: 80vw;
+    }
+}
+@keyframes modal{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

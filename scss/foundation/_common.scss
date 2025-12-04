@@ -10,7 +10,7 @@ body {
 
 @media (max-width: 767px){
 	body {
-		font-size:12px;
+		font-size:14px;
 	}
 	ul, ol { margin-bottom:0; }
 }
@@ -132,12 +132,15 @@ span.slicknav_menutxt { display:none; }
 .indexPage .breadcrumbs { padding:10px 0 ;font-size:12px;background: url(../common/images/breadcrumbs_bg.png) top left;color:#FFF; }
 .indexPage .breadcrumbs .container { padding:0 20px; }
 .indexPage .breadcrumbs a { color:#FFF; }
-
-
-@media (max-width: 767px){
-	.breadcrumbs { display:none; }
+.breadcrumbs { 
+	padding: 0 15px;
+	@media (min-width: 768px){
+		padding: 0 30px;
+	}
+	@media (min-width: 1024px){
+		padding: 0;
+	}
 }
-
 /*=========================================================*/
 /* Sidebar */
 /*=========================================================*/
@@ -151,13 +154,13 @@ span.slicknav_menutxt { display:none; }
 
 #sideBar h2 { background:#000;color:#FFF;font-size:15px;padding:15px 20px; }
 #sideBar h2 a { color:#FFF; }
-#sideBar li  { margin:0 0 0 -40px;padding:0; }
+#sideBar li  { margin:0 ;padding:0; }
 #sideBar li a { display:block;text-decoration:none;color:#333;background: url(../common/images/side_list.png) no-repeat center left  #EEE;padding:15px 0 15px 30px;border-bottom:1px dotted #B4B4B4; }
 #sideBar li a:hover { background: url(../common/images/side_list.png) no-repeat center left  #FFF; }
 #sideBar li.active a { background: url(../common/images/side_list_active.png) no-repeat center left  #FFF; }
-
-@media (max-width: 767px){
-	#sideBar { display:none; }
+#sideBar { display:none; }
+@media (min-width: 1024px){
+	#sideBar { display:block; }
 }
 
 
@@ -167,12 +170,12 @@ span.slicknav_menutxt { display:none; }
 #spLocalNav .wrapper { margin:0 15px; }
 #spLocalNav h2 { background:#000;color:#FFF;font-size:13px;padding:15px 20px; }
 #spLocalNav h2 a { color:#FFF; }
-#spLocalNav li  { margin:0 0 0 -40px;padding:0; }
+#spLocalNav li  { margin:0 ;padding:0; }
 #spLocalNav li a { display:block;text-decoration:none;color:#333;background: url(../common/images/side_list.png) no-repeat center left  #EEE;padding:15px 0 15px 30px;border-bottom:1px dotted #B4B4B4; }
 #spLocalNav li a:hover { background: url(../common/images/side_list.png) no-repeat center left  #FFF; }
 #spLocalNav li.active a { background: url(../common/images/side_list_active.png) no-repeat center left  #FFF; }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
 	#spLocalNav { display:none; }
 }
 
@@ -181,25 +184,63 @@ span.slicknav_menutxt { display:none; }
 /*=========================================================*/
 /* pages */
 /*=========================================================*/
-#pages { margin:0 0 50px 0; }
-#pageContents h2 { border-bottom:2px solid #00A1FF;font-size:23px;padding:0 0 10px 0;margin:0 0 20px 0; }
-#pageContents h2 span { display:block;font-size:12px;font-family: 'Lora', serif;color:#00A1FF;padding:0 0 5px 0; }
-
-#pageContents h3 { font-size:19px;margin:30px 0 15px 0; }
-#pageContents h4 { font-size:16px;margin:0 0 10px 0; }
-#pages h5 { font-size:16px;color:#00A1FF;margin:25px 0 15px 0; }
-#pages h6 { font-size:14px;color:#FFF;background:#797979;margin:20px 0 10px 0;padding:6px 10px; }
-
-@media (max-width: 767px){
-	#pages { margin:0 0 10px 0; }
+#pages { 
+	margin:0 0 10px 0;
+	@media (min-width: 1024px){
+		margin:0 0 50px 0;
+	}
+}
 	#pageContents h2 {
 		margin:30px 0 20px 0;
-		font-size: 15px;
+		font-size: 1.5rem;
 		margin:0 0 10px 0;
+		border-bottom:2px solid #00A1FF;
+		display:block;
+		padding:0 0 10px 0;
+		@media (min-width: 768px){
+			font-size:2.3rem;
+		}
 	}
-	#pageContents h2 span { font-size:11px;font-family: 'Lora', serif; }
+#pageContents h2 span { 
+	font-size:1.1rem;
+	font-family: 'Lora', serif; 
+	color:#00A1FF;
+	padding:0 0 5px 0; 
+	display:block;
+	@media (min-width: 768px){
+		font-size:1.2rem;
+		font-family: 'Lora', serif;
+	}
+}
 
-	#pageContents h3 { font-size:14px;margin:15px 0; }
-	#pageContents h4 { font-size:14px; }
-	#pages h5 { font-size:14px; }
+#pageContents h3 { 
+	font-size:14px;
+	margin:15px 0; 
+	@media (min-width: 768px){
+		font-size:19px;
+		margin:30px 0 15px 0;
+	}
+}
+#pageContents h4 {
+	font-size:14px; 
+	margin:30px 0 15px 0;
+	@media (min-width: 768px){
+		font-size:16px;
+		margin:0 0 10px 0; 
+	}
+}
+#pages h5 { 
+	font-size:16px; 
+	color:#00A1FF;
+	margin:25px 0 15px 0;
+	@media (min-width: 768px){
+		font-size:18px;
+	}
+}
+#pages h6 { 
+	font-size:14px;
+	color:#FFF;
+	background:#797979;
+	margin:20px 0 10px 0;
+	padding:6px 10px; 
 }

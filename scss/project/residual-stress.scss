@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* CSS Document */
+.merit-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 0;
+  @media (min-width: 768px){
+    flex-flow: row nowrap;
+  }
+}
+.merit-box-li {
+    width: 100%;
+    @media (min-width: 768px){
+        width: calc((100% - 40px) / 3);
+    }
+}
+.li-tittle {
+  text-align: center;
+  color: #fff;
+  background-color: #00A1FF;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
+}

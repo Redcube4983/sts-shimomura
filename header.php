@@ -13,7 +13,6 @@
 <link href="<?php echo get_template_directory_uri(); ?>/common/css/bootstrap.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri(); ?>/common/css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet">
-<link href="<?php echo get_template_directory_uri(); ?>/common/css/common.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri(); ?>/css/common.css" rel="stylesheet">
 <?php if (is_front_page()) : ?>
     <!--swiper-->
@@ -23,7 +22,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/home.css" />
 <?php elseif (is_page()) : ?>
-		<?php if (is_page('characterprofile')) : ?>
+		<?php if (is_page(array('characterprofile','process','quality-control','smk'))) : ?>
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/magnific-popup.css">
 		<?php endif; ?>
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page.css" />
@@ -193,9 +192,8 @@
 					<div class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/site-logo.svg" alt="下村特殊精工会社" class="alpha"></a></div>
 				<?php endif; ?>
 			</div>
-			<div class="l-header__top--right rightBox">
-				<a href="/" class="languagelink">日本語</a><a href="/en/" class="languagelink">English</a><a href="/cn/" class="languagelinkr">中文</a>
-				<a href="https://shimomuranet.daido.co.jp//" class="outLink">Web 受注システム</a>
+			<div class="l-header__top--right rightBox">		
+				<a href="/" class="languagelink">日本語</a><a href="/en/" class="languagelink">English</a><a href="/cn/" class="languagelinkr">中文</a><a href="https://shimomuranet.daido.co.jp//" class="outLink">Web 受注システム</a><a class="contactlink" href="/contact/"><span>お問い合わせ</span></a>
 			</div>
 			<button class="l-header__menu-btn js-sp-btnMenu">
 				<span class="l-header__menu-bar"></span>
@@ -254,26 +252,27 @@
 						<ul class="gnav__child">
 							<li class="gnav__child__inner"><a href="/mono/material/">素材・サービス</a></li>
 							<li class="gnav__child__inner"><a href="/mono/process/">製造・生産</a></li>
-							<li class="gnav__child__inner"><a href="/mono/quality/">品質</a></li>
-							<li class="gnav__child__inner"><a href="/mono/analysis/">解析・分析</a></li>
+							<li class="gnav__child__inner"><a href="/mono/quality-control/">品質管理体制</a></li>
 							<li class="gnav__child__inner"><a href="/mono/smk/">SMK Project</a></li>
 							<li class="gnav__child__inner"><a href="/mono/sss/">シモムラ安全教室</a></li>
 						</ul>
 					</li>
+					<li class="gnav__list__inner"><a class="gnav__link" href="/sustainability/"><span>サスティナビリティ</span></a></li>
 					<li class="gnav__list__inner">
 						<div class="gnav__list__inner__title-area">
 							<a class="gnav__link" href="/recruit/"><span>採用情報</span></a>
 							<span class="c-btn__arrow l-navList__item-title-arrow"></span>
 						</div>
 						<ul class="gnav__child">
+							<li class="gnav__child__inner"><a href="/recruit/aboutus/">会社を知る</a></li>
+							<li class="gnav__child__inner"><a href="/recruit/environment/">働く環境を知る</a></li>
+							<li class="gnav__child__inner"><a href="/recruit/ourwork/">仕事を知る</a></li>
+							<li class="gnav__child__inner"><a href="/recruit/internship/">インターンシップ制度</a></li>
 							<li class="gnav__child__inner"><a href="/recruit/outline/">募集要項</a></li>
-							<li class="gnav__child__inner"><a href="/recruit/ourwork/">社員紹介</a></li>
-							<li class="gnav__child__inner"><a href="/recruit/environment/">仕事紹介</a></li>
-							<li class="gnav__child__inner"><a href="/recruit/qa/">Ｑ＆Ａ</a></li>
-							<li class="gnav__child__inner"><a href="/recruit/contact/">応募フォーム</a></li>
+							<li class="gnav__child__inner"><a href="/recruit/qa/">よくあるご質問</a></li>
+							<li class="gnav__child__inner"><a href="/recruit/contact/">エントリーフォーム</a></li>
 						</ul>
 					</li>
-					<li class="gnav__list__inner"><a class="gnav__link" href="/contact/"><span>お問い合わせ</span></a></li>
 					<li class="gnav__list__inner sp"><a class="gnav__link" href="/privacy-policy/"><span>プライバシーポリシー</span></a></li>
 					<li class="gnav__list__inner sp"><a class="gnav__link" href="/site-policy/"><span>サイトポリシー</span></a></li>
 				</ul>

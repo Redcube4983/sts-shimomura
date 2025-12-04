@@ -67,7 +67,7 @@ $(window).on('load resize', function () {
   $('.l-navList__item-title-arrow').off();
   $('.l-footer__nav-title-arrow').off();
   $('.gnav__list__inner').off();
-  if (window.matchMedia('(max-width:919px)').matches) {
+  if (window.matchMedia('(max-width:1023px)').matches) {
    // SPの処理
    if ($('.js-sp-btnMenu').hasClass("is-open")) {
       //open表示中の場合
@@ -104,7 +104,7 @@ $(window).on('load resize', function () {
       $arrow.toggleClass('is-open');
     });
 
-  } else if (window.matchMedia('(min-width:920px)').matches) {
+  } else if (window.matchMedia('(min-width:1024px)').matches) {
     // PCの処理
     var ua = navigator.userAgent;
     if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
@@ -117,7 +117,6 @@ $(window).on('load resize', function () {
 
     } else {
       // PC用コード
-        $('.l-nav').css('display', 'block');
         if ($('.js-sp-btnMenu').hasClass("is-open")) {
         //open表示中の場合
         $('body').removeClass('fixed').css('top', 0 + 'px');
@@ -188,6 +187,7 @@ $(window).load(function() {
 
 $(function(){
   // 1回目のアクセス
+  $("#loadingLayer").css("display","none");
   if($.cookie("access") == undefined) {
     //最初にアクセスしたときにはここに書いたアニメーションのJSが動く
     $.cookie("access","onece");

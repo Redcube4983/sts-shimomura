@@ -50,9 +50,6 @@ add_shortcode('php', 'Include_my_php');
 function get_infomation() {
 	get_template_part('parts/infomation');
 }
-function get_company() {
-	get_template_part('parts/company');
-}
-function get_products() {
-	get_template_part('parts/products');
+function get_LocalNavi() {
+	get_template_part('parts/LocalNavi');
 }

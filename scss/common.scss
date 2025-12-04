@@ -1,11 +1,13 @@
 @charset "utf-8";
 // モジュールの読み込み
 // Foundation
+@use 'foundation/reset' as reset;
 @use 'foundation/base' as base;
 @use 'foundation/loading' as loading;
 // component
 @use 'component/button' as button;
 @use 'component/component' as component;
+@use 'component/modal' as modal;
 // Layout
 @use 'layout/header';
 @use 'layout/footer';
