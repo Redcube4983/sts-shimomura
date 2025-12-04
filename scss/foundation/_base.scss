@@ -37,78 +37,14 @@ a:focus {
   height: auto;
   max-width: 900px;
 }
-/*-------video------ */
-#loadingWrap video {
-	display:block;
-	position: fixed;
-	top: -100%;
-	left: -100%;
-	bottom: -100%;
-	right: -100%;
-	min-width:100%;
-	min-height:100%;
-	max-width:inherit;
-	margin:auto;
-	width:auto;
-	height:auto;
-	z-index:-1000;
-}
 
-#loadingWrap .zoomIn2{
-	color: #FFF;
-	text-align: center;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size: 100px;
-	font-weight: bold;
-	height: auto;
-	width: 600px;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-left: -300px;
-	z-index:60;
-}
-#loadingWrap .zoomIn2.zoomIn {
-    top: 40%;
-    font-size: 60px;
-}
-.zoomIn2 {
-  animation: translate 2s; 
-  -webkit-animation: translate 2s; /* Safari & Chrome */
-}
-@-webkit-keyframes zoomIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.3, .3, .3);
-    transform: scale3d(.3, .3, .3);
-  }
-  50% {
-    opacity: 1;
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
   }
 }
+@media (min-width: 1200px) {
+  .container {
 
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.3, .3, .3);
-    transform: scale3d(.3, .3, .3);
   }
-  50% {
-    opacity: 1;
-  }
-}
-
-.zoomIn2 {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-}
-
-#loadingLayer {
-	overflow: hidden;	
-	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.44) 100%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.44))); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.44) 100%); /* W3C */
 }

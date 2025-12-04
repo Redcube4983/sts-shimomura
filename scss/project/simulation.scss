@@ -1,0 +1,62 @@
+#enquete {
+	margin: 10px auto;
+	padding: 10px;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+}
+.enqueteSelect {
+	width: 100%;
+	padding: 6px;
+	box-sizing: border-box;
+}
+.enq_qustion {
+	padding: 4px;
+	font-size: 16px;
+	font-weight: 600;
+}
+.enq_select {
+	width: 100%;
+	margin: 8px 0px;
+	padding: 4px;
+	font-size: 14px;
+}
+.enq_sel {
+	text-align:center;
+}
+.enq_allow {
+
+	padding: 20px 0;
+	text-align:center;
+	width:0 auto;
+}
+#result {
+	width: 100%;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+
+table#tbl_result {
+	width:100%;
+}
+#tbody_result {
+		width:100%;
+}
+#tbody_result td {
+		width:100%;
+}
+#tbody_result td a {
+		display:block;
+		border-bottom:1px solid #CCC;
+		padding:10px 10px 10px 20px;
+		width:100%;
+		color:#000;
+	    background: url(../common/images/arrow_1.png) left center no-repeat;
+}
+.steel_name {
+	display: inline-block;
+	min-width: 250px;
+}
+.steel_mention {
+	display: inline-block;
+}

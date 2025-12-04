@@ -40,10 +40,10 @@
 			</div>
 			<div class="l-footer__nav-block">
 				<div class="l-footer__nav-title-area">
-					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/csr/environment/">CSR活動<br>環境への取り組み</a>
+					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/csr/environment/">CSR活動<br class="pc">環境への取り組み</a>
 				</div>
 				<div class="l-footer__nav-title-area">
-					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/global/">グローバルネットワーク<br>｢シモムラ品質｣を世界へ</a>
+					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/global/">グローバルネットワーク<br class="pc">｢シモムラ品質｣を世界へ</a>
 				</div>
 			</div>
 			<div class="l-footer__nav-block">
@@ -71,9 +71,7 @@
 					<li class="c-icon__arrow--accent"><a href="/recruit/qa/">Ｑ＆Ａ</a></li>
                     <li class="c-icon__arrow--accent"><a href="/recruit/contact/">応募フォーム</a></li>
 				</ul>
-			</div>
-            <div class="l-footer__nav-block">
-				<div class="l-footer__nav-title-area">
+                <div class="l-footer__nav-title-area">
 					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/contact/">お問い合わせ</a>
 				</div>
 			</div>
@@ -168,6 +166,15 @@
                 });
             });  
         </script>
+    <?php elseif (is_page('simulation')) : ?>
+        <!-- jQueryUI ver1.11.4 and Plugin-->
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/common/js/jqui/jquery-ui.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/common/js/jqui/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/common/js/jqui/jquery-ui.structure.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/common/js/jqui/jquery-ui.theme.css">
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.tmpl.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.tmplPlus.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/common/js/newsimulation.js"></script>
     <?php endif; ?>
 <script>
 // グローバルナビ　アクティブ化

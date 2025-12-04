@@ -21,6 +21,15 @@ function imagepassshort($arg)
 add_action('the_content', 'imagepassshort');
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* 投稿内のPDFを相対パスに */
+function pdfpassshort($arg)
+{
+  $content = str_replace('"pdf/', '"' . get_bloginfo('template_directory') . '/pdf/', $arg);
+  return $content;
+}
+add_action('the_content', 'pdfpassshort');
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* 固定ページでショートコードを利用 */
@@ -38,7 +47,12 @@ add_shortcode('php', 'Include_my_php');
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* テンプレ呼び出し関数*/
-function get_contact() {
+function get_infomation() {
 	get_template_part('parts/infomation');
-  get_template_part('parts/company');
+}
+function get_company() {
+	get_template_part('parts/company');
+}
+function get_products() {
+	get_template_part('parts/products');
 }

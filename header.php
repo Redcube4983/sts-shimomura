@@ -8,9 +8,11 @@
 <meta name="description" content="高精度・高品質で世界をリードする大同グループのみがき棒鋼専門メーカー　下村特殊精工株式会社" />
 <meta name="keywords" content="下村特殊精工株式会社,シモムラ,快削鋼,ステンレス,快削ステンレス,工具鋼,研磨,引抜,特殊鋼,シャフト,金属,下村特殊精工,BIS,IS6603,ＢＩＳライセンス,非鉛,鉛フリー,Pb,残留応力" />
 <title>下村特殊精工株式会社　｜　高品質の快削ステンレス鋼・快削鋼・工具鋼の磨き棒鋼専門メーカー</title>
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/common/images/favicon.jpg">
 <link href="<?php echo get_template_directory_uri(); ?>/common/css/normalize.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri(); ?>/common/css/bootstrap.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri(); ?>/common/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri(); ?>/common/css/common.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri(); ?>/css/common.css" rel="stylesheet">
 <?php if (is_front_page()) : ?>
@@ -184,8 +186,12 @@
 	<header class="l-header">
 		<div class="l-header__top">
 			<div class="l-header__top--left leftBox">
-				<h1>高品質の快削ステンレス鋼・快削鋼・工具鋼の磨き棒鋼専門メーカー</h1>
-				<div class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/site-logo.svg" alt="下村特殊精工会社" class="alpha"></a></div>
+				<p>高品質の快削ステンレス鋼・快削鋼・工具鋼の磨き棒鋼専門メーカー</p>
+				<?php if (is_front_page()) : ?>
+					<h1 class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/site-logo.svg" alt="下村特殊精工会社" class="alpha"></a></h1>
+				<?php else: ?>
+					<div class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/site-logo.svg" alt="下村特殊精工会社" class="alpha"></a></div>
+				<?php endif; ?>
 			</div>
 			<div class="l-header__top--right rightBox">
 				<a href="/" class="languagelink">日本語</a><a href="/en/" class="languagelink">English</a><a href="/cn/" class="languagelinkr">中文</a>
@@ -268,6 +274,8 @@
 						</ul>
 					</li>
 					<li class="gnav__list__inner"><a class="gnav__link" href="/contact/"><span>お問い合わせ</span></a></li>
+					<li class="gnav__list__inner sp"><a class="gnav__link" href="/privacy-policy/"><span>プライバシーポリシー</span></a></li>
+					<li class="gnav__list__inner sp"><a class="gnav__link" href="/site-policy/"><span>サイトポリシー</span></a></li>
 				</ul>
 			</nav>
 		</div>
