@@ -9,7 +9,7 @@
 	<li><a href="/company/quality/">品質環境方針</a></li>
 	<li><a href="/company/iso/">ISOの取得について</a></li>
 	<li><a href="/company/characterprofile/">マスコットキャラクター</a></li>
-	<li><a href="/company/outline/?id=groupLink">大同特殊鋼グループ</a></li>
+	<li><a href="/company/outline/#groupLink">大同特殊鋼グループ</a></li>
 </ul>
 <?php elseif (is_page(array('products','stainless','structual','tool','leadfree','bis','residual-stress','brand','specification','stock','simulation','catalogue'))) : ?>
 <h2><a href="/products/">製品紹介</a></h2>
@@ -25,6 +25,13 @@
 	<li><a href="/products/stock/">在庫一覧</a></li>
 	<li><a href="/products/simulation/">鋼種シミュレーション</a></li>
 	<li><a href="/products/catalogue/">製品カタログ</a></li>
+</ul>
+<?php elseif (is_page(array('sustainability','environment','society','governance'))) : ?>
+<h2><a href="/sustainability/">サスティナビリティ</a></h2>
+<ul class="sideMenu">
+	<li><a href="/sustainability/environment/">環境への取り組み</a></li>
+	<li><a href="/sustainability/society/">社会への取り組み</a></li>
+	<li><a href="/sustainability/governance/">ガバナンス強化</a></li>
 </ul>
 <?php elseif (is_page(array('mono','material','process','quality-control','smk','sss'))) : ?>
 <h2><a href="/mono/">シモムラのこだわり</a></h2>

@@ -170,7 +170,7 @@
 
             }
             @media (min-width: 1024px){
-                display: block;
+                display: block !important;
                 position: static;
                 height: 46px;
                 &.is-open{
@@ -179,8 +179,12 @@
             }
         .gnav{
             display: block;
+            height: 100%;
+            overflow-y: auto;
             @media (min-width: 1024px){
                 display: block;
+                height: auto;
+                overflow-y: revert;
             }
             &__list{
                 border-top: 0px solid #FFFF;
@@ -232,7 +236,7 @@
                                 border-right: 1px solid #FFF;
                             }
                         }
-                        &:nth-child(8){
+                        &:nth-child(7){
                             a.gnav__link{
                                 border-right: 0px solid #FFF;
                             }
@@ -241,6 +245,16 @@
                     &__title-area {
                         display: flex;
                         flex-flow: row nowrap;
+                        &.single{
+                            a.gnav__link{
+                               width: 100%;
+                               padding: 20px 20px 20px 36px;
+                               @media (min-width: 1024px){
+                                    width: auto;
+                                    padding: 0;
+                               }
+                            }
+                        }
                         @media (min-width: 1024px){
                             display: block;
                             height: 100%;
@@ -411,6 +425,30 @@
                             font-size: 1.5rem;
                         }
                     }
+                }
+            }
+            .sp__language{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+                .languagelink{
+                    color: #fff;
+                    font-size: 1.4rem;
+                    position: relative;
+                    &:not(:last-child){
+                        &::before{
+                            position: absolute;
+                            border-left: 1px solid #fff;
+                            display: block;
+                            height: 100%;
+                            right: -10px;
+                            content: "";
+                        }
+                    }
+                }
+                @media (min-width: 1024px){
+                    display: none;
                 }
             }
         }

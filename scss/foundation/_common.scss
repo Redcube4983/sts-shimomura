@@ -50,6 +50,9 @@ a[href]:after {
 .indent {   padding-left: 1em;  text-indent: -1em; }
 table th { white-space: nowrap !important; }
 
+main {
+  overflow-x: hidden;
+}
 /*=========================================================*/
 /* header */
 /*=========================================================*/
@@ -125,7 +128,14 @@ span.slicknav_menutxt { display:none; }
 /*=========================================================*/
 /* パンくず */
 /*=========================================================*/
-.breadcrumbs { font-size:12px;width:100%;text-align:left;margin:10px 0; }
+.breadcrumbs { 
+	font-size:12px;
+	width:100%;
+	text-align:left;
+	margin:10px 0; 
+	position: relative;
+  	z-index: 1;
+}
 
 .indexPage .breadcrumbs { position:absolute;bottom:0;left:0;font-size:12px;width:100%;text-align:left;z-index:100;margin:0; }
 

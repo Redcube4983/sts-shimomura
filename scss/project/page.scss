@@ -87,26 +87,34 @@
 	font-size:26px;
 	opacity:0; 
 }
-#pages h1 .img { 
+#pages h1 .img{
+	width: 150%;
+	left: 50%;
+	transform: translateX(-50%);
 	position:absolute;
 	z-index:1;
-	width:100%; 
+	@media (min-width: 768px) {
+		width:100%; 
+		left: 0%;
+		transform: translateX(0%);
+	}		
 }
-@media (max-width: 767px) {
-	#pages h1 .img{
-		width: 150%;
-	}
-}
+
 #pages h1 .img img { width:100%;height:auto; }
 
-
-#pages h1 em { display:block;font-size:11px;font-style:normal;margin-top:5px; }
-
-// #pages h1.indexH1 { position:relative;width:100%;text-align:center;color:#FFF;font-size:26px; }
-// #pages h1.indexH1 .copy { position:absolute;width:100%;padding:9% 0 0 0;text-align:center;color:#FFF;font-size:26px;z-index:99; }
-
-// #pages h1.subH1 { position:relative;width:100%;text-align:center;color:#FFF;font-size:26px;}
-// #pages h1.subH1 .copy { position:absolute;width:100%;padding:3% 0 0 0;text-align:center;color:#FFF;font-size:26px;z-index:99; }
+#pages h1 em {
+	display: inline-block;
+	margin-top: 0;
+	margin-left: 8px;
+	font-size: 12px;
+	font-style:normal;
+	@media (min-width: 768px) {
+		display:block;
+		font-style:normal;
+		line-height: 1;
+		margin-left:0px;
+	}
+}
 #pages h1.indexH1,
 #pages h1.subH1 {
 	position:relative;
@@ -116,48 +124,50 @@
 	font-size:26px;
 	display: table;
 }
-#pages h1.indexH1 .copy,
-#pages h1.subH1 .copy {
+
+#pages h1.indexH1 .copy{
+	font-size: 16px;
+	text-shadow: 0px 2px 5px #000;
+	top: -10px;
 	position:relative;
 	display: table-cell;
 	vertical-align: middle;
 	width:100%;
-	padding:0 !important;
 	text-align:center;
 	color:#FFF;
-	font-size:26px;
+	z-index:99;
+}
+#pages h1.subH1 .copy {
+	font-size: 16px;
+	text-shadow: 0px 0px 10px #000;
+	position:relative;
+	display: table-cell;
+	vertical-align: middle;
+	width:100%;
+	text-align:center;
+	color:#FFF;
 	z-index:99;
 }
 @media (min-width: 768px) {
-	#pages h1.subH1 .img{
-		width: 200%;
-	}
-}
-@media (min-width: 1024px) {
-	#pages h1.subH1 .img{
-		width: 100%;
-	}
-}
-@media (max-width: 767px) {
-	#pages h1.subH1 .img{
-		width: 300%;
-	}
-}
-@media (max-width: 767px) {
-	#pages h1.indexH1 .copy{
-		font-size: 16px;
-		text-shadow: 0px 2px 5px #000;
-		top: -10px;
-	}
+	#pages h1.indexH1 .copy,
 	#pages h1.subH1 .copy {
-		font-size: 16px;
-		text-shadow: 0px 2px 5px #000;
+		padding:0 !important;
+		font-size:26px;
 	}
-	#pages h1 em {
-		display: inline-block;
-		margin-top: 0;
-		margin-left: 8px;
-		font-size: 12px;
+}
+#pages h1.subH1 .img{
+	width: 240%;
+	transform: translateX(-50%);
+	position:absolute;
+	left: 50%;
+	z-index:1;
+	@media (min-width: 768px) {
+		width: 200%;
+		transform: translateX(0%);
+		left: 0%;
+	}
+	@media (min-width: 1024px) {
+		width: 100%;
 	}
 }
 
@@ -228,7 +238,11 @@
 .typeA .caseBox { border:1px solid #666;padding:5px;margin:10px 0; font-size:12px;}
 
 
-#pageContents { opacity:0; }
+#pageContents { 
+	opacity:0; 
+	position: relative;
+    z-index: 0;
+}
 #pageContents .box { margin-bottom:15px; }
 #pageContents .box.rightSpace { margin-right:5px; }
 #pageContents .box.leftSpace { margin-left:5px; }
@@ -460,29 +474,6 @@
 .whiteBorderR { border-right:10px solid #fff; }
 .blueBtn { width:100%; background:#118EFF;padding:10px 0;text-align:center;display:block;color:#fff;text-decoration:none;}
 .blueBtn:hover {text-decoration:none;color:#fff;background:#00A3FF;}
-
-/* contact */
-.contactContet { margin-top:20px; }
-
-.contactBox table {	background:#F6F6F6; }
-.contactBox table th { background:#EBEBEB;padding:20px !important; }
-.contactBox table td { padding:20px !important; }
-.contactBox table td.name {	font-weight:bold; text-align:center; }
-.contactBox table td.number strong { font-size:18px; font-weight:bold; color:#1180FF; }
-.contactBox table td.notice { font-size:10px;}
-#contactBlock .commentBlock { margin-top:30px; }
-#contactBlock .commentBlock .box { border-bottom:1px solid #CCC;padding:10px 20px;font-size:12px;margin-bottom:0; }
-#contactBlock .commentBlock .box:first-child { border-top:1px solid #CCC; }
-#contactBlock .commentBlock .box img { margin-right:20px; }
-
-@media (max-width: 991px){
-.contactBox table th { display:block;width:100%;text-align:left; }
-.contactBox table td { display:block;width:100%;padding:10px 20px; }
-.contactBox table td.name {	text-align:left; }
-#contactBlock .commentBlock .box img { display:block;margin:0 0 10px 0; }
-.contactBox table td.number strong { font-size:15px; }
-
-}
 
 
 /*=========================================================*/

@@ -15,7 +15,7 @@ Template Name: archive
 <h1 class="indexH1">
 	<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/information/ttl_bg.jpg" class="img-responsive block-center"></div>
 	<div class="copy">インフォメーション<em>Information</em></div>
-	<div class="breadcrumbs"><div class="container"><a href="/">TOP</a> &gt; <a href="/infomation/">インフォメーション</a> &gt; <?php echo $cat->cat_name; ?></div>
+	<div class="breadcrumbs"><div class="container"><a href="/">TOP</a> &gt; <a href="/information/">インフォメーション</a> &gt; <?php echo $cat->cat_name; ?></div>
 </h1>
 <div class="container infoContent">
 <div class="row">

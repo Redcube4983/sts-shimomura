@@ -216,12 +216,29 @@ textarea:focus {
 	outline-width: 0;
 }
 
-/* Style select like a standard input */
-select {
-	-moz-appearance: none; /* Firefox 36+ */
-	-webkit-appearance: none; /* Chrome 41+ */
+input, select {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
+input[type="button"],
+button,
+select {
+  background: #efefef;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 4px 8px;
+  line-height: 1.5rem;
+}
+select {
+  line-height: 2;
+  color: #333;
+  box-shadow: none;
+  padding: 14px 40px 14px 8px;
+  background: #efefef url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E) no-repeat right 5px top 55%;
+  background-size: 16px 16px;
+  cursor: pointer;
+}
 select::-ms-expand {
 	display: none; /* Internet Explorer 11+ */
 }

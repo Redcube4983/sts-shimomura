@@ -55,10 +55,10 @@
 #mascot{
 	.imgBox{
 		margin: 0 0 20px;
+        .img-responsive {
+            width: 100%;
+        }
 	}
-}
-.img-responsive {
-  width: 100%;
 }
 dt {
   font-weight: bold;

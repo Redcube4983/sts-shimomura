@@ -2,12 +2,12 @@ $(function(){
 	var myXml = new XMLHttpRequest();
 	myXml.onreadystatechange = function() {
 		if ((myXml.readyState === 4) && (myXml.status === 200)) {
-			if (!$.cookie('shimomura') || $.cookie('shimomura') == '0') {
+			if (!jQuery.cookie('shimomura') || jQuery.cookie('shimomura') == '0') {
 				let elem = document.getElementsByTagName('body');
 				elem[0].insertAdjacentHTML('beforeend', myXml.responseText);
 				$('.cookiebox').css({ display:'flex', opacity:0, bottom:'-50px' }).animate({ opacity:1, bottom: 0 });
 				$('.cookiebox-btn').on('click', function(){
-					$.cookie('shimomura', 1, {expires: 180, path: '/'});
+					jQuery.cookie('shimomura', 1, {expires: 180, path: '/'});
 					$('.cookiebox').animate({ opacity:0, bottom:'-50px'}, 'normal', 'linear', function(){
 						$(this).hide();
 					});

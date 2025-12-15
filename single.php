@@ -12,7 +12,7 @@ Template Name: single
 </h1>
 <div class="container">
 <div class="breadcrumbs"><div class="container"><a href="/">TOP</a> &gt; 
-    <a href="/infomation/">インフォメーション</a> &gt; <?php the_title(); ?></div>
+    <a href="/infromation/">インフォメーション</a> &gt; <?php the_title(); ?></div>
     </div>
 <div class="row">
 	<div id="sideBar" class="col-xs-12 col-sm-3 col-md-3">

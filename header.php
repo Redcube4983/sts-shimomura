@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!doctype html>
+<html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta http-equiv="content-style-type" content="text/css">
-<meta http-equiv="content-script-type" content="text/javascript">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="高精度・高品質で世界をリードする大同グループのみがき棒鋼専門メーカー　下村特殊精工株式会社" />
-<meta name="keywords" content="下村特殊精工株式会社,シモムラ,快削鋼,ステンレス,快削ステンレス,工具鋼,研磨,引抜,特殊鋼,シャフト,金属,下村特殊精工,BIS,IS6603,ＢＩＳライセンス,非鉛,鉛フリー,Pb,残留応力" />
-<title>下村特殊精工株式会社　｜　高品質の快削ステンレス鋼・快削鋼・工具鋼の磨き棒鋼専門メーカー</title>
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/common/images/favicon.jpg">
 <link href="<?php echo get_template_directory_uri(); ?>/common/css/normalize.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri(); ?>/common/css/bootstrap.css" rel="stylesheet">
@@ -24,8 +19,10 @@
 <?php elseif (is_page()) : ?>
 		<?php if (is_page(array('characterprofile','process','quality-control','smk'))) : ?>
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/magnific-popup.css">
+		<?php  elseif (is_page(array('error','confilm','completion'))) : ?>
+			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contact01.css" />
 		<?php endif; ?>
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page.css" />
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page.css" />
         <?php
         // slug名のcssがあれば読み込む
         global $post;
@@ -46,11 +43,16 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/home.css" />
 <?php endif; ?>
 <link href="https://fonts.googleapis.com/css?family=Lora:400italic/" rel="stylesheet" type="text/css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <!--modify start-->
 <link href="<?php echo get_template_directory_uri(); ?>/common/css/modal.css" rel="stylesheet">
 <!--modify end-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
@@ -193,7 +195,7 @@
 				<?php endif; ?>
 			</div>
 			<div class="l-header__top--right rightBox">		
-				<a href="/" class="languagelink">日本語</a><a href="/en/" class="languagelink">English</a><a href="/cn/" class="languagelinkr">中文</a><a href="https://shimomuranet.daido.co.jp//" class="outLink">Web 受注システム</a><a class="contactlink" href="/contact/"><span>お問い合わせ</span></a>
+				<a href="/" class="languagelink">日本語</a><a href="/en/" class="languagelink">English</a><a href="/cn/" class="languagelinkr">中文</a><a href="https://shimomuranet.daido.co.jp/" target="_blank" class="outLink">Web 受注システム</a><a class="contactlink" href="/contact/"><span>お問い合わせ</span></a>
 			</div>
 			<button class="l-header__menu-btn js-sp-btnMenu">
 				<span class="l-header__menu-bar"></span>
@@ -205,7 +207,11 @@
 		<div class="navWrapper l-nav">
 			<nav class="gnav">
 				<ul class="gnav__list">
-					<li class="gnav__list__inner sp"><a class="gnav__link" href="/"><span>HOME</span></a></li>
+					<li class="gnav__list__inner sp">
+						<div class="gnav__list__inner__title-area single">
+							<a class="gnav__link" href="/"><span>HOME</span></a>
+						</div>
+					</li>
 					<li class="gnav__list__inner">
 						<div class="gnav__list__inner__title-area">
 							<a class="gnav__link" href="/company/"><span>会社案内</span></a>
@@ -220,7 +226,7 @@
 							<li class="gnav__child__inner"><a href="/company/quality/">品質環境方針</a></li>
 							<li class="gnav__child__inner"><a href="/company/iso/">ISOの取得について</a></li>
 							<li class="gnav__child__inner"><a href="/company/characterprofile/">マスコットキャラクター</a></li>
-							<li class="gnav__child__inner"><a href="/company/outline/?id=groupLink">大同特殊鋼グループ</a></li>
+							<li class="gnav__child__inner"><a href="/company/outline/#groupLink">大同特殊鋼グループ</a></li>
 						</ul>
 					</li>
 					<li class="gnav__list__inner">
@@ -242,8 +248,11 @@
 							<li class="gnav__child__inner"><a href="/products/catalogue/">製品カタログ</a></li>
 						</ul>
 					</li>
-					<li class="gnav__list__inner sp"><a class="gnav__link" href="/csr/environment/"><span>CSR活動 環境への取り組み</span></a></li>
-					<li class="gnav__list__inner"><a class="gnav__link" href="/global/"><span>グローバルネットワーク<span class="sp">｢シモムラ品質｣を世界へ</span></span></a></li>
+					<li class="gnav__list__inner">
+						<div class="gnav__list__inner__title-area single">
+							<a class="gnav__link" href="/global/"><span>グローバルネットワーク<span class="sp">｢シモムラ品質｣を世界へ</span></span></a>
+						</div>
+					</li>
 					<li class="gnav__list__inner">
 						<div class="gnav__list__inner__title-area">
 							<a class="gnav__link" href="/mono/"><span>シモムラのこだわり</span></a>
@@ -257,7 +266,17 @@
 							<li class="gnav__child__inner"><a href="/mono/sss/">シモムラ安全教室</a></li>
 						</ul>
 					</li>
-					<li class="gnav__list__inner"><a class="gnav__link" href="/sustainability/"><span>サスティナビリティ</span></a></li>
+					<li class="gnav__list__inner">
+						<div class="gnav__list__inner__title-area">
+							<a class="gnav__link" href="/sustainability/"><span>サスティナビリティ</span></a>
+							<span class="c-btn__arrow l-navList__item-title-arrow"></span>
+						</div>
+						<ul class="gnav__child">
+							<li class="gnav__child__inner"><a href="/sustainability/environment/">環境への取り組み</a></li>
+							<li class="gnav__child__inner"><a href="/sustainability/society/">社会への取り組み</a></li>
+							<li class="gnav__child__inner"><a href="/sustainability/governance/">ガバナンス強化</a></li>
+						</ul>
+					</li>
 					<li class="gnav__list__inner">
 						<div class="gnav__list__inner__title-area">
 							<a class="gnav__link" href="/recruit/"><span>採用情報</span></a>
@@ -273,9 +292,14 @@
 							<li class="gnav__child__inner"><a href="/recruit/contact/">エントリーフォーム</a></li>
 						</ul>
 					</li>
+					<li class="gnav__list__inner sp"><a class="gnav__link" href="https://shimomuranet.daido.co.jp//" target="_blank"><span>Web受注システム</span></a></li>
+					<li class="gnav__list__inner sp"><a class="gnav__link" href="/contact/"><span>お問い合わせ</span></a></li>
 					<li class="gnav__list__inner sp"><a class="gnav__link" href="/privacy-policy/"><span>プライバシーポリシー</span></a></li>
 					<li class="gnav__list__inner sp"><a class="gnav__link" href="/site-policy/"><span>サイトポリシー</span></a></li>
 				</ul>
+				<div class="sp__language">
+					<a href="/" class="languagelink">日本語</a><a href="/en/" class="languagelink">English</a><a href="/cn/" class="languagelink">中文</a>
+				</div>
 			</nav>
 		</div>
 	</header>

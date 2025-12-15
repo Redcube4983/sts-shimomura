@@ -1,4 +1,4 @@
-$(window).load(function () {
+$(window).on('load', function () {
 		hsize = $("h1 .img img").height();
 		$("h1.indexH1").css("height", hsize + "px");
 	});
@@ -16,7 +16,7 @@ $(function() {
 	})
 });
 // 保険
-$(window).load(function () {
+$(window).on('load', function () {
 	hsize = $(".img img").height();
 	$("h1.subH1").css("height", hsize + "px");
 });
@@ -31,12 +31,8 @@ $(function(){
 });
 
 
-// ツールチップ
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-})
 
-$(window).resize(function () {
+$(window).on('resize', function () {
 	hsize = $(".img img").height();
 	$("h1.subH1").css("height", hsize + "px");
 });
@@ -76,8 +72,8 @@ $(window).on('load resize', function () {
         
     } else {
       //open非表示の場合
-      $('.l-nav').css('display', '');
       $('body').removeClass('fixed').css('top', 0 + 'px');
+      
     }
    // サブメニュー開閉
     $('.l-navList__item-title-arrow').on('click', function () {
@@ -120,7 +116,6 @@ $(window).on('load resize', function () {
         if ($('.js-sp-btnMenu').hasClass("is-open")) {
         //open表示中の場合
         $('body').removeClass('fixed').css('top', 0 + 'px');
-		$('.l-header__menu-btn').removeClass('is-open');
 		$('.l-navList__item-title-arrow').removeClass('is-open');
 		$('.gnav__child').removeClass('is-open').css('display', '');
         } else {
@@ -179,18 +174,12 @@ $(function() {
         .animate({opacity: '1'}, fadeSpeed);
 });
 
-
-$(window).load(function() {
-    $('.cataBlock .box').tile();
-});
-
-
 $(function(){
   // 1回目のアクセス
   $("#loadingLayer").css("display","none");
-  if($.cookie("access") == undefined) {
+  if(jQuery.cookie("access") == undefined) {
     //最初にアクセスしたときにはここに書いたアニメーションのJSが動く
-    $.cookie("access","onece");
+    jQuery.cookie("access","onece");
     $("#loadingLayer").css("display","block");
     setTimeout(function() {
 			$('#loadingLayer').fadeOut(400);
@@ -200,25 +189,5 @@ $(function(){
     $("#loadingLayer").css("display","none");
         // 2回目以降は動かないようにする
   }
-});
-
-// モーダル youtube 停止
-$(function(){
-	$('a, .btn').click(function () { 
-	  var idname = $(this).attr('data-target'),
-	  	  myFrame = $(idname).find('iframe'),
-	      src = myFrame.attr('src');
-
-	  $(idname).on('shown.bs.modal', function () {
-		myFrame.attr('src', src + "?autoplay=1" );
-	  });
-			
-	  $(idname).on('hidden.bs.modal', function () {
-		// myFrame.removeAttr('src');
-		myFrame.attr('src', src);
-		$(idname).off('shown.bs.modal');
-		$(idname).off('hidden.bs.modal');
-	  });
-	});
 });
 

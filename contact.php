@@ -16,9 +16,8 @@ Template Name: contact
 		<div class="wrapper contactIndex">
         	<h2><span>Contact Us</span>どんなことでもお気軽にお問い合わせください。</h2>
             <div id="contactBlock">
-                <div class="container">
+                <div class="">
                     <div class="contactBox">
-
                     <table class="table table-striped">
                       <tbody>
                         <tr>
@@ -35,12 +34,11 @@ Template Name: contact
                           <td nowrap class="number">E-mail <strong style="color:#00A1FF"><a href="mailto:soumu@sts-shimomura.co.jp">soumu@sts-shimomura.co.jp</a></strong></td>
                         </tr>
                       </tbody>
-					</table>
-
-					<div class="commentBlock">
-                   	  <div class="box"><img src="images/tel.png">他の事業部へ電話にてお問い合わせの方は<a href="/company/location.html">こちら</a></div>
-                    	<div class="box"><img src="images/web.png">弊社はＷebにて見積りが出来ます。ご希望の方は<a href="/company/location.html"></a><a href="https://shimomuranet.daido.co.jp/ASP/GMWPA060.asp" target="_blank">こちら</a><a href="/company/location.html"></a></div>
-                    </div>
+					            </table>
+                      <div class="commentBlock">
+                        <div class="box"><img src="images/tel.png">他の事業部へ電話にてお問い合わせの方は<a href="/company/location.html">こちら</a></div>
+                        <div class="box"><img src="images/web.png">弊社はＷebにて見積りが出来ます。ご希望の方は<a href="/company/location.html"></a><a href="https://shimomuranet.daido.co.jp/ASP/GMWPA060.asp" target="_blank">こちら</a><a href="/company/location.html"></a></div>
+                     </div>
                     </div>
                 </div>
             </div>

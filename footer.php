@@ -16,7 +16,7 @@
 					<li class="c-icon__arrow--accent"><a href="/company/quality/">品質環境方針</a></li>
                     <li class="c-icon__arrow--accent"><a href="/company/iso/">ISOの取得について</a></li>
                     <li class="c-icon__arrow--accent"><a href="/company/characterprofile/">マスコットキャラクター</a></li>
-                    <li class="c-icon__arrow--accent"><a href="/company/outline/?id=groupLink">大同特殊鋼グループ</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/company/outline/#groupLink">大同特殊鋼グループ</a></li>
 				</ul>
 			</div>
 			<div class="l-footer__nav-block">
@@ -39,15 +39,10 @@
 				</ul>
 			</div>
 			<div class="l-footer__nav-block">
-				<div class="l-footer__nav-title-area">
-					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white towlines" href="/csr/environment/">CSR活動<br class="pc">環境への取り組み</a>
-				</div>
-				<div class="l-footer__nav-title-area">
+				<div class="l-footer__nav-title-area single">
 					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white towlines" href="/global/">グローバルネットワーク<br class="pc">｢シモムラ品質｣を世界へ</a>
 				</div>
-			</div>
-			<div class="l-footer__nav-block">
-				<div class="l-footer__nav-title-area">
+                <div class="l-footer__nav-title-area">
 					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/mono/">シモムラのこだわり</a>
 					<span class="c-btn__arrow l-footer__nav-title-arrow"></span>
 				</div>
@@ -58,12 +53,18 @@
 					<li class="c-icon__arrow--accent"><a href="/mono/smk/">SMK Project</a></li>
 					<li class="c-icon__arrow--accent"><a href="/mono/sss/">シモムラ安全教室</a></li>
 				</ul>
+			</div>
+			<div class="l-footer__nav-block">
                 <div class="l-footer__nav-title-area">
 					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/sustainability/">サスティナビリティ</a>
+                    <span class="c-btn__arrow l-footer__nav-title-arrow"></span>
 				</div>
-			</div>
-            <div class="l-footer__nav-block">
-				<div class="l-footer__nav-title-area">
+                <ul class="l-footer__nav-list">
+                    <li class="c-icon__arrow--accent"><a href="/sustainability/environment/">環境への取り組み</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/sustainability/society/">社会への取り組み</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/sustainability/governance/">ガバナンス強化</a></li>
+				</ul>
+                <div class="l-footer__nav-title-area">
 					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/recruit/">採用情報</a>
 					<span class="c-btn__arrow l-footer__nav-title-arrow"></span>
 				</div>
@@ -76,9 +77,19 @@
                     <li class="c-icon__arrow--accent"><a href="/recruit/qa/">よくあるご質問</a></li>
                     <li class="c-icon__arrow--accent"><a href="/recruit/contact/">エントリーフォーム</a></li>
 				</ul>
+			</div>
+            <div class="l-footer__nav-block">
+                <div class="l-footer__nav-title-area single">
+					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="https://shimomuranet.daido.co.jp//" target="_blank">Web受注システム</a>
+				</div>
                 <div class="l-footer__nav-title-area">
 					<a class="l-footer__nav-title l-footer__nav-title-parent c-icon__arrow--white" href="/contact/">お問い合わせ</a>
+                    <span class="c-btn__arrow l-footer__nav-title-arrow"></span>
 				</div>
+                <ul class="l-footer__nav-list">
+                    <li class="c-icon__arrow--accent"><a href="/contact01/">本社営業部</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/contact02/">工場業務部</a></li>
+				</ul>
 			</div>
 		</nav>
 
@@ -145,13 +156,43 @@
 <script src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.cookie.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/common/js/permission_cookie.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/common/js/bootstrap.min.js"></script> 
-<script src="<?php echo get_template_directory_uri(); ?>/common/js/smooth-scroll.min.js"></script> 
-<script src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.mousewheel-3.0.6.pack.js"></script> 
-<script src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.tile.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/common/js/custom.js"></script> 
-<!--modify start--> 
-<script src="<?php echo get_template_directory_uri(); ?>/common/js/modal.js"></script> 
-<!--modify end-->
+<script>
+    $(document).ready(function(){
+        //URLのハッシュ値を取得
+        var urlHash = location.hash;
+        var headerHeight = $('.l-header').outerHeight(); 
+        //ハッシュ値があればページ内スクロール
+        if(urlHash) {
+            //スクロールを0に戻す
+            $('body,html').stop().scrollTop(0);
+            setTimeout(function () {
+            //ロード時の処理を待ち、時間差でスクロール実行
+            scrollToAnker(urlHash) ;
+            }, 100);
+        }
+        
+        //通常のクリック時
+        $('a[href^="#"]').click(function() {
+            //ページ内リンク先を取得
+            var href= $(this).attr("href");
+            //リンク先が#か空だったらhtmlに
+            var hash = href == "#" || href == "" ? 'html' : href;
+            //スクロール実行
+            scrollToAnker(hash);
+            //リンク無効化
+            return false;
+        });
+        
+        // 関数：スムーススクロール
+        // 指定したアンカー(#ID)へアニメーションでスクロール
+        function scrollToAnker(hash) {
+            var target = $(hash);
+            var position = target.offset().top - headerHeight;
+            $('body,html').stop().animate({scrollTop:position}, 800);
+        }
+        })
+</script>
 <?php if (is_front_page()) : ?>
 <?php else : ?>
     <?php if (is_page('characterprofile')) : ?>
@@ -208,6 +249,12 @@ $(function(){
 	$('.sideMenu li a[href="'+url+'"]').parent().addClass('active');
 });
 </script> 
+<?php endif; ?>
+ <?php if( is_page(array('contact01','error'))): ?>
+  <script src="<?php echo get_template_directory_uri(); ?>/common/js/yubinbango.js" charset="UTF-8"></script>
+  <script>
+  document.querySelector('.mw_wp_form_input form').classList.add('h-adr');
+  </script>
 <?php endif; ?>
 <?php wp_footer(); ?>
 </body>
