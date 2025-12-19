@@ -1,6 +1,5 @@
 $(function(){
 	var myXml = new XMLHttpRequest();
-	var result = $(location).attr("href");
 	myXml.onreadystatechange = function() {
 		if ((myXml.readyState === 4) && (myXml.status === 200)) {
 			if (!jQuery.cookie('shimomura') || jQuery.cookie('shimomura') == '0') {
@@ -28,6 +27,6 @@ $(function(){
 			}
 		}
 	}
-	myXml.open("GET", result + "/wp-content/themes/shimomura/common/js/permission_cookie.txt", true);
+	myXml.open("GET", "/wp-content/themes/shimomura/common/js/permission_cookie.txt", true);
 	myXml.send();
 });
