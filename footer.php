@@ -11,12 +11,12 @@
 					<li class="c-icon__arrow--accent"><a href="/company/greeting/">代表挨拶</a></li>
 					<li class="c-icon__arrow--accent"><a href="/company/outline/">会社概要</a></li>
 					<li class="c-icon__arrow--accent"><a href="/company/history/">沿革</a></li>
-					<li class="c-icon__arrow--accent"><a href="/company/location//">国内事業所及び海外拠点</a></li>
+					<li class="c-icon__arrow--accent"><a href="/company/location/">国内事業所及び海外拠点</a></li>
 					<li class="c-icon__arrow--accent"><a href="/company/ethic/">企業倫理憲章</a></li>
 					<li class="c-icon__arrow--accent"><a href="/company/quality/">品質環境方針</a></li>
                     <li class="c-icon__arrow--accent"><a href="/company/iso/">ISOの取得について</a></li>
                     <li class="c-icon__arrow--accent"><a href="/company/characterprofile/">マスコットキャラクター</a></li>
-                    <li class="c-icon__arrow--accent"><a href="/company/outline/#groupLink">大同特殊鋼グループ</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/company/outline/#groupLink/">大同特殊鋼グループ</a></li>
 				</ul>
 			</div>
 			<div class="l-footer__nav-block">
@@ -35,7 +35,7 @@
 					<li class="c-icon__arrow--accent"><a href="/products/specification/">製品規格</a></li>
                     <li class="c-icon__arrow--accent"><a href="/products/stock/">在庫一覧</a></li>
 					<li class="c-icon__arrow--accent"><a href="/products/simulation/">鋼種シミュレーション</a></li>
-					<li class="c-icon__arrow--accent"><a href="/products/catalogue">製品カタログ</a></li>
+					<li class="c-icon__arrow--accent"><a href="/products/catalogue/">製品カタログ</a></li>
 				</ul>
 			</div>
 			<div class="l-footer__nav-block">

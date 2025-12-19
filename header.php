@@ -189,9 +189,9 @@
 			<div class="l-header__top--left leftBox">
 				<p>高品質の快削ステンレス鋼・快削鋼・工具鋼の磨き棒鋼専門メーカー</p>
 				<?php if (is_front_page()) : ?>
-					<h1 class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/site-logo.svg" alt="下村特殊精工会社" class="alpha"></a></h1>
+					<h1 class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/site-logo.svg" alt="下村特殊精工株式会社" class="alpha"></a></h1>
 				<?php else: ?>
-					<div class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/site-logo.svg" alt="下村特殊精工会社" class="alpha"></a></div>
+					<div class="logo"><a href="/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/site-logo.svg" alt="下村特殊精工株式会社" class="alpha"></a></div>
 				<?php endif; ?>
 			</div>
 			<div class="l-header__top--right rightBox">		
