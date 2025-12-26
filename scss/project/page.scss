@@ -80,14 +80,14 @@
 }
 
 
-#pages h1 { 
+#pages .indexH1 { 
 	width:100%;
 	text-align:center;
 	color:#FFF;
 	font-size:26px;
 	opacity:0; 
 }
-#pages h1 .img{
+#pages .indexH1 .img{
 	width: 150%;
 	left: 50%;
 	transform: translateX(-50%);
@@ -100,19 +100,59 @@
 	}		
 }
 
-#pages h1 .img img { width:100%;height:auto; }
+#pages .indexH1 .img img { width:100%;height:auto; }
 
-#pages h1 em {
+#pages .indexH1 em {
 	display: inline-block;
 	margin-top: 0;
 	margin-left: 8px;
 	font-size: 12px;
 	font-style:normal;
-	@media (min-width: 768px) {
+	@media (min-width: 1280px) {
 		display:block;
 		font-style:normal;
-		line-height: 1;
+		line-height: 1.4;
 		margin-left:0px;
+		font-size: 1.3rem;
+    	letter-spacing: 1px;
+	}
+}
+#pages .subH1 { 
+	width:100%;
+	text-align:center;
+	color:#FFF;
+	font-size:26px;
+	opacity:0; 
+}
+#pages .subH1 .img{
+	width: 150%;
+	left: 50%;
+	transform: translateX(-50%);
+	position:absolute;
+	z-index:1;
+	@media (min-width: 768px) {
+		width:100%; 
+		left: 0%;
+		transform: translateX(0%);
+	}		
+}
+
+#pages .subH1 .img img { width:100%;height:auto; }
+
+#pages .subH1 em {
+	display: inline-block;
+	margin-top: 0;
+	margin-left: 8px;
+	font-size: 12px;
+	font-style:normal;
+	letter-spacing: 2px;
+	@media (min-width: 1280px) {
+		display:block;
+		font-style:normal;
+		line-height: 1.4;
+		margin-left:0px;
+		font-size: 1.3rem;
+    	letter-spacing: 2px;
 	}
 }
 #pages h1.indexH1,
@@ -124,7 +164,15 @@
 	font-size:26px;
 	display: table;
 }
-
+#pages .indexH1,
+#pages .subH1 {
+	position:relative;
+	width:100%;
+	text-align:center;
+	color:#FFF;
+	font-size:26px;
+	display: table;
+}
 #pages h1.indexH1 .copy{
 	font-size: 16px;
 	text-shadow: 0px 2px 5px #000;
@@ -148,14 +196,118 @@
 	color:#FFF;
 	z-index:99;
 }
+#pages .indexH1 .copy{
+	font-size: 16px;
+	text-shadow: 0px 2px 5px #000;
+	top: -10px;
+	position:relative;
+	display: table-cell;
+	vertical-align: middle;
+	width:100%;
+	text-align:center;
+	color:#FFF;
+	z-index:99;
+	h1{
+		font-size: 16px;
+		display: inline;
+	}
+	h2{
+		font-size: 16px;
+		display: inline;
+	}
+}
+#pages .subH1 .copy {
+	font-size: 16px;
+	text-shadow: 0px 0px 10px #000;
+	position:relative;
+	display: table-cell;
+	vertical-align: middle;
+	width:100%;
+	text-align:center;
+	color:#FFF;
+	z-index:99;
+	h1{
+		font-size: 16px;
+		display: inline;
+	}
+	h2{
+		font-size: 16px;
+		display: inline;
+	}
+}
 @media (min-width: 768px) {
 	#pages h1.indexH1 .copy,
 	#pages h1.subH1 .copy {
 		padding:0 !important;
 		font-size:26px;
 	}
+	#pages .indexH1 .copy {
+		padding:0 !important;
+		h1{
+			font-size:2.6rem;
+			letter-spacing: 1rem;
+			line-height: 1.6;
+			display: inline;
+		}
+	}
+	#pages .subH1 .copy {
+		padding:0 !important;
+		h1{
+			font-size:2.6rem;
+			letter-spacing: 1rem;
+			line-height: 1.6;
+			display: inline;
+		}
+		h2{
+			font-size:2.6rem;
+			letter-spacing: 1rem;
+			line-height: 1.6;
+			display: inline;
+		}
+	}
+}
+@media (min-width: 1280px) {
+	#pages .indexH1 .copy {
+		padding:0 !important;
+		h1{
+			font-size:2.6rem;
+			letter-spacing: 1rem;
+			display: block;
+			line-height: 1.6;
+		}
+	}
+	#pages .subH1 .copy {
+		padding:0 !important;
+		h1{
+			font-size:2.6rem;
+			letter-spacing: 1rem;
+			display: block;
+			line-height: 1.6;
+		}
+		h2{
+			font-size:2.6rem;
+			letter-spacing: 1rem;
+			display: block;
+			line-height: 1.6;
+		}
+	}
 }
 #pages h1.subH1 .img{
+	width: 240%;
+	transform: translateX(-50%);
+	position:absolute;
+	left: 50%;
+	z-index:1;
+	@media (min-width: 768px) {
+		width: 200%;
+		transform: translateX(0%);
+		left: 0%;
+	}
+	@media (min-width: 1024px) {
+		width: 100%;
+	}
+}
+#pages .subH1 .img{
 	width: 240%;
 	transform: translateX(-50%);
 	position:absolute;
@@ -176,6 +328,7 @@
 #linkBlock h2 { padding:0 10px; }
 #linkBlock .box { margin:15px 0; }
 #linkBlock .imgBox { overflow:hidden; }
+#linkBlock .imgBox.border { border: 1px solid #666;}
 #linkBlock .imgBox img {
 							height: auto;
 							-webkit-transition:all 0.4s ease-in-out;
@@ -438,7 +591,12 @@
 
 
 
-.information .infoContent { margin-top:20px; }
+.information .infoContent { 
+	margin-top:20px; 
+	@media (min-width: 1024px){
+		padding: 0 20px;
+	}
+}
 .informationIndex { padding:0 0 0 40px !important; }
 #infoBlock .container{ width:auto;padding:0; }
 #infoBlock .infoBox { background:#FFF; }

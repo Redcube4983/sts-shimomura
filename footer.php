@@ -250,7 +250,7 @@ $(function(){
 });
 </script> 
 <?php endif; ?>
- <?php if( is_page(array('contact01','error'))): ?>
+ <?php if( is_page(array('contact01','error','contact02'))): ?>
   <script src="<?php echo get_template_directory_uri(); ?>/common/js/yubinbango.js" charset="UTF-8"></script>
   <script>
   document.querySelector('.mw_wp_form_input form').classList.add('h-adr');

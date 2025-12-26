@@ -6,13 +6,13 @@ Template Name: single
 <?php get_header(); ?>
 <main>
 <section id="pages" class="information">
-<h1 class="indexH1">
+<div class="subH1">
 	<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/information/page_ttl_bg.jpg" class="img-responsive block-center"></div>
-	<div class="copy">インフォメーション<em>Information</em></div>
-</h1>
+	<div class="copy"><h2>インフォメーション</h2><em>Information</em></div>
+</div>
 <div class="container">
 <div class="breadcrumbs"><div class="container"><a href="/">TOP</a> &gt; 
-    <a href="/infromation/">インフォメーション</a> &gt; <?php the_title(); ?></div>
+    <a href="/information/">インフォメーション</a> ＞ <?php the_title(); ?></div>
     </div>
 <div class="row">
 	<div id="sideBar" class="col-xs-12 col-sm-3 col-md-3">
@@ -33,6 +33,10 @@ Template Name: single
                         <?php while (have_posts()) : the_post(); ?>
                         <time><?php the_date('Y.m.d'); ?></time>
                         <?php the_content(); ?>
+                            <?php if( get_field('pdf') ):?>
+                                <a href="<?php the_field('pdf');?>" target="_blank"><?php the_title(); ?></a>
+                            <?php else: ?>
+                            <?php endif; ?>
                         <?php endwhile; ?>
                     <?php else: ?>
                     <!-- 投稿が無い場合の処理 -->

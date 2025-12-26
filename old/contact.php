@@ -8,7 +8,7 @@ Template Name: contact
 <h1 class="indexH1">
 	<div class="img"><img src="images/ttl_bg.jpg" class="img-responsive block-center"></div>
 	<div class="copy">お問い合わせ<em>Contact US</em></div>
-	<div class="breadcrumbs"><div class="container"><a href="/">TOP</a> > お問い合わせ</div></div>
+	<?php get_breadcrumb(); ?>
 </h1>
 <div class="container contactContet">
 <div class="row">

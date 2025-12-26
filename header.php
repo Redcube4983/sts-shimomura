@@ -53,13 +53,17 @@
 <link href="<?php echo get_template_directory_uri(); ?>/common/css/modal.css" rel="stylesheet">
 <!--modify end-->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
 
-	gtag('config', '');
-	</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-75H6JYFR86"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-75H6JYFR86');
+</script>
+
 <?php wp_head(); ?>
 </head>
 
@@ -195,7 +199,7 @@
 				<?php endif; ?>
 			</div>
 			<div class="l-header__top--right rightBox">		
-				<a href="/" class="languagelink">日本語</a><a href="/en/" class="languagelink">English</a><a href="/cn/" class="languagelinkr">中文</a><a href="https://shimomuranet.daido.co.jp/" target="_blank" class="outLink">Web 受注システム</a><a class="contactlink" href="/contact/"><span>お問い合わせ</span></a>
+				<a href="/en/" class="languagelink">English</a><a href="/cn/" class="languagelinkr">中文</a><a href="https://shimomuranet.daido.co.jp/" target="_blank" class="outLink">Web 受注システム</a><a class="contactlink" href="/contact/"><span>お問い合わせ</span></a>
 			</div>
 			<button class="l-header__menu-btn js-sp-btnMenu">
 				<span class="l-header__menu-bar"></span>
@@ -298,7 +302,7 @@
 					<li class="gnav__list__inner sp"><a class="gnav__link" href="/site-policy/"><span>サイトポリシー</span></a></li>
 				</ul>
 				<div class="sp__language">
-					<a href="/" class="languagelink">日本語</a><a href="/en/" class="languagelink">English</a><a href="/cn/" class="languagelink">中文</a>
+					<a href="/en/" class="languagelink">English</a><a href="/cn/" class="languagelink">中文</a>
 				</div>
 			</nav>
 		</div>

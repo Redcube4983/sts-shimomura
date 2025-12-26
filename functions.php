@@ -59,6 +59,9 @@ function get_infomation() {
 function get_LocalNavi() {
 	get_template_part('parts/LocalNavi');
 }
+function get_breadcrumb() {
+	get_template_part('parts/breadcrumb');
+}
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -122,79 +125,79 @@ function my_exam_validation_rule( $Validation, $data, $Data ) {
 	if ( $title === '本社営業部へのお問い合わせ' ) {
 	// ラベル一覧（name属性 → 日本語名）
 	$labels = [
-    'company'           => '会社団体名・部署名',
+    	'company'           => '会社団体名・部署名',
 		'name_sei'           => '姓',
 		'name_mei'           => '名',
 		'kana_sei'      => 'セイ',
 		'kana_mei'      => 'メイ',	
-    'select_year'	=> '年',
+    	'select_year'	=> '年',
 		'select_month'	=> '月',
 		'select_day'	=> '日',
-    'address_zip'     => '郵便番号',
+    	'address_zip'     => '郵便番号',
 		'address_prefecture'     => '都道府県',
 		'address_city'     => '市区町村',
 		'address_street'     => '番地',
 		'mail'               => 'メールアドレス',
 		'mail_check'         => 'メールアドレス確認用',
 		'tel'                => '電話番号',
-    'request'                => 'お問い合わせ内容',
+    	'request'                => 'お問い合わせ内容',
 	];
 	$required = [
-    'company',
+    	'company',
 		'name_sei',
 		'name_mei',
 		'kana_sei',
 		'kana_mei',
-    'select_year',
-    'select_month',
-    'select_day',
-    'address_zip',
+		'select_year',
+		'select_month',
+		'select_day',
+		'address_zip',
 		'address_prefecture',
 		'address_city',
-    'address_street',
+   		'address_street',
 		'mail',
 		'mail_check',
 		'tel',
-    'request',
+    	'request',
 	];
 	}
   if ( $title === '工場業務部へのお問い合わせ' ) {
 	// ラベル一覧（name属性 → 日本語名）
 	$labels = [
-    'company'           => '会社団体名・部署名',
+    	'company'           => '会社団体名・部署名',
 		'name_sei'           => '姓',
 		'name_mei'           => '名',
 		'kana_sei'      => 'セイ',
 		'kana_mei'      => 'メイ',	
-    'select_year'	=> '年',
+    	'select_year'	=> '年',
 		'select_month'	=> '月',
 		'select_day'	=> '日',
-    'address_zip'     => '郵便番号',
+    	'address_zip'     => '郵便番号',
 		'address_prefecture'     => '都道府県',
 		'address_city'     => '市区町村',
 		'address_street'     => '番地',
 		'mail'               => 'メールアドレス',
 		'mail_check'         => 'メールアドレス確認用',
 		'tel'                => '電話番号',
-    'request'                => 'お問い合わせ内容',
+    	'request'                => 'お問い合わせ内容',
 	];
 	$required = [
-    'company',
+    	'company',
 		'name_sei',
 		'name_mei',
 		'kana_sei',
 		'kana_mei',
-    'select_year',
-    'select_month',
-    'select_day',
-    'address_zip',
+		'select_year',
+		'select_month',
+		'select_day',
+		'address_zip',
 		'address_prefecture',
 		'address_city',
-    'address_street',
+    	'address_street',
 		'mail',
 		'mail_check',
 		'tel',
-    'request',
+    	'request',
 	];
 	}
 

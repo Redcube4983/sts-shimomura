@@ -6,11 +6,11 @@ Template Name: home
 <?php get_header(); ?>
 <main>
 <section id="pages" class="information indexPage">
-<h1 class="indexH1">
+<div class="indexH1">
 	<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/information/ttl_bg.jpg" class="img-responsive block-center"></div>
-	<div class="copy">インフォメーション<em>Information</em></div>
-	<div class="breadcrumbs"><div class="container"><a href="/">TOP</a> &gt; インフォメーション</div></div>
-</h1>
+	<div class="copy"><h1>インフォメーション</h1><em>Information</em></div>
+    <?php get_breadcrumb(); ?>
+</div>
 <div class="container infoContent">
 <div class="row">
 	<div id="sideBar" class="col-xs-12 col-sm-3 col-md-3">

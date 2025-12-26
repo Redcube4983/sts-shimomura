@@ -162,8 +162,8 @@ span.slicknav_menutxt { display:none; }
 
 
 
-#sideBar h2 { background:#000;color:#FFF;font-size:15px;padding:15px 20px; }
-#sideBar h2 a { color:#FFF; }
+#sideBar h2 { background:#000;color:#FFF;font-size:15px;}
+#sideBar h2 a { color:#FFF; padding:15px 20px; display: block; }
 #sideBar li  { margin:0 ;padding:0; }
 #sideBar li a { display:block;text-decoration:none;color:#333;background: url(../common/images/side_list.png) no-repeat center left  #EEE;padding:15px 0 15px 30px;border-bottom:1px dotted #B4B4B4; }
 #sideBar li a:hover { background: url(../common/images/side_list.png) no-repeat center left  #FFF; }
@@ -200,7 +200,7 @@ span.slicknav_menutxt { display:none; }
 		margin:0 0 50px 0;
 	}
 }
-	#pageContents h2 {
+#pageContents h2 {
 		margin:30px 0 20px 0;
 		font-size: 1.5rem;
 		margin:0 0 10px 0;
@@ -210,7 +210,7 @@ span.slicknav_menutxt { display:none; }
 		@media (min-width: 768px){
 			font-size:2.3rem;
 		}
-	}
+}
 #pageContents h2 span { 
 	font-size:1.1rem;
 	font-family: 'Lora', serif; 
@@ -222,7 +222,28 @@ span.slicknav_menutxt { display:none; }
 		font-family: 'Lora', serif;
 	}
 }
-
+#pageContents h1 {
+		margin:30px 0 20px 0;
+		font-size: 1.5rem;
+		margin:0 0 10px 0;
+		border-bottom:2px solid #00A1FF;
+		display:block;
+		padding:0 0 10px 0;
+		@media (min-width: 768px){
+			font-size:2.3rem;
+		}
+}
+#pageContents .title-en { 
+	font-size:1.1rem;
+	font-family: 'Lora', serif; 
+	color:#00A1FF;
+	padding:0 0 5px 0; 
+	display:block;
+	@media (min-width: 768px){
+		font-size:1.2rem;
+		font-family: 'Lora', serif;
+	}
+}
 #pageContents h3 { 
 	font-size:14px;
 	margin:15px 0; 

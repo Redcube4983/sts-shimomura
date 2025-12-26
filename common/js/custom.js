@@ -1,10 +1,10 @@
 $(window).on('load', function () {
-		hsize = $("h1 .img img").height();
-		$("h1.indexH1").css("height", hsize + "px");
+		hsize = $(".indexH1 .img img").height();
+		$(".indexH1").css("height", hsize + "px");
 	});
 	$(window).resize(function () {
-		  hsize = $("h1 .img img").height();
-		  $("h1.indexH1").css("height", hsize + "px");
+		  hsize = $(".indexH1 .img img").height();
+		  $(".indexH1").css("height", hsize + "px");
 	});
 
 
@@ -12,13 +12,13 @@ $(window).on('load', function () {
 $(function() {
 	$(".img img").on('load', function(){
 		var hsize = $(this).height();
-		$("h1.subH1").css("height", hsize + "px");
+		$(".subH1").css("height", hsize + "px");
 	})
 });
 // 保険
 $(window).on('load', function () {
 	hsize = $(".img img").height();
-	$("h1.subH1").css("height", hsize + "px");
+	$(".subH1").css("height", hsize + "px");
 });
 
 // ボタン透過
@@ -30,12 +30,11 @@ $(function(){
   });
 });
 
-
-
 $(window).on('resize', function () {
 	hsize = $(".img img").height();
-	$("h1.subH1").css("height", hsize + "px");
+	$(".subH1").css("height", hsize + "px");
 });
+
 jQuery(function ($) {
   var scrollPos;//グローバルで初期かしておかないと上にもどっちゃう
   $('.js-sp-btnMenu').on('click', function () {
@@ -148,11 +147,16 @@ $(window).on('load resize', function () {
 // ページ読込遅延
 $(function() {
     var fadeSpeed = 600;
-    $('#pages h1')
+    $('#pages .indexH1')
         .css({opacity: '0.0'})
         .animate({opacity: '1'}, fadeSpeed);
 });
-
+$(function() {
+    var fadeSpeed = 600;
+    $('#pages .subH1')
+        .css({opacity: '0.0'})
+        .animate({opacity: '1'}, fadeSpeed);
+});
 $(function() {
     var fadeSpeed = 800;
     $('#pageContents')
