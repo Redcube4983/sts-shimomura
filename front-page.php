@@ -37,7 +37,7 @@ Template Name: front-page
 			<a class="slider__textArea" href="/company/characterprofile/">
 				<h2 class="slider__title__en">Jumping into the Future</h2>
 				<h3 class="slider__title">創業100周年に向かって。</h3>
-				<p class="slider__text">下村特殊精工は2016年6月に創業75周年を迎えました。<br>これからも「シモムラブランド」という最高品質を世界に提供し続け、<br>創業１００周年に向かって日々進化して参ります。</p>
+				<p class="slider__text">下村特殊精工は2021年6月に創業80周年を迎えました。<br>これからも「シモムラブランド」という最高品質を世界に提供し続け、<br>創業１００周年に向かって日々進化して参ります。</p>
 				<span class="slider__block">公式マスコットキャラクター誕生</span>
 			</a>
 		</div>

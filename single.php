@@ -41,6 +41,26 @@ Template Name: single
                     <?php else: ?>
                     <!-- 投稿が無い場合の処理 -->
                     <?php endif; ?>
+                    <div class="p-pager animate-fade">
+                        <?php // 現在の投稿に隣接している前後の投稿を取得する
+                        $prev_post = get_previous_post(); // 前の投稿を取得
+                        $next_post = get_next_post(); // 次の投稿を取得
+                        if( $prev_post || $next_post ): // どちらか一方があれば表示
+                        ?>
+                        <nav class="p-page-nav">
+                        <?php if( $prev_post ): // 前の投稿があれば表示 ?>
+                        <div class="p-pager__inner">
+                        <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="prev-link">≪ PREV</a>
+                        </div>
+                        <?php endif; ?>
+                        <?php if( $next_post ): // 次の投稿があれば表示 ?>
+                        <div class="p-pager__inner">
+                        <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="next-link">NEXT ≫</a>
+                        </div>
+                        <?php endif; ?>
+                        </nav>
+                        <?php endif; ?>
+                    </div>
 			    </div>
 				</div>
 			</div>

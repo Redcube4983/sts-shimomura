@@ -107,7 +107,12 @@ footer a,footer a:hover { color:#FFF; }
 		@media screen and (min-width: 768px) {
 			width: calc(100% - 60px);
 		}
-		&.c-icon__arrow--white::before { left: 10px; }
+		&.c-icon__arrow--white::before { 
+			left: 10px; 
+			transform: rotate(45deg) translate(0%, -70%);
+			bottom: auto;
+			top: 50%;
+		}
 
 		@media screen and (min-width: 1024px) {
 			color: #fff;
