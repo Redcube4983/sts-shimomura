@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* CSS Document */
+@use '../global' as *;
+.indexPage #pageContents .wrapper {
+    padding: 0 0 0 0;
+    @media (min-width: 1024px) {
+        padding: 0 0 0 40px;
+    }
+}
+#sideBar{
+    margin-top: 30px;
+}
+.indexPage .breadcrumbs .container {
+    @media (min-width: 1024px) {
+        padding: 0;
+    }
+}
+#pageContents{
+    h2 {
+        margin: 30px 0 0 0;
+        font-size: 1.5rem;
+        margin: 00;
+        border-bottom: 0px solid #00a1ff;
+        display: block;
+        padding: 0;
+        @media (min-width: 768px) {
+            font-size: 2.3rem;
+        }
+    }
+    p {
+        margin: 0;
+        line-height: 1.8;
+    }
+    .leadBox {
+        font-size: 1.8rem;
+        margin: 20px 0 15px;
+        @media (min-width: 768px) {
+            font-size: 2.3rem;
+            margin: 30px 0px 20px;
+        }
+     }
+     .copyBox {
+        margin: 10px 0px;
+    }
+    .blueBgArea{
+        margin: 0 0 60px;
+        background-color: $main-color;
+        color: $white;
+    }
+}
