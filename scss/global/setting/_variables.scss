@@ -1,0 +1,14 @@
+@charset "utf-8";
+@use "sass:map";
+/* CSS Document */
+
+$triangles: (
+  top: polygon(50% 0, 100% 100%, 0 100%),
+  bottom: polygon(0 0, 100% 0, 50% 100%),
+  right: polygon(0 0, 100% 50%, 0 100%),
+  left: polygon(0 50%, 100% 0, 100% 100%),
+  lower-left: polygon(0 0, 100% 100%, 0 100%),
+  upper-left: polygon(0 0, 100% 0, 0 100%),
+  lower-right: polygon(100% 0, 100% 100%, 0 100%),
+  upper-right: polygon(0 0, 100% 0, 100% 100%)
+);

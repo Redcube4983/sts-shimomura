@@ -25,13 +25,11 @@ Template Name: contact
                           <th colspan="3">下村特殊精工株式会社</th>
                         </tr>
                         <tr>
-                          <td class="name">本社営業部</td>
-                          <td nowrap class="form"><a href="/contact01/">お問い合わせフォーム</a></td>
+                          <td nowrap class="form"><a href="/contact01/">営業部へのお問い合わせ</a></td>
                           <td nowrap class="number">TEL <strong>047-321-3821</strong></td>
                         </tr>
                         <tr>
-                          <td class="name">工場業務部</td>
-                          <td nowrap class="form"><a href="/contact02/">お問い合わせフォーム</a></td>
+                          <td nowrap class="form"><a href="/contact02/">その他のお問い合わせ</a></td>
                           <td nowrap class="number">TEL <strong>0479-80-7210</strong></td>
                         </tr>
                       </tbody>

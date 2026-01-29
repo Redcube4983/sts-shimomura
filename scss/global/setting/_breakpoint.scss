@@ -1,3 +1,4 @@
+@use "sass:map";
 // レイアウト幅
 $layout-width-canvas: 1440px;
 $layout-width-container: 1140px;
@@ -15,13 +16,11 @@ $breakpoints: (
 
 //メディアクエリー
 $mediaquerys: (
-  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
-  under-md: "screen and (max-width: #{map-get($breakpoints,'md') - 1}px)",
-  only-md: "screen and (min-width: #{map-get($breakpoints,'md') + 1}px) and (max-width: #{map-get($breakpoints,'lg') - 1}px)",
-  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
-  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
-  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
-  xxl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+  sm: "screen and (min-width: #{map.get($breakpoints,'sm')}px)",
+  md: "screen and (min-width: #{map.get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map.get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map.get($breakpoints,'xl')}px)",
+  xxl: "screen and (min-width: #{map.get($breakpoints,'xl')}px)",
 );
 
 // ヘッダー高さ

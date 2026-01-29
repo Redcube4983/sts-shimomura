@@ -1,9 +1,11 @@
 @use "../setting/color" as *;
 @use "../setting/breakpoint" as *;
+@use "../setting/variables" as *;
+@use "sass:map";
 
 // メディアクエリー -------------------------------------------------------------------
 @mixin mq($mediaquery: md) {
-  @media #{map-get($mediaquerys, $mediaquery)} {
+  @media #{map.get($mediaquerys, $mediaquery)} {
     @content;
   }
 }
@@ -127,3 +129,8 @@ $k02: #4d4d4d;
 $k03: #251e1c;
 $b01: #4275d4;
 $b02: #dfecf7;
+
+
+@mixin triangle($direction) {
+  clip-path: map.get($triangles, $direction);
+}

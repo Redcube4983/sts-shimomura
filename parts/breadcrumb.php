@@ -1,26 +1,53 @@
 <?php
-// 現在のページ情報を取得
 $post = get_queried_object();
-// 祖先ページのIDを取得
 $ancestors = get_post_ancestors($post->ID);
-if ($ancestors) {
-    echo '<div class="breadcrumbs">';
-    // ホーム（トップページ）へ戻るリンク
-    echo '<a href="' . esc_url(home_url('/')) . '">TOP</a> ＞ ';
-    // 祖先ページを逆順（親→子）で表示
-    $ancestors = array_reverse($ancestors);
-    foreach ($ancestors as $ancestor_id) {
-        $page = get_post($ancestor_id);
-        echo '<a href="' . esc_url(get_permalink($page->ID)) . '">' . esc_html($page->post_title) . '</a> ＞ ';
-    }
-    // 現在のページを表示
-    echo esc_html($post->post_title);
-    echo '</div>';
+
+// sustainability ページID
+$sustainability = get_page_by_path('sustainability');
+$sustainability_id = $sustainability ? $sustainability->ID : 0;
+
+// container を使うか
+$use_container = false;
+
+// ① TOPレベルページ
+if ( empty($ancestors) ) {
+	$use_container = true;
+}
+
+// ② sustainability 配下（自身含む）
+if ( $sustainability_id && ( is_page('sustainability') || in_array($sustainability_id, $ancestors) ) ) {
+	$use_container = true;
+}
+
+// breadcrumbs 開始
+if ( $use_container ) {
+	echo '<div class="breadcrumbs"><div class="container">';
 } else {
-    // 親ページがない（トップレベル）の場合はホームのみ表示
-    echo '<div class="breadcrumbs"><div class="container">';
-    echo '<a href="' . esc_url(home_url('/')) . '">TOP</a> ＞ ';
-    echo esc_html($post->post_title) ;
-    echo '</div></div>';
+	echo '<div class="breadcrumbs">';
+}
+
+// ===== パンくず本体 =====
+echo '<a href="' . esc_url(home_url('/')) . '">TOP</a> ＞ ';
+
+if ($ancestors) {
+
+	$ancestors = array_reverse($ancestors);
+	foreach ($ancestors as $ancestor_id) {
+		$page = get_post($ancestor_id);
+		echo '<a href="' . esc_url(get_permalink($page->ID)) . '">' . esc_html($page->post_title) . '</a> ＞ ';
+	}
+
+	echo esc_html($post->post_title);
+
+} else {
+
+	echo esc_html($post->post_title);
+}
+
+// 閉じ
+if ( $use_container ) {
+	echo '</div></div>';
+} else {
+	echo '</div>';
 }
 ?>

@@ -50,6 +50,12 @@ a[href]:after {
 .indent {   padding-left: 1em;  text-indent: -1em; }
 table th { white-space: nowrap !important; }
 
+.mfp-bg {
+  z-index: 10000;
+}
+.mfp-wrap {
+  z-index: 10000;
+}
 main {
   overflow-x: hidden;
 }

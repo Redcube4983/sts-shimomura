@@ -27,7 +27,7 @@
 	<li><a href="/products/catalogue/">製品カタログ</a></li>
 </ul>
 <?php elseif (is_page(array('sustainability','environment','society','governance'))) : ?>
-<h2><a href="/sustainability/">サスティナビリティ</a></h2>
+<h2><a href="/sustainability/">サステナビリティ</a></h2>
 <ul class="sideMenu">
 	<li><a href="/sustainability/environment/">環境への取り組み</a></li>
 	<li><a href="/sustainability/society/">社会への取り組み</a></li>

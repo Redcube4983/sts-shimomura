@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page.css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/home.css" />
 <?php elseif (is_page()) : ?>
-		<?php if (is_page(array('characterprofile','process','quality-control','smk'))) : ?>
+		<?php if (is_page(array('characterprofile','process','quality-control','smk','sustainability'))) : ?>
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/common/css/magnific-popup.css">
 		<?php  elseif (is_page(array('error','confilm','completion'))) : ?>
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contact01.css" />
@@ -272,7 +272,7 @@
 					</li>
 					<li class="gnav__list__inner">
 						<div class="gnav__list__inner__title-area">
-							<a class="gnav__link" href="/sustainability/"><span>サスティナビリティ</span></a>
+							<a class="gnav__link" href="/sustainability/"><span>サステナビリティ</span></a>
 							<span class="c-btn__arrow l-navList__item-title-arrow"></span>
 						</div>
 						<ul class="gnav__child">

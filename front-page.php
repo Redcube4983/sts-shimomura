@@ -11,9 +11,9 @@ Template Name: front-page
       <div class="swiper-slide">
 		<a class="swiper-link" href="/products/leadfree/">
 			<picture>
-				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_09_bg.jpg" type="image/jpg">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_09n.jpg" type="image/jpg">
-				<img src="<?php echo get_template_directory_uri(); ?>/common/images/main_09_bg.jpg" alt="" class="mainImg img-responsive mainImg">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/main_09_bg.jpg" type="image/jpg">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/sp_main_09n.jpg" type="image/jpg">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/main_09_bg.jpg" alt="" class="mainImg img-responsive mainImg">
 			</picture>
 		</a>
 		<div class="copyWrapper">
@@ -26,28 +26,29 @@ Template Name: front-page
 		</div>
       </div>
       <div class="swiper-slide">
-        <a class="swiper-link" href="/company/characterprofile/">
+        <a class="swiper-link" href="/global/">
 			<picture>
-				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_07_bg_80ver.jpg" type="image/jpg">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_07n.jpg" type="image/jpg">
-				<img src="<?php echo get_template_directory_uri(); ?>/common/images/main_07_bg_80ver.jpg" alt="" class="mainImg img-responsive mainImg">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/main_02_bg.jpg" type="image/jpg">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/sp_main_02n.jpg" type="image/jpg">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/main_02_bg.jpg" alt="" class="mainImg img-responsive mainImg">
 			</picture>	
 		</a>
 		<div class="copyWrapper">
-			<a class="slider__textArea" href="/company/characterprofile/">
-				<h2 class="slider__title__en">Jumping into the Future</h2>
-				<h3 class="slider__title">創業100周年に向かって。</h3>
-				<p class="slider__text">下村特殊精工は2021年6月に創業80周年を迎えました。<br>これからも「シモムラブランド」という最高品質を世界に提供し続け、<br>創業１００周年に向かって日々進化して参ります。</p>
-				<span class="slider__block">公式マスコットキャラクター誕生</span>
+			<a class="slider__textArea" href="/global/">
+				<h2 class="slider__title__en">Global Network</h2>
+				<h3 class="slider__title">「シモムラ品質」を世界へ。</h3>
+				<p class="slider__text">国内工場と同等の生産環境を海外に構築。日本と同じ品質レベルの製品供給を実現し、<br>「シモムラ品質」の製品とサービスを、世界中のお客様にお届けしています。</p>
+				<span class="slider__block">グローバルネットワーク</span>
 			</a>
 		</div>
+		<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/global-image.jpg" alt="" class="global-image">
       </div>
       <div class="swiper-slide">
         <a class="swiper-link" href="/company/">
 			<picture>
-				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_01_bg.jpg" type="image/jpg">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_01n.jpg" type="image/jpg">
-				<img src="<?php echo get_template_directory_uri(); ?>/common/images/main_01_bg.jpg" alt="" class="mainImg img-responsive mainImg">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/main_01_bg.jpg" type="image/jpg">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/sp_main_01n.jpg" type="image/jpg">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/main_01_bg.jpg" alt="" class="mainImg img-responsive mainImg">
 			</picture>	
 		</a>
 		<div class="copyWrapper">
@@ -62,9 +63,9 @@ Template Name: front-page
       <div class="swiper-slide">
         <a class="swiper-link" href="/mono/smk/">
 			<picture>
-				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_04_bg.jpg" type="image/jpg">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_04n.jpg" type="image/jpg">
-				<img src="<?php echo get_template_directory_uri(); ?>/common/images/main_04_bg.jpg" alt="" class="mainImg img-responsive mainImg">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/main_04_bg.jpg" type="image/jpg">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/sp_main_04n.jpg" type="image/jpg">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/main_04_bg.jpg" alt="" class="mainImg img-responsive mainImg">
 			</picture>	
 		</a>
 		<div class="copyWrapper">
@@ -76,21 +77,30 @@ Template Name: front-page
 			</a>
 		</div>
       </div>
-      <div class="swiper-slide">
-        <a class="swiper-link" href="//kenja.jp/8144_20180724" target="_blank">
+	  <div class="swiper-slide">
+        <a class="swiper-link" href="/sustainability/">
 			<picture>
-				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/main_08_bg.png" type="image/png">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_main_08.png" type="image/png">
-				<img src="<?php echo get_template_directory_uri(); ?>/common/images/main_08_bg.png" alt="" class="mainImg img-responsive mainImg">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/main_05_bg.jpg" type="image/jpg">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/sp_main_05n.jpg" type="image/jpg">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/main_05_bg.jpg" alt="" class="mainImg img-responsive mainImg">
 			</picture>	
 		</a>
-      </div>
+		<div class="copyWrapper">
+			<a class="slider__textArea" href="/sustainability/">
+				<h2 class="slider__title__en">Sustainability</h2>
+				<h3 class="slider__title">サステナブルな社会の実現をめざして。</h3>
+				<p class="slider__text">地球社会の一員として、サステナブルな社会の実現をめざして事業活動を展開、<br>会社の持続的な成長に向けてサステナビリティ経営を推進しています。</p>
+				<span class="slider__block">サステナビリティ</span>
+			</a>
+		</div>
+		<p class="sustainability-text">下村特殊精工が環境保全活動を支援している北海道クッチャロ湖</p>
+      </div>   
       <div class="swiper-slide">
         <a class="swiper-link" href="/recruit/">
 			<picture>
-				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/common/images/mainvisual.jpg" type="image/png">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/common/images/sp_slideimage_n.jpg" type="image/png">
-				<img src="<?php echo get_template_directory_uri(); ?>/common/images/mainvisual.jpg" alt="" class="mainImg img-responsive mainImg">
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/mainvisual.jpg" type="image/png">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/sp_slideimage_n.jpg" type="image/png">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/mainvisual.jpg" alt="" class="mainImg img-responsive mainImg">
 			</picture>	
 		<div class="copyWrapper">
 			<a class="slider__textArea" href="/recruit/">
@@ -109,22 +119,22 @@ Template Name: front-page
   <div thumbsSlider="" class="swiper mySwiper2">
     <div class="swiper-wrapper">
 		<li class="swiper-slide">
-			<img src="<?php echo get_template_directory_uri(); ?>/common/images/slici_nav_09.jpg" class="img-responsive alpha"><span>非鉛快削鋼シリーズ</span>
+			<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/slici_nav_09.jpg" class="img-responsive alpha"><span>非鉛快削鋼シリーズ</span>
 		</li>
 		<li class="swiper-slide">
-		<img src="<?php echo get_template_directory_uri(); ?>/common/images/slici_nav_07_80ver.jpg" class="img-responsive alpha"><span>創業８０周年</span>
+		<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/slici_nav_02.jpg" class="img-responsive alpha"><span>グローバルネットワーク</span>
 		</li>
 		<li class="swiper-slide">
-		<img src="<?php echo get_template_directory_uri(); ?>/common/images/slici_nav_01.jpg" class="img-responsive alpha"><span>下村特殊精工について</span>
+		<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/slici_nav_01.jpg" class="img-responsive alpha"><span>下村特殊精工について</span>
 		</li>
 		<li class="swiper-slide">
-		<img src="<?php echo get_template_directory_uri(); ?>/common/images/slici_nav_04.jpg" class="img-responsive alpha"><span>SMK PROJECT</span>
+		<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/slici_nav_04.jpg" class="img-responsive alpha"><span>SMK PROJECT</span>
 		</li>
 		<li class="swiper-slide">
-		<img src="<?php echo get_template_directory_uri(); ?>/common/images/slici_nav_08.png" class="img-responsive alpha"><span>賢者の選択&nbsp;Leaders</span>
+		<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/slici_nav_05.jpg" class="img-responsive alpha"><span>サステナビリティ</span>
 		</li>
 		<li class="swiper-slide">
-		<img src="<?php echo get_template_directory_uri(); ?>/common/images/front_image.jpg" class="img-responsive alpha"><span>採用情報</span>
+		<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/front_image.jpg" class="img-responsive alpha"><span>採用情報</span>
 		</li>
     </div>
   </div>
@@ -133,26 +143,26 @@ Template Name: front-page
 	</div>
 	<div id="linkBlock">
 		<div class="container">
-			<h2><img src="<?php echo get_template_directory_uri(); ?>/common/images/ttl_linkblock.png" class="img-responsive"></h2>
+			<h2><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/ttl_linkblock.png" class="img-responsive" alt="CONTENTS"></h2>
 			<div class="row flexbox">
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/company/greeting/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/l_img_01.jpg" class="img-responsive"></a></div><div class="textBox">代表挨拶<span>Message</span></div></div></div>
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/global/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/l_img_02.jpg" class="img-responsive"></a></div><div class="textBox">グローバルネットワーク<span>Gloobal Network</span></div></div></div>
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/csr/environment/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/l_img_03.jpg" class="img-responsive"></a></div><div class="textBox">環境への取り組みについて<span>The Commitment to the Environment</span></div></div></div>
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/products/leadfree/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/common/images/l_img_09.jpg" class="img-responsive"></a></div><div class="textBox">非鉛快削鋼シリーズ<span>Lead-free free cutting steel Series  </span></div></div></div>
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/products/catalogue/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/l_img_05.jpg" class="img-responsive"></a></div><div class="textBox">製品カタログ<span>Product catalog</span></div></div></div>
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/recruit/ourwork/"><img src="<?php echo get_template_directory_uri(); ?>/common/images/contents_Interview.jpg" class="img-responsive"></a></div><div class="textBox">社員紹介<span>Interview</span></div></div></div>
+				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/company/greeting/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_01.jpg" class="img-responsive"></a></div><div class="textBox">代表挨拶<span>Message</span></div></div></div>
+				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/global/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_02.jpg" class="img-responsive"></a></div><div class="textBox">グローバルネットワーク<span>Gloobal Network</span></div></div></div>
+				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/csr/environment/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_03.jpg" class="img-responsive"></a></div><div class="textBox">環境への取り組みについて<span>The Commitment to the Environment</span></div></div></div>
+				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/products/leadfree/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_09.jpg" class="img-responsive"></a></div><div class="textBox">非鉛快削鋼シリーズ<span>Lead-free free cutting steel Series  </span></div></div></div>
+				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/products/catalogue/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_05.jpg" class="img-responsive"></a></div><div class="textBox">製品カタログ<span>Product catalog</span></div></div></div>
+				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/recruit/ourwork/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/contents_Interview.jpg" class="img-responsive"></a></div><div class="textBox">社員紹介<span>Interview</span></div></div></div>
 			</div>
 		</div>
 	</div>
 
 	<div class="p-infoBlock">
 		<div class="container">
-			<h2><img src="<?php echo get_template_directory_uri(); ?>/common/images/ttl_topics.png" class="img-responsive"><a href="/information/">INFORMATION一覧を見る</a></h2>
+			<h2><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/ttl_topics.png" class="img-responsive" alt="INFOMATION"><a href="/information/">INFORMATION一覧を見る</a></h2>
 			<div class="infoBox" id="infomationBlock">
 					<?php
 						$args = array(
 							'post_type' => array('post'),
-							'posts_per_page' => 4,
+							'posts_per_page' => 6,
 							'post_status' => 'publish',
 							'orderby' => 'date',
 							'order' => 'DESC',

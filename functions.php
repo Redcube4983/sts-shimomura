@@ -59,8 +59,17 @@ function get_infomation() {
 function get_LocalNavi() {
 	get_template_part('parts/LocalNavi');
 }
+function get_LocalNaviPc() {
+	get_template_part('parts/LocalNaviPc');
+}
+function get_LocalNaviSp() {
+	get_template_part('parts/LocalNaviSp');
+}
 function get_breadcrumb() {
 	get_template_part('parts/breadcrumb');
+}
+function get_CompanyProfile() {
+	get_template_part('parts/CompanyProfile');
 }
 
 
@@ -91,149 +100,115 @@ mvwpform_autop_filter();
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* MW_WP_Form バリデーション*/
 
-//全てのフォームにバリデーションを適用する為にフォームを取得
-add_action( 'init', function() {
-	global $wpdb;
+/**
+ * MW WP Form カスタムバリデーション統合版
+ * $labels / $required / $requiredSelect を使用
+ */
+function my_custom_validation( $Validation, $data ) {
+    // 1. 全項目の名称定義
+    $labels = [
+        'company'    => '会社団体名・部署名',
+        'name_sei'   => '姓',
+        'name_mei'   => '名',
+        'kana_sei'   => 'セイ',
+        'kana_mei'   => 'メイ',  
+        'naiyou'     => 'お問い合わせの項目',
+        'request'    => 'お問い合わせ内容',
+        'privacy'    => '個人情報保護方針への同意',
+        'tel'  => '電話番号',
+        'mail'       => 'メールアドレス',
+        'mail_local' => 'メールアドレス(確認用) ローカル部',
+		'mail_domain' => 'メールアドレス(確認用) ドメイン部',
+    ];
 
-	// MW WP Form の投稿タイプを取得（通常は 'mw-wp-form'）
-	$forms = get_posts([
-		'post_type' => 'mw-wp-form',
-		'post_status' => 'publish',
-		'numberposts' => -1,
-	]);
-
-	foreach ( $forms as $form ) {
-		$hook = 'mwform_validation_mw-wp-form-' . $form->ID;
-
-		add_filter( $hook, 'my_exam_validation_rule', 10, 3 );
-	}
-});
-function my_exam_validation_rule( $Validation, $data, $Data ) {
-
-	// フォームキー → ID（例: "mw-wp-form-17" → 17）
-	$form_key = $Data->get_form_key();
-	$form_id = (int) str_replace('mw-wp-form-', '', $form_key);
-
-	// フォームの投稿情報を取得
-	$form_post = get_post($form_id);
-	if ( ! $form_post || $form_post->post_type !== 'mw-wp-form' ) {
-		return $Validation;
-	}
-
-	// タイトルで分岐（idで上手く行かない）
-	$title = $form_post->post_title;
-	if ( $title === '本社営業部へのお問い合わせ' ) {
-	// ラベル一覧（name属性 → 日本語名）
-	$labels = [
-    	'company'           => '会社団体名・部署名',
-		'name_sei'           => '姓',
-		'name_mei'           => '名',
-		'kana_sei'      => 'セイ',
-		'kana_mei'      => 'メイ',	
-    	'select_year'	=> '年',
-		'select_month'	=> '月',
-		'select_day'	=> '日',
-    	'address_zip'     => '郵便番号',
-		'address_prefecture'     => '都道府県',
-		'address_city'     => '市区町村',
-		'address_street'     => '番地',
-		'mail'               => 'メールアドレス',
-		'mail_check'         => 'メールアドレス確認用',
-		'tel'                => '電話番号',
-    	'request'                => 'お問い合わせ内容',
-	];
-	$required = [
-    	'company',
-		'name_sei',
-		'name_mei',
-		'kana_sei',
-		'kana_mei',
-		'select_year',
-		'select_month',
-		'select_day',
-		'address_zip',
-		'address_prefecture',
-		'address_city',
-   		'address_street',
+    // 2. 「入力」を必須とする項目 (noempty)
+    $required = [
+        'company',
+        'name_sei',
+        'name_mei',
+        'kana_sei',
+        'kana_mei',
+        'request',
 		'mail',
-		'mail_check',
-		'tel',
-    	'request',
-	];
-	}
-  if ( $title === '工場業務部へのお問い合わせ' ) {
-	// ラベル一覧（name属性 → 日本語名）
-	$labels = [
-    	'company'           => '会社団体名・部署名',
-		'name_sei'           => '姓',
-		'name_mei'           => '名',
-		'kana_sei'      => 'セイ',
-		'kana_mei'      => 'メイ',	
-    	'select_year'	=> '年',
-		'select_month'	=> '月',
-		'select_day'	=> '日',
-    	'address_zip'     => '郵便番号',
-		'address_prefecture'     => '都道府県',
-		'address_city'     => '市区町村',
-		'address_street'     => '番地',
-		'mail'               => 'メールアドレス',
-		'mail_check'         => 'メールアドレス確認用',
-		'tel'                => '電話番号',
-    	'request'                => 'お問い合わせ内容',
-	];
-	$required = [
-    	'company',
-		'name_sei',
-		'name_mei',
-		'kana_sei',
-		'kana_mei',
-		'select_year',
-		'select_month',
-		'select_day',
-		'address_zip',
-		'address_prefecture',
-		'address_city',
-    	'address_street',
-		'mail',
-		'mail_check',
-		'tel',
-    	'request',
-	];
-	}
+		'mail_local',
+		'mail_domain',
+    ];
 
-	foreach ( $required as $key ) {
-		$label = $labels[$key];
-		if ( $key === 'select_year' ) {
-			$message = "「{$label}」は必須項目です。選択してください。";
-		}else if ( $key === 'select_month' ) {
-			$message = "「{$label}」は必須項目です。選択してください。";
-		}else if ( $key === 'select_day' ) {
-			$message = "「{$label}」は必須項目です。選択してください。";
-		}else if ( $key === 'address_prefecture' ) {
-			$message = "「{$label}」は必須項目です。選択してください。";
-		}else {
-			$message = "「{$label}」は必須項目です。入力してください。";
-		}
-		$Validation->set_rule( $key, 'noEmpty', [
-			'message' => $message
-		] );
-	}
+    // 3. 「選択」を必須とする項目 (noempty / チェックボックス等)
+    $requiredSelect = [
+        'naiyou',
+        'privacy',
+    ];
 
-	// メール形式
-	$Validation->set_rule( 'mail', 'mail', [
-		'message' => 'メールアドレスの書式に誤りがあります。正しく入力してください。'
-	] );
+    // --- 必須バリデーションの一括適用 ---
 
-	// メール一致（equal_to: mail）
-	$Validation->set_rule( 'mail_check', 'eq', [
-		'target' => 'mail',
-		'message'  => 'メールアドレスが一致しません。'
-	] );
+    // 入力必須の処理
+    foreach ( $required as $key ) {
+        if ( isset($labels[$key]) ) {
+            $Validation->set_rule( $key, 'noempty', [
+                'message' => '「'. $labels[$key] . '」は必須項目です。入力してください。'
+            ] );
+        }
+    }
 
-	// 電話番号形式（例：03-1234-5678）
-	$Validation->set_rule( 'tel', 'tel', [
-		'message' => '電話番号の形式が正しくありません（例：03-1234-5678）。'
-	] );
+    // 選択必須の処理
+    foreach ( $requiredSelect as $key ) {
+        if ( isset($labels[$key]) ) {
+            $Validation->set_rule( $key, 'required', [
+                'message' => '「'.$labels[$key] . '」は必須項目です。選択してください。'
+            ] );
+        }
+    }
 
-	return $Validation;
+    // --- 形式・一致チェックの個別適用 ---
+
+    // 4. 電話番号判定（tel）
+    $Validation->set_rule( 'tel', 'tel', [
+        'message' => '「'.$labels['tel'] . '」の書式に誤りがあります。正しく入力してください。'
+    ] );
+
+    // 5. メールアドレス形式判定（標準ルールに戻す）
+    $Validation->set_rule( 'mail', 'mail', [
+        'message' => '「'.$labels['mail'] . '」の書式に誤りがあります。正しく入力してください。'
+    ] );
+
+    // 6. 全角カタカナ判定（kana_sei / kana_mei）
+    $kana_fields = ['kana_sei', 'kana_mei'];
+    foreach ( $kana_fields as $field ) {
+        $Validation->set_rule( $field, 'callback', [
+            'callback' => function( $value ) {
+                $value = str_replace(array(" ", "　"), "", $value); // 空白を無視する場合
+                if ( $value === '' ) return true; // 空の場合は noempty に任せる
+                // 全角カタカナのみ（中黒「・」や長音「ー」を含む）
+                return preg_match( "/^[ァ-ヶー]+$/u", $value );
+            },
+            'message' => '「' . $labels[$field] . '」は全角カタカナで入力してください。'
+        ] );
+    }
+
+    // 7. 分割メールの一致チェック（修正済み）
+    // 第2引数は 'callback' を使い、判定ロジックを直接記述します
+    $input_mail  = isset($data['mail'])        ? trim($data['mail'])        : '';
+    $mail_local  = isset($data['mail_local'])  ? trim($data['mail_local'])  : '';
+    $mail_domain = isset($data['mail_domain']) ? trim($data['mail_domain']) : '';
+
+    // すべて入力されている場合のみ、一致するか確認
+    if ( $input_mail !== '' && $mail_local !== '' && $mail_domain !== '' ) {
+        if ( $input_mail !== ($mail_local . '@' . $mail_domain) ) {
+            // 一致しない場合、エラーをセットする
+            // ルール名は 'eq' ではなく、独自の識別名（例: 'mail_mismatch'）にします
+            $Validation->set_rule( 'mail', 'mail_mismatch', [
+                'message' => '「メールアドレス」が一致しません。正しく入力してください。'
+            ] );
+        }
+    }
+
+    // 【最重要】
+    return $Validation;
 }
+
+    
+// xxx はフォームの投稿IDに書き換えてください
+add_filter( 'mwform_validation_mw-wp-form-258', 'my_custom_validation', 10, 2 );
+add_filter( 'mwform_validation_mw-wp-form-315', 'my_custom_validation', 10, 2 );
+

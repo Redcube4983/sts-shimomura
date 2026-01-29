@@ -8,7 +8,7 @@ Template Name: contact02
 <section id="pages" class="contact">
 <div class="subH1">
 	<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/contact/page_ttl_bg.jpg" class="img-responsive block-center"></div>
-	<div class="copy"><h1>工場業務部へのお問い合わせ</h1><em>Contact US</em></div>
+	<div class="copy"><h1>その他のお問い合わせ</h1><em>Contact US</em></div>
 </div>
 <div class="container contactContet">
     <?php get_breadcrumb(); ?>
