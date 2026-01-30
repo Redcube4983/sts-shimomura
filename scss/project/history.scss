@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* CSS Document */
+@use '../global' as *;
+
+.history-area{
+    display: flex;
+    flex-flow: column;
+    padding-top: 40px;
+    margin-top: 40px;
+    .history-inner{
+        border-left: 3px solid $main-color;
+        min-height: 160px;
+        margin-left: 40px;
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        @media (min-width: 768px) {
+          grid-template-columns: 100px 1fr;  
+        }
+        .history-decade{
+            position: relative;
+            span{
+                background-color: $main-color;
+                color: $white;
+                width: 80px;
+                height: auto;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                position: absolute;
+                left: -41.5px;
+                top: -40px;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+            }
+        }
+        .history-item-area{
+            display: flex;
+            flex-flow: column;
+            gap: 20px;
+            padding: 40px 0;
+            .history-item{
+                display: grid;
+                grid-template-columns: 60px 1fr;
+                align-items: flex-start;
+                gap: 20px;
+                font-size: 1.6rem;
+                line-height: 1.6;
+                position: relative;
+                @media (min-width: 1024px) {
+                    font-size: 1.8rem;
+                }
+                &::before{
+                    width: 40px;
+                    height: 2px;
+                    top: 1.6rem;
+                    transform: translateY(-50%);
+                    left: -50px;
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    background-color: $main-color;
+                    @media (min-width: 768px) {
+                        width: 90px;
+                        left: -100px;
+                    }
+                }
+                &::after{
+                    width: 8px;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    top: 1.6rem;
+                    transform: translateY(-50%);
+                    left: -55.5px;
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    background-color: $main-color;
+                    @media (min-width: 768px) {
+                        left: -105.5px;
+                    }
+                }
+            }
+        }
+    }
+}

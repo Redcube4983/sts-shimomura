@@ -71,6 +71,9 @@ function get_breadcrumb() {
 function get_CompanyProfile() {
 	get_template_part('parts/CompanyProfile');
 }
+function get_history() {
+	get_template_part('parts/history');
+}
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

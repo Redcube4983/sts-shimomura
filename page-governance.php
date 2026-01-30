@@ -24,6 +24,40 @@ Template Name: page-governance
 					<div class="copyBox">
 						<p>下村特殊精工は、大同特殊鋼グループ経営理念に則り、社会から信頼される企業であり続けるため、経営の健全性の確保、人権の尊重、腐敗防止、コンプライアンスの徹底など、ガバナンスの強化に取り組んでいます。</p>
 					</div>
+					<section class="buttongArea">
+						<ul>
+							<li>
+								<a href="#" class="c-btn__link c-btn--bgGray c-icon-arrow--whiter">
+									<span>下村特殊精工グループ人権方針</span>
+								</a>
+								<p>当社は事業活動によって影響を受けるすべての人の人権が尊重されなければならない事を理解し、人権の尊重に取り組みます。</p>
+							</li>
+							<li>
+								<a href="#" class="c-btn__link c-btn--bgGray c-icon-arrow--whiter">
+									<span>下村特殊精工 企業倫理憲章</span>
+								</a>
+								<p>役員及び社員一人ひとりが企業倫理を共通の志として事業に邁進すべく準拠すべく普遍的な倫理を定め　国の内外を問わず、全ての法律、国際ルール及びその精神を遵守すると共に社会良識をもって行動します。</p>
+							</li>
+							<li>
+								<a href="#" class="c-btn__link c-btn--bgGray c-icon-arrow--whiter">
+									<span>下村特殊精工グループの行動基準</span>
+								</a>
+								<p>「企業倫理憲章」に基づく「行動基準」を定め、役員をはじめ社員は全てこの「行動基準」に従い行動します。</p>
+							</li>
+							<li>
+								<a href="#" class="c-btn__link c-btn--bgGray c-icon-arrow--whiter">
+									<span>下村特殊精工グループ贈収賄防止方針</span>
+								</a>
+								<p>公正、透明、自由な競争と適正な取引を通じてグループ経営理念の実践と人々が暮らす未来社会の実現に努めます。</p>
+							</li>
+							<li>
+								<a href="#" class="c-btn__link c-btn--bgGray c-icon-arrow--whiter">
+									<span>情報セキュリティ基本方針</span>
+								</a>
+								<p>情報セキュリティ対策を継続的に改善し、当社が保有する情報資産を様々な脅威から保護することを経営上の重要課題と認識し、情報セキュリティ基本方針を定めて対策に取り組みます。</p>
+							</li>
+						</ul>
+					</section>
                     <section class="blueBgArea">
                         <h3>下村特殊精工グループ人権方針</h3>
                         <h4>大同特殊鋼グループ人権方針（2023年2月22日制定）</h4>
