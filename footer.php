@@ -188,7 +188,7 @@
         // 指定したアンカー(#ID)へアニメーションでスクロール
         function scrollToAnker(hash) {
             var target = $(hash);
-            var position = target.offset().top - headerHeight;
+            var position = target.offset().top - 75;
             $('body,html').stop().animate({scrollTop:position}, 800);
         }
         })
@@ -261,6 +261,7 @@ $(function(){
 <?php endif; ?>
  <?php if( is_page(array('contact01','error','contact02'))): ?>
   <script src="<?php echo get_template_directory_uri(); ?>/common/js/yubinbango.js" charset="UTF-8"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/common/js/form.js" charset="UTF-8"></script>
   <script>
   document.querySelector('.mw_wp_form_input form').classList.add('h-adr');
   jQuery(function($) {
