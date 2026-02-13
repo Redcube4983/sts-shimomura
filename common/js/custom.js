@@ -1,24 +1,35 @@
-$(window).on('load', function () {
-		hsize = $(".indexH1 .img img").height();
-		$(".indexH1").css("height", hsize + "px");
-	});
-	$(window).resize(function () {
-		  hsize = $(".indexH1 .img img").height();
-		  $(".indexH1").css("height", hsize + "px");
-	});
+$(function () {
 
+  function setIndexH1() {
+    const img = $('.indexH1 .img img')[0];
+    if (!img) return;
 
-// 先行
-$(function() {
-	$(".img img").on('load', function(){
-		var hsize = $(this).height();
-		$(".subH1").css("height", hsize + "px");
-	})
-});
-// 保険
-$(window).on('load', function () {
-	hsize = $(".img img").height();
-	$(".subH1").css("height", hsize + "px");
+    const h = img.getBoundingClientRect().height;
+    if (h > 0) {
+      $('.indexH1').css('height', h + 'px');
+    }
+  }
+
+  function setSubH1() {
+    const img = $('.subH1 .img img')[0];
+    if (!img) return;
+
+    const h = img.getBoundingClientRect().height;
+    if (h > 0) {
+      $('.subH1').css('height', h + 'px');
+    }
+  }
+
+  // DOM直後 + 1フレーム待ち
+  requestAnimationFrame(setIndexH1);
+  requestAnimationFrame(setSubH1);
+
+  // リサイズ対応
+  $(window).on('resize', function () {
+    setIndexH1();
+    setSubH1();
+  });
+
 });
 
 // ボタン透過
@@ -30,10 +41,6 @@ $(function(){
   });
 });
 
-$(window).on('resize', function () {
-	hsize = $(".img img").height();
-	$(".subH1").css("height", hsize + "px");
-});
 
 jQuery(function ($) {
   var scrollPos;//グローバルで初期かしておかないと上にもどっちゃう
@@ -129,17 +136,47 @@ $(window).on('load resize', function () {
 			
 	    }
 	   // サブメニュー開閉
-		$('.gnav__list__inner').hover( function () {
-		const $btn = $(this);
-		const $item = $btn.closest('.gnav__list__inner');
-		$(this).toggleClass('is-open');
-		$item.toggleClass('is-open');
-		$btn.toggleClass('is-open');
-		const $submenu = $item.find('.gnav__child');
-		$(this).children('.gnav__list__inner__title-area').find('.gnav__link').toggleClass('active');
-		$(this).children('.gnav__list__inner__title-area').find('.gnav__link').next('.c-btn__arrow').toggleClass('is-open');
-		$submenu.slideToggle(500).css('display', 'flex').toggleClass('is-open');
-		});    
+		$('.gnav__list__inner').on('mouseenter', function () {
+        const $item = $(this);
+        const $submenu = $item.find('.gnav__child');
+
+        // 他メニューを即閉じ（フェード or 即非表示）
+        $('.gnav__list__inner').not($item).each(function () {
+          const $other = $(this);
+          $other.removeClass('is-open');
+          $other.find('.gnav__link').removeClass('active');
+          $other.find('.c-btn__arrow').removeClass('is-open');
+          $other.find('.gnav__child')
+            .stop(true, true)
+            .fadeOut(0)
+            .removeClass('is-open');
+        });
+
+        // 自分を開く
+        $item.addClass('is-open');
+        $item.find('.gnav__link').addClass('active');
+        $item.find('.c-btn__arrow').addClass('is-open');
+
+        $submenu
+          .stop(true, true)
+          .slideDown(500)
+          .css({ display: 'flex', visibility: 'visible' })
+          .addClass('is-open');
+        });
+
+        $('.gnav__list__inner').on('mouseleave', function () {
+          const $item = $(this);
+          const $submenu = $item.find('.gnav__child');
+
+          $item.removeClass('is-open');
+          $item.find('.gnav__link').removeClass('active');
+          $item.find('.c-btn__arrow').removeClass('is-open');
+
+          $submenu
+            .stop(true, true)
+            .slideUp(300)
+            .removeClass('is-open');
+        });  
     }
   }
 });
@@ -178,6 +215,17 @@ $(function() {
         .animate({opacity: '1'}, fadeSpeed);
 });
 
+
+//$(function(){
+  // 1回目のアクセス
+  //$("#loadingLayer").css("display","none");
+    //$("#loadingLayer").css("display","block");
+    //setTimeout(function() {
+			//$('#loadingLayer').fadeOut(400);
+		//}, 1800);
+
+//});
+
 $(function(){
   // 1回目のアクセス
   $("#loadingLayer").css("display","none");
@@ -187,11 +235,12 @@ $(function(){
     $("#loadingLayer").css("display","block");
     setTimeout(function() {
 			$('#loadingLayer').fadeOut(400);
-		}, 6500);
+		}, 4000);
   // 2回目以降は動かないようにするけど最初は動かす
   } else {
     $("#loadingLayer").css("display","none");
-        // 2回目以降は動かないようにする
+    $('html').addClass('is-hidden');
+    // 2回目以降は動かないようにする
   }
 });
 

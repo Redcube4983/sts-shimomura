@@ -16,18 +16,36 @@ a:focus {
 /**
  loadingLayer
 **/
+/**
+ loadingLayer
+**/
 
-#loadingLayer{
-  position:fixed;
-  margin: auto;
-  inset: 0;
-  z-index:10000;
+/* ===== loading ===== */
+#loadingLayer {
+	position: fixed;
+	inset: 0;
+	z-index: 10000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity .4s ease;
 }
+
 #loadingLayer #box{
 	position:fixed;
 	margin: auto;
 	inset: 0;
 	background: rgba(38, 142, 234, 0.95);
+}
+html.is-hidden #loadingLayer {
+	opacity: 0;
+	pointer-events: none;
+  visibility: hidden;
+  #box{
+    opacity: 0;
+    background-color: transparent;
+    visibility: hidden;
+  }
 }
 #loading {
   position: absolute;

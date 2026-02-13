@@ -36,7 +36,7 @@ Template Name: contact
 					          </table>
 					<div class="commentBlock">
                    	  <div class="box"><img src="<?php echo get_template_directory_uri(); ?>/images/contact/tel.png">他の事業部へ電話にてお問い合わせの方は<a href="/company/location/">こちら</a></div>
-                    	<div class="box"><img src="<?php echo get_template_directory_uri(); ?>/images/contact/web.png">弊社はＷebにて見積りが出来ます。ご希望の方は<a href="/company/location/"></a><a href="https://shimomuranet.daido.co.jp/ASP/GMWPA060.asp" target="_blank">こちら</a><a href="/company/location/"></a></div>
+                    	<div class="box"><img src="<?php echo get_template_directory_uri(); ?>/images/contact/web.png">弊社はWebにて見積りが出来ます。ご希望の方は<a href="/company/location/"></a><a href="https://shimomuranet.daido.co.jp/ASP/GMWPA060.asp" target="_blank">こちら</a><a href="/company/location/"></a></div>
                     </div>
                     </div>
                 </div>
