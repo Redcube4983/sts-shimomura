@@ -43,18 +43,23 @@ $(function(){
 
 
 jQuery(function ($) {
-  var scrollPos;//グローバルで初期かしておかないと上にもどっちゃう
+  let scrollPos = 0;
   $('.js-sp-btnMenu').on('click', function () {
+    const $html = $('html');
+    const $body = $('body');
     $('.l-nav').toggleClass('is-open').slideToggle(500);
     $('.l-header__menu-btn').toggleClass('is-open');
-    if ($('body').hasClass('fixed')) {
-      $('body').removeClass('fixed').css('top', 0 + 'px');
-      window.scrollTo(0, scrollPos);//初期化
+    if ($html.hasClass('is-fixed')) {
+        $html.removeClass('is-fixed');
+        $body.css('top', '');
+        window.scrollTo(0, scrollPos);
     } else {
-      scrollPos = $(window).scrollTop();//現在のスクロール位置
-      $('body').addClass('fixed').css('top', -scrollPos + 'px');
+        scrollPos = window.pageYOffset;
+        $body.css('top', -scrollPos + 'px');
+        $html.addClass('is-fixed');
     }
-	if ($('.l-header__menu-btn').hasClass('is-open')) {
+	if (
+    $('.l-header__menu-btn').hasClass('is-open')) {
 		$('.l-header__menu-label').html('close');
     $('.l-nav').addClass('is-open');
      
@@ -66,6 +71,9 @@ jQuery(function ($) {
   });
 });
 $(window).on('load resize', function () {
+  let scrollPos = 0;
+  const $html = $('html');
+  const $body = $('body');
   $('.l-navList__item-title-arrow').off();
   $('.l-footer__nav-title-arrow').off();
   $('.gnav__list__inner').off();
@@ -73,12 +81,15 @@ $(window).on('load resize', function () {
    // SPの処理
    if ($('.js-sp-btnMenu').hasClass("is-open")) {
       //open表示中の場合
-      scrollPos = $(window).scrollTop();//現在のスクロール位置
-       $('body').addClass('fixed').css('top', -scrollPos + 'px');
+      scrollPos = window.pageYOffset;
+      $body.css('top', -scrollPos + 'px');
+      $html.addClass('is-fixed');
         
     } else {
       //open非表示の場合
-      $('body').removeClass('fixed').css('top', 0 + 'px');
+      $html.removeClass('is-fixed');
+      $body.css('top', '');
+      window.scrollTo(0, scrollPos);
       
     }
    // サブメニュー開閉
@@ -119,11 +130,14 @@ $(window).on('load resize', function () {
 
     } else {
       // PC用コード
-        if ($('.js-sp-btnMenu').hasClass("is-open")) {
+        if (
+          $('.js-sp-btnMenu').hasClass("is-open")) {
         //open表示中の場合
-        $('body').removeClass('fixed').css('top', 0 + 'px');
-		$('.l-navList__item-title-arrow').removeClass('is-open');
-		$('.gnav__child').removeClass('is-open').css('display', '');
+          $html.removeClass('is-fixed');
+          $body.css('top', '');
+          window.scrollTo(0, scrollPos);
+          $('.l-navList__item-title-arrow').removeClass('is-open');
+          $('.gnav__child').removeClass('is-open').css('display', '');
         } else {
 
         }

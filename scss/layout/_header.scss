@@ -166,6 +166,7 @@
             width: 100%;
             display: none;
             height: calc(100svh - 60px);
+            overflow-y: auto;
             &.is-open{
 
             }
@@ -180,11 +181,9 @@
         .gnav{
             display: block;
             height: 100%;
-            overflow-y: auto;
             @media (min-width: 1024px){
                 display: block;
                 height: auto;
-                overflow-y: revert;
             }
             &__list{
                 border-top: 0px solid #FFFF;
