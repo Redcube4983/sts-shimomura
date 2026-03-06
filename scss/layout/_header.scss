@@ -231,6 +231,25 @@
                                 }
                             } 
                         }
+                        &:hover{
+                            .gnav__link{
+                                color: #000;
+                                &::after{
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                    background-color: #fff;
+                                    content: "";
+                                }
+                            }
+                            .c-btn__arrow {
+                                border-top: 1px solid #000;
+                                border-right: 1px solid #000;
+                            }
+                        }
                         &:not(:last-child){
                             a.gnav__link{
                                 border-right: 1px solid #FFF;
@@ -258,6 +277,9 @@
                         @media (min-width: 1024px){
                             display: block;
                             height: 100%;
+                            .c-btn__arrow {
+                                transition: transform .5s ease;
+                            }
                             &:has(.active){
                                  .c-btn__arrow {
                                     border-top: 1px solid #000;
@@ -339,6 +361,12 @@
                         }
                         span{
                             z-index: 2;
+                            &.sp{
+                            display: inline-block;
+                            @media (min-width: 1024px){
+                                display: none;
+                            }
+                            }
                         }
                         @media (min-width: 1024px){
                             &.active{

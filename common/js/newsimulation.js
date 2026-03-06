@@ -175,7 +175,7 @@ $(function(){
 			for(var key in curScene['answer']){
 				htmlButtons += "<button class='enq_select btn btn-info' level='" + nextLevel + "' cond='" + curScene['key'] + "' qst='" + cur + "' ans='" + ans + key + "' val='" + key + "'>" + curScene['answer'][key] + "</button><br>\n";
 			}
-			$('#enq_arrow' + level).html('<img src="https://sts-shimomura.cube-stg.jp/wp-content/themes/shimomura/images/products/simulation/arrow.png" alt="" />');
+			$('#enq_arrow' + level).html('<img src="/wp-content/themes/shimomura/images/products/simulation/arrow.png" alt="" />');
 			$('#enq_level' + nextLevel).html(htmlButtons);
 			$($.support.checkOn ? 'html' : 'body').animate( { scrollTop: $('#enq_level' + nextLevel).offset().top }, 1000, 'linear' );
 		} else {

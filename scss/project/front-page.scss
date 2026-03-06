@@ -66,6 +66,9 @@
 		font-weight: bold;
 	}
 }
+.swiper {
+	opacity: 0;
+}
 .p-swiper{
 	padding-bottom: 40px;
 	@media (min-width: 1024px){
@@ -322,6 +325,7 @@
 	margin:10px 0 0 0;
 	padding:30px 0;
 	border-top:1px solid #E4E4E4; 
+	opacity: 0;
 }
 #linkBlock .container{ 
 	padding:0 30px; 

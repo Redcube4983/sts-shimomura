@@ -41,9 +41,8 @@ $(function(){
   });
 });
 
-
+let scrollPos = 0;
 jQuery(function ($) {
-  let scrollPos = 0;
   $('.js-sp-btnMenu').on('click', function () {
     const $html = $('html');
     const $body = $('body');
@@ -71,7 +70,6 @@ jQuery(function ($) {
   });
 });
 $(window).on('load resize', function () {
-  let scrollPos = 0;
   const $html = $('html');
   const $body = $('body');
   $('.l-navList__item-title-arrow').off();
@@ -89,7 +87,6 @@ $(window).on('load resize', function () {
       //open非表示の場合
       $html.removeClass('is-fixed');
       $body.css('top', '');
-      window.scrollTo(0, scrollPos);
       
     }
    // サブメニュー開閉
@@ -158,7 +155,6 @@ $(window).on('load resize', function () {
         $('.gnav__list__inner').not($item).each(function () {
           const $other = $(this);
           $other.removeClass('is-open');
-          $other.find('.gnav__link').removeClass('active');
           $other.find('.c-btn__arrow').removeClass('is-open');
           $other.find('.gnav__child')
             .stop(true, true)
@@ -168,7 +164,6 @@ $(window).on('load resize', function () {
 
         // 自分を開く
         $item.addClass('is-open');
-        $item.find('.gnav__link').addClass('active');
         $item.find('.c-btn__arrow').addClass('is-open');
 
         $submenu
@@ -183,7 +178,6 @@ $(window).on('load resize', function () {
           const $submenu = $item.find('.gnav__child');
 
           $item.removeClass('is-open');
-          $item.find('.gnav__link').removeClass('active');
           $item.find('.c-btn__arrow').removeClass('is-open');
 
           $submenu
@@ -221,7 +215,24 @@ $(function() {
         .css({opacity: '0.0'})
         .animate({opacity: '1'}, fadeSpeed);
 });
-
+$(function() {
+    var fadeSpeed = 800;
+    $('.swiper')
+        .css({opacity: '0.0'})
+        .animate({opacity: '1'}, fadeSpeed);
+});
+$(function() {
+    var fadeSpeed = 800;
+    $('#linkBlock')
+        .css({opacity: '0.0'})
+        .animate({opacity: '1'}, fadeSpeed);
+});
+$(function() {
+    var fadeSpeed = 800;
+    $('.breadcrumbs')
+        .css({opacity: '0.0'})
+        .animate({opacity: '1'}, fadeSpeed);
+});
 $(function() {
     var fadeSpeed = 2000;
     $('#topContent')
@@ -247,12 +258,14 @@ $(function(){
     //最初にアクセスしたときにはここに書いたアニメーションのJSが動く
     jQuery.cookie("access","onece");
     $("#loadingLayer").css("display","block");
+    $("#loadingLayer #box").css("background-color","rgba(38,142,234,.95)");
     setTimeout(function() {
 			$('#loadingLayer').fadeOut(400);
-		}, 4000);
+		}, 3200);
   // 2回目以降は動かないようにするけど最初は動かす
   } else {
     $("#loadingLayer").css("display","none");
+    $("#loadingLayer #box").css("background-color","transparent");
     $('html').addClass('is-hidden');
     // 2回目以降は動かないようにする
   }

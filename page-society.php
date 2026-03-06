@@ -8,7 +8,7 @@ Template Name: page-society
 <section id="pages" class="company indexPage">
 	<div class="indexH1">
 		<div class="img"><img src="<?php echo get_template_directory_uri(); ?>/images/society/ttl_bg.jpg" class="img-responsive block-center"></div>
-		<div class="copy"><h1>社会への取り組</h1><em>Social Initiatives</em></div>
+		<div class="copy"><h1>社会への取り組み</h1><em>Social Initiatives</em></div>
 		<!--[php file='breadcrumb']-->
          <?php get_breadcrumb(); ?>
 	</div>

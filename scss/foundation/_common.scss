@@ -147,6 +147,7 @@ span.slicknav_menutxt { display:none; }
 	margin:10px 0; 
 	position: relative;
   	z-index: 1;
+	opacity: 0;
 }
 
 .indexPage .breadcrumbs { position:absolute;bottom:0;left:0;font-size:12px;width:100%;text-align:left;z-index:100;margin:0; }

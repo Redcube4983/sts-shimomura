@@ -216,7 +216,7 @@
        <script src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.magnific-popup.min.js"></script> 
        <script>
             $(function() {
-                $('.popup-youtube').magnificPopup({
+                jQuery('.popup-youtube').magnificPopup({
                 type: 'iframe'
                 });
             });
