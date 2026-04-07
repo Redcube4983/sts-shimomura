@@ -16,7 +16,7 @@
 					<li class="c-icon__arrow--accent"><a href="/company/quality/">品質環境方針</a></li>
                     <li class="c-icon__arrow--accent"><a href="/company/iso/">ISOの取得について</a></li>
                     <li class="c-icon__arrow--accent"><a href="/company/characterprofile/">マスコットキャラクター</a></li>
-                    <li class="c-icon__arrow--accent"><a href="/company/outline/#groupLink/">大同特殊鋼グループ</a></li>
+                    <li class="c-icon__arrow--accent"><a href="/company/outline/#groupLink">大同特殊鋼グループ</a></li>
 				</ul>
 			</div>
 			<div class="l-footer__nav-block">
