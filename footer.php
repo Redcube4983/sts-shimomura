@@ -263,7 +263,12 @@ $(function(){
   <script src="<?php echo get_template_directory_uri(); ?>/common/js/yubinbango.js" charset="UTF-8"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/common/js/form.js" charset="UTF-8"></script>
   <script>
-  document.querySelector('.mw_wp_form_input form').classList.add('h-adr');
+    jQuery(function() {
+        const form = document.querySelector('.mw_wp_form_input form');
+        if (form) {
+            form.classList.add('h-adr');
+        }
+    });
   jQuery(function($) {
     // フォーム全体を監視
     $('.mw_wp_form form').on('submit', function(e) {

@@ -80,12 +80,12 @@ Template Name: page-environment
 						<ol class="listStyle mb0">
                             <li class="listStyleNumber">建屋明り採り設置</li>
                             <li class="listStyleNumber">コンプレッサーの台数制御及び管理圧力の適正化</li>
-							<li class="listStyleNumber">蛍光灯,水銀灯のLED化推進</li>
+							<li class="listStyleNumber">蛍光灯、水銀灯のLED化推進</li>
 							<li class="listStyleNumber">熱処理炉と酸洗の廃止（15年）</li>
 							<li class="listStyleNumber">電力デマンド管理強化</li>
 							<li class="listStyleNumber">高効率エアコン更新</li>
-							<li class="listStyleNumber">棟内窓断熱強化，屋根遮熱塗装</li>
-							<li class="listStyleNumber">工場Air元圧管理,配管ループ化</li>
+							<li class="listStyleNumber">棟内窓断熱強化、屋根遮熱塗装</li>
+							<li class="listStyleNumber">工場Air元圧管理、配管ループ化</li>
 							<li class="listStyleNumber">ムダ電力、待機電力の削減</li>
 						</ol>
                     </section>

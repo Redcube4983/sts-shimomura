@@ -251,23 +251,31 @@ $(function() {
 
 //});
 
-$(function(){
+$(window).on('load', function(){
+
   // 1回目のアクセス
   $("#loadingLayer").css("display","none");
-  if(jQuery.cookie("access") == undefined) {
-    //最初にアクセスしたときにはここに書いたアニメーションのJSが動く
-    jQuery.cookie("access","onece");
+
+  if (jQuery.cookie("access") == undefined) {
+
+    // 初回アクセス時
+    jQuery.cookie("access", "once", { path: '/' });
+
     $("#loadingLayer").css("display","block");
     $("#loadingLayer #box").css("background-color","rgba(38,142,234,.95)");
+    $(".loading-text").css("display","flex");
     setTimeout(function() {
-			$('#loadingLayer').fadeOut(400);
-		}, 3200);
-  // 2回目以降は動かないようにするけど最初は動かす
+      $('#loadingLayer').fadeOut(400);
+    }, 1800);
+
   } else {
+
+    // 2回目以降
     $("#loadingLayer").css("display","none");
     $("#loadingLayer #box").css("background-color","transparent");
     $('html').addClass('is-hidden');
-    // 2回目以降は動かないようにする
+    $(".loading-text").css("display","none");
   }
+
 });
 
