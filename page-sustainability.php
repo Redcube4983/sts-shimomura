@@ -141,7 +141,7 @@ Template Name: page-sustainability
                             <p>日本最北端のラムサール条約登録湿地、クッチャロ湖の素晴らしい自然環境を護るために、下村特殊精工はクッチャロ湖保全活動のオフィシャルサポーターとして地元NPOと連携し、湖の水質調査や、湖畔林の再生、地域活性化やファンづくりなどに貢献しています。</p>
                         </div>
                         <div class="moviearea__youtube">
-                            <a href="https://www.youtube.com/watch?v=JsRGrM-Px88&t=2s" class="moviearea__youtube__link popup-youtube">
+                            <a href="https://www.youtube.com/watch?v=ItcA363PtJ0" class="moviearea__youtube__link popup-youtube">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/sustainability/sustainability-image08.jpg" alt="" class="sustainability-image">
                                 <span class="arrow"></span>
                             </a>
