@@ -146,12 +146,14 @@ $(window).on('load resize', function () {
 		} else {
 			
 	    }
-	   // サブメニュー開閉
-		$('.gnav__list__inner').on('mouseenter', function () {
+	  let hoverTimer;
+
+      $('.gnav__list__inner').on('mouseenter', function () {
         const $item = $(this);
         const $submenu = $item.find('.gnav__child');
+        const $link = $item.find('.gnav__link');
 
-        // 他メニューを即閉じ（フェード or 即非表示）
+        // 他メニューを即閉じ
         $('.gnav__list__inner').not($item).each(function () {
           const $other = $(this);
           $other.removeClass('is-open');
@@ -162,29 +164,40 @@ $(window).on('load resize', function () {
             .removeClass('is-open');
         });
 
-        // 自分を開く
-        $item.addClass('is-open');
-        $item.find('.c-btn__arrow').addClass('is-open');
+        // タイマー開始（0.5秒後に開く）
+        hoverTimer = setTimeout(function () {
+          $item.addClass('is-open');
+          $item.find('.c-btn__arrow').addClass('is-open');
+          $link.addClass('is-open');
 
-        $submenu
-          .stop(true, true)
-          .slideDown(500)
-          .css({ display: 'flex', visibility: 'visible' })
-          .addClass('is-open');
-        });
-
-        $('.gnav__list__inner').on('mouseleave', function () {
-          const $item = $(this);
-          const $submenu = $item.find('.gnav__child');
-
-          $item.removeClass('is-open');
-          $item.find('.c-btn__arrow').removeClass('is-open');
+          $link.css({ display: 'flex', visibility: 'visible' });
 
           $submenu
             .stop(true, true)
-            .slideUp(300)
-            .removeClass('is-open');
-        });  
+            .slideDown(500)
+            .css({ display: 'flex', visibility: 'visible' })
+            .addClass('is-open');
+
+        }, 500); // ←ここが遅延
+      });
+
+      $('.gnav__list__inner').on('mouseleave', function () {
+        const $item = $(this);
+        const $submenu = $item.find('.gnav__child');
+        const $link = $item.find('.gnav__link');
+
+        // タイマーキャンセル（これ重要）
+        clearTimeout(hoverTimer);
+
+        $item.removeClass('is-open');
+        $item.find('.c-btn__arrow').removeClass('is-open');
+        $link.removeClass('is-open');
+
+        $submenu
+          .stop(true, true)
+          .slideUp(300)
+          .removeClass('is-open');
+      }); 
     }
   }
 });

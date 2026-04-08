@@ -238,6 +238,7 @@
                                     position: absolute;
                                     left: 0;
                                     top: 0;
+                                    transform: scale(1 , 1);
                                     width: 100%;
                                     height: 100%;
                                     display: block;
@@ -278,7 +279,7 @@
                             display: block;
                             height: 100%;
                             .c-btn__arrow {
-                                transition: transform .5s ease;
+                                transition: transform .5s ease-in-out;
                             }
                             &:has(.active){
                                  .c-btn__arrow {
@@ -324,7 +325,7 @@
                             color: #FFF;
                             position: relative;
                             text-decoration: none;
-                            transition: color .5s ease;
+                            transition: color .5s ease-in-out;
                             overflow: hidden;
                             padding: 0;
                             font-size: 1.4rem;
@@ -334,11 +335,13 @@
                             &::after{
                                 position: absolute;
                                 left: 0;
-                                top: 100%;
+                                top: 0;
                                 width: 100%;
                                 height: 100%;
                                 display: block;
-                                transition: top .5s ease;
+                                transform: scale(1 , 0);
+                                transform-origin: bottom;
+                                transition: transform .5s ease-in-out;
                                 background-color: #fff;
                                 content: "";
                             }
@@ -380,6 +383,7 @@
                                     display: block;
                                     background-color: #fff;
                                     content: "";
+                                    transform: scale(1, 1);
                                 }
                             }
                         }

@@ -421,6 +421,7 @@
                         width: 100%;
                         height: auto;
                         display: block;
+                        min-width: 0;
                     }
                     @media (min-width: 768px) {
                         flex-flow: row nowrap;
