@@ -269,55 +269,145 @@ $(function(){
             form.classList.add('h-adr');
         }
     });
-  jQuery(function($) {
-    // フォーム全体を監視
-    $('.mw_wp_form form').on('submit', function(e) {
-        // フォームオブジェクトを定義
-        var $form = $(this);
-        
-        // 入力値を取得
-        var mail = $form.find('input[name="mail"]').val();
-        var local = $form.find('input[name="mail_local"]').val();
-        var domain = $form.find('input[name="mail_domain"]').val();
-        
-        // 両方の入力がある場合のみ比較
-        if (mail && local && domain) {
-            var fullConfirm = local.trim() + "@" + domain.trim();
-            
-            if (mail.trim() !== fullConfirm) {
-                // 1. 送信を強制停止
-                e.preventDefault();
-                e.stopImmediatePropagation();
-                
-                // 2. エラーメッセージを表示
-                if ($('#js-mail-error').length === 0) {
-                    $form.find('input[name="mail"]').after('<div id="js-mail-error" class="error">「メールアドレス」が一致しません。正しく入力してください。</div>');
-                } else {
-                    $('#js-mail-error').show();
+    jQuery(function($) {
+
+        $('.mw_wp_form form').on('submit', function(e) {
+
+            var $form = $(this);
+
+            // ==============================
+            // 初期化
+            // ==============================
+            $('#js-name-errors').remove();
+            $('#js-kana-errors').remove();
+            $('#js-mail-error').remove();
+
+            var hasError = false;
+
+            // ==============================
+            // 出力先取得（ここがポイント）
+            // ==============================
+
+            var $nameBlock = $form.find('.contact__formarea__list').eq(1).find('.list__block01--name');
+            var $kanaBlock = $form.find('.contact__formarea__list').eq(2).find('.list__block01--name');
+
+            // ==============================
+            // エラー表示関数
+            // ==============================
+
+            function showError($target, boxId, id, message) {
+
+                if ($('#' + boxId).length === 0) {
+                    $target.after('<div id="'+boxId+'"></div>');
                 }
 
-                // --- 追加：入力欄までスクロール ---
-                $('html, body').animate({
-                    scrollTop: $form.find('input[name="mail"]').offset().top - 100
-                }, 300);
-                
-                // 3. ボタンの無効化を解除
+                const $box = $('#' + boxId);
+
+                if ($('#' + id).length === 0) {
+                    $box.append('<div id="'+id+'" class="error">'+message+'</div>');
+                } else {
+                    $('#' + id).text(message).show();
+                }
+            }
+
+            // ==============================
+            // 値取得
+            // ==============================
+
+            var name_sei  = $form.find('input[name="name_sei"]').val() || '';
+            var name_mei  = $form.find('input[name="name_mei"]').val() || '';
+            var kana_sei  = $form.find('input[name="kana_sei"]').val() || '';
+            var kana_mei  = $form.find('input[name="kana_mei"]').val() || '';
+
+            var mail   = $form.find('input[name="mail"]').val();
+            var local  = $form.find('input[name="mail_local"]').val();
+            var domain = $form.find('input[name="mail_domain"]').val();
+
+            // ==============================
+            // 正規表現
+            // ==============================
+
+            var halfRegex = /[ -~｡-ﾟ]/;          // 半角NG
+            var kanaRegex = /^[ァ-ヶー　]+$/;     // 全角カタカナのみ
+
+            // ==============================
+            // 姓・名（全角）
+            // ==============================
+
+            if (name_sei && halfRegex.test(name_sei)) {
+                showError($nameBlock, 'js-name-errors', 'js-error-sei', '「姓」は全角で入力してください。');
+                hasError = true;
+            }
+
+            if (name_mei && halfRegex.test(name_mei)) {
+                showError($nameBlock, 'js-name-errors', 'js-error-mei', '「名」は全角で入力してください。');
+                hasError = true;
+            }
+
+            // ==============================
+            // セイ・メイ（カタカナ）
+            // ==============================
+
+            if (kana_sei && !kanaRegex.test(kana_sei)) {
+                showError($kanaBlock, 'js-kana-errors', 'js-error-kana-sei', '「セイ」は全角カタカナで入力してください。');
+                hasError = true;
+            }
+
+            if (kana_mei && !kanaRegex.test(kana_mei)) {
+                showError($kanaBlock, 'js-kana-errors', 'js-error-kana-mei', '「メイ」は全角カタカナで入力してください。');
+                hasError = true;
+            }
+
+            // ==============================
+            // メール一致
+            // ==============================
+
+            if (mail && local && domain) {
+                var fullConfirm = local.trim() + "@" + domain.trim();
+
+                if (mail.trim() !== fullConfirm) {
+
+                    hasError = true;
+
+                    if ($('#js-mail-error').length === 0) {
+                        $form.find('input[name="mail"]').after(
+                            '<div id="js-mail-error" class="error">「メールアドレス」が一致しません。正しく入力してください。</div>'
+                        );
+                    }
+                }
+            }
+
+            // ==============================
+            // エラー時処理
+            // ==============================
+
+            if (hasError) {
+
+                e.preventDefault();
+                e.stopImmediatePropagation();
+
+                // スクロール
+                var $firstError = $('.error:visible').first();
+
+                if ($firstError.length) {
+                    $('html, body').animate({
+                        scrollTop: $firstError.offset().top - 100
+                    }, 300);
+                }
+
+                // ボタン復活
                 var $submit = $form.find('input[type="submit"]');
                 setTimeout(function(){
-                    $submit.prop('disabled', false);
-                    // MW WP Form独自の処理でクラスが変わる場合の対策
-                    $submit.removeClass('disabled'); 
+                    $submit.prop('disabled', false).removeClass('disabled');
                 }, 100);
 
                 return false;
             }
-        }
-        
-        // 一致している場合はエラーを消して送信を許可
-        $('#js-mail-error').hide();
+
+        });
+
     });
-});
-  </script>
+</script>
 <?php endif; ?>
 <?php wp_footer(); ?>
 </body>

@@ -279,7 +279,7 @@
                             display: block;
                             height: 100%;
                             .c-btn__arrow {
-                                transition: transform .5s ease-in-out;
+                                transition: transform .2s ;
                             }
                             &:has(.active){
                                  .c-btn__arrow {
@@ -325,7 +325,7 @@
                             color: #FFF;
                             position: relative;
                             text-decoration: none;
-                            transition: color .5s ease-in-out;
+                            transition: color .2s ease-in-out;
                             overflow: hidden;
                             padding: 0;
                             font-size: 1.4rem;
@@ -341,7 +341,7 @@
                                 display: block;
                                 transform: scale(1 , 0);
                                 transform-origin: bottom;
-                                transition: transform .5s ease-in-out;
+                                transition: transform .2s ease-in-out;
                                 background-color: #fff;
                                 content: "";
                             }
@@ -401,7 +401,8 @@
                 padding: 0;
                 display: none;
                 @media (min-width: 1024px){
-                    width: 260px;
+                    width: calc(100% + 1px);
+                    min-width: 210px;
                     position: absolute;
                     left: -1px;
                     filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.4));
@@ -442,7 +443,7 @@
                         }
                         @media (min-width: 1024px){
                             padding: 15px 10px 15px 30px;
-                            transition:background-color .5s ease , color .5s ease ;
+                            transition:background-color .2s ease , color .2s ease ;
                             font-size: 1.3rem;
                             &:hover{
                                 background-color: #313131;

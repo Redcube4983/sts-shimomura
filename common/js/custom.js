@@ -174,11 +174,11 @@ $(window).on('load resize', function () {
 
           $submenu
             .stop(true, true)
-            .slideDown(500)
+            .slideDown(300)
             .css({ display: 'flex', visibility: 'visible' })
             .addClass('is-open');
 
-        }, 500); // ←ここが遅延
+        }, 200); // ←ここが遅延
       });
 
       $('.gnav__list__inner').on('mouseleave', function () {
@@ -195,7 +195,7 @@ $(window).on('load resize', function () {
 
         $submenu
           .stop(true, true)
-          .slideUp(300)
+          .slideUp(200)
           .removeClass('is-open');
       }); 
     }

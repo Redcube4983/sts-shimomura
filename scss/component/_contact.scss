@@ -474,3 +474,9 @@ ul, ol {
   background-color: #ffeced;
   padding: 10px;
 }
+#js-name-errors,
+#js-kana-errors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

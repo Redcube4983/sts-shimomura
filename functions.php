@@ -103,12 +103,34 @@ mvwpform_autop_filter();
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* MW_WP_Form バリデーション*/
 
-/**
- * MW WP Form カスタムバリデーション統合版
- * $labels / $required / $requiredSelect を使用
- */
+/* MW WP Form バリデーション */
+
+// ==============================
+// カスタム関数（外出し）
+// ==============================
+
+// 全角カタカナチェック
+function mw_validate_kana( $value ) {
+    $value = str_replace(array(" ", "　"), "", $value);
+    if ( $value === '' ) return true;
+
+    return preg_match("/^[ァ-ヶー]+$/u", $value);
+}
+
+// 全角チェック（半角禁止）
+function mw_validate_fullwidth( $value ) {
+    if ( $value === '' ) return true;
+
+    return preg_match('/^[^ -~｡-ﾟ]+$/u', $value);
+}
+
+
+// ==============================
+// メインバリデーション
+// ==============================
 function my_custom_validation( $Validation, $data ) {
-    // 1. 全項目の名称定義
+
+    // ラベル定義
     $labels = [
         'company'    => '会社団体名・部署名',
         'name_sei'   => '姓',
@@ -118,34 +140,27 @@ function my_custom_validation( $Validation, $data ) {
         'naiyou'     => 'お問い合わせの項目',
         'request'    => 'お問い合わせ内容',
         'privacy'    => '個人情報保護方針への同意',
-        'tel'  => '電話番号',
+        'tel'        => '電話番号',
         'mail'       => 'メールアドレス',
         'mail_local' => 'メールアドレス(確認用) ローカル部',
-		'mail_domain' => 'メールアドレス(確認用) ドメイン部',
+        'mail_domain'=> 'メールアドレス(確認用) ドメイン部',
     ];
 
-    // 2. 「入力」を必須とする項目 (noempty)
+    // 入力必須
     $required = [
-        'company',
-        'name_sei',
-        'name_mei',
-        'kana_sei',
-        'kana_mei',
-        'request',
-		'mail',
-		'mail_local',
-		'mail_domain',
+        'company','name_sei','name_mei',
+        'kana_sei','kana_mei',
+        'request','mail','mail_local','mail_domain',
     ];
 
-    // 3. 「選択」を必須とする項目 (noempty / チェックボックス等)
+    // 選択必須
     $requiredSelect = [
-        'naiyou',
-        'privacy',
+        'naiyou','privacy',
     ];
 
-    // --- 必須バリデーションの一括適用 ---
-
-    // 入力必須の処理
+    // ==============================
+    // 必須チェック
+    // ==============================
     foreach ( $required as $key ) {
         if ( isset($labels[$key]) ) {
             $Validation->set_rule( $key, 'noempty', [
@@ -154,7 +169,6 @@ function my_custom_validation( $Validation, $data ) {
         }
     }
 
-    // 選択必須の処理
     foreach ( $requiredSelect as $key ) {
         if ( isset($labels[$key]) ) {
             $Validation->set_rule( $key, 'required', [
@@ -163,55 +177,61 @@ function my_custom_validation( $Validation, $data ) {
         }
     }
 
-    // --- 形式・一致チェックの個別適用 ---
+    // ==============================
+    // 形式チェック
+    // ==============================
 
-    // 4. 電話番号判定（tel）
+    // 電話番号
     $Validation->set_rule( 'tel', 'tel', [
-        'message' => '「'.$labels['tel'] . '」の書式に誤りがあります。正しく入力してください。'
+        'message' => '「'.$labels['tel'] . '」の書式に誤りがあります。'
     ] );
 
-    // 5. メールアドレス形式判定（標準ルールに戻す）
+    // メール形式
     $Validation->set_rule( 'mail', 'mail', [
-        'message' => '「'.$labels['mail'] . '」の書式に誤りがあります。正しく入力してください。'
+        'message' => '「'.$labels['mail'] . '」の書式に誤りがあります。'
     ] );
 
-    // 6. 全角カタカナ判定（kana_sei / kana_mei）
-    $kana_fields = ['kana_sei', 'kana_mei'];
-    foreach ( $kana_fields as $field ) {
+    // ==============================
+    // カナ（※これだけで半角も排除される）
+    // ==============================
+    foreach ( ['kana_sei','kana_mei'] as $field ) {
         $Validation->set_rule( $field, 'callback', [
-            'callback' => function( $value ) {
-                $value = str_replace(array(" ", "　"), "", $value); // 空白を無視する場合
-                if ( $value === '' ) return true; // 空の場合は noempty に任せる
-                // 全角カタカナのみ（中黒「・」や長音「ー」を含む）
-                return preg_match( "/^[ァ-ヶー]+$/u", $value );
-            },
-            'message' => '「' . $labels[$field] . '」は全角カタカナで入力してください。'
+            'function' => 'mw_validate_kana',
+            'message'  => '「' . $labels[$field] . '」は全角カタカナで入力してください。'
         ] );
     }
 
-    // 7. 分割メールの一致チェック（修正済み）
-    // 第2引数は 'callback' を使い、判定ロジックを直接記述します
+    // ==============================
+    // 名前（全角のみ）
+    // ==============================
+    foreach ( ['name_sei','name_mei'] as $field ) {
+        $Validation->set_rule( $field, 'callback', [
+            'function' => 'mw_validate_fullwidth',
+            'message'  => '「' . $labels[$field] . '」は全角で入力してください。'
+        ] );
+    }
+
+    // ==============================
+    // メール一致チェック
+    // ==============================
     $input_mail  = isset($data['mail'])        ? trim($data['mail'])        : '';
     $mail_local  = isset($data['mail_local'])  ? trim($data['mail_local'])  : '';
     $mail_domain = isset($data['mail_domain']) ? trim($data['mail_domain']) : '';
 
-    // すべて入力されている場合のみ、一致するか確認
-    if ( $input_mail !== '' && $mail_local !== '' && $mail_domain !== '' ) {
+    if ( $input_mail && $mail_local && $mail_domain ) {
         if ( $input_mail !== ($mail_local . '@' . $mail_domain) ) {
-            // 一致しない場合、エラーをセットする
-            // ルール名は 'eq' ではなく、独自の識別名（例: 'mail_mismatch'）にします
             $Validation->set_rule( 'mail', 'mail_mismatch', [
-                'message' => '「メールアドレス」が一致しません。正しく入力してください。'
+                'message' => '「メールアドレス」が一致しません。'
             ] );
         }
     }
 
-    // 【最重要】
     return $Validation;
 }
 
-    
-// xxx はフォームの投稿IDに書き換えてください
+
+// ==============================
+// フック（フォームID）
+// ==============================
 add_filter( 'mwform_validation_mw-wp-form-258', 'my_custom_validation', 10, 2 );
 add_filter( 'mwform_validation_mw-wp-form-315', 'my_custom_validation', 10, 2 );
-

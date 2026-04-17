@@ -13,7 +13,7 @@
         top: -2px;
         cursor: pointer;
         &.is-open{
-            transition: transform .5s ease , top .5s ease;
+            transition: transform .2s ease , top .2s ease;
             transform: rotate(-45deg);
             top: 4px;
         }
@@ -31,7 +31,7 @@
             &.is-open{
                 border-top: 1px solid #000;
                 border-right: 1px solid #000;
-                transition: transform .5s ease , top .5s ease;
+                transition: transform .1s linear , top .1s linear;
                 transform: rotate(-45deg);
                 top: 48%;
             }
