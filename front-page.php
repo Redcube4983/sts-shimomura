@@ -41,7 +41,7 @@ Template Name: front-page
 				<span class="slider__block">グローバルネットワーク</span>
 			</a>
 		</div>
-		<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/global-image.jpg" alt="" class="global-image">
+		<!-- <img src="<--?php echo get_template_directory_uri(); ?>/images/front-page/global-image.jpg" alt="" class="global-image"> -->
       </div>
       <div class="swiper-slide">
         <a class="swiper-link" href="/company/">
