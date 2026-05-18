@@ -8,6 +8,24 @@ Template Name: front-page
 <section id="topContent">
 	<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper p-swiper mySwiper">
     <div class="swiper-wrapper">
+	<div class="swiper-slide">
+        <a class="swiper-link" href="/global/">
+			<picture>
+				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/main_02_bg.jpg" type="image/jpg">
+				<source srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/sp_main_02n.jpg" type="image/jpg">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/main_02_bg.jpg" alt="" class="mainImg img-responsive mainImg">
+			</picture>	
+		</a>
+		<div class="copyWrapper">
+			<a class="slider__textArea" href="/global/">
+				<h2 class="slider__title__en">Exceptional Machinability</h2>
+				<h3 class="slider__title">切削加工の常識を変える<br>下村のPbフリー超快削ステンレス鋼・SGF06E</h3>
+				<p class="slider__text">ステンレス鋼でありながら、真鍮材料に匹敵する被削性を実現。<br>加工の容易化や環境負荷対応など、お客様に様々なメリットをお届けします。</p>
+				<span class="slider__block">切削加工の常識を変える鋼</span>
+			</a>
+		</div>
+		<!-- <img src="<--?php echo get_template_directory_uri(); ?>/images/front-page/global-image.jpg" alt="" class="global-image"> -->
+      </div>
       <div class="swiper-slide">
 		<a class="swiper-link" href="/products/leadfree/">
 			<picture>
@@ -25,24 +43,7 @@ Template Name: front-page
 			</a>
 		</div>
       </div>
-      <div class="swiper-slide">
-        <a class="swiper-link" href="/global/">
-			<picture>
-				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/main_02_bg.jpg" type="image/jpg">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/sp_main_02n.jpg" type="image/jpg">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/main_02_bg.jpg" alt="" class="mainImg img-responsive mainImg">
-			</picture>	
-		</a>
-		<div class="copyWrapper">
-			<a class="slider__textArea" href="/global/">
-				<h2 class="slider__title__en">Global Network</h2>
-				<h3 class="slider__title">「シモムラ品質」を世界へ。</h3>
-				<p class="slider__text">国内工場と同等の生産環境を海外に構築。日本と同じ品質レベルの製品供給を実現し、<br>「シモムラ品質」の製品とサービスを、世界中のお客様にお届けしています。</p>
-				<span class="slider__block">グローバルネットワーク</span>
-			</a>
-		</div>
-		<!-- <img src="<--?php echo get_template_directory_uri(); ?>/images/front-page/global-image.jpg" alt="" class="global-image"> -->
-      </div>
+
       <div class="swiper-slide">
         <a class="swiper-link" href="/company/">
 			<picture>
@@ -119,11 +120,14 @@ Template Name: front-page
   <div thumbsSlider="" class="swiper mySwiper2">
     <div class="swiper-wrapper">
 		<li class="swiper-slide">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/slici_nav_09.jpg" class="img-responsive alpha"><span>非鉛快削鋼シリーズ</span>
+			<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/slici_nav_02.jpg" class="img-responsive alpha"><span>切削加工の常識を変える鋼</span>
 		</li>
 		<li class="swiper-slide">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/slici_nav_02.jpg" class="img-responsive alpha"><span>グローバルネットワーク</span>
+			<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/slici_nav_09.jpg" class="img-responsive alpha"><span>非鉛快削鋼シリーズ</span>
 		</li>
+		<!-- <li class="swiper-slide">
+		<img src="<--?php echo get_template_directory_uri(); ?>/images/front-page/slici_nav_02.jpg" class="img-responsive alpha"><span>グローバルネットワーク</span>
+		</li> -->
 		<li class="swiper-slide">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/front-page/slici_nav_01.jpg" class="img-responsive alpha"><span>下村特殊精工について</span>
 		</li>
@@ -145,12 +149,54 @@ Template Name: front-page
 		<div class="container">
 			<h2><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/ttl_linkblock.png" class="img-responsive" alt="CONTENTS"></h2>
 			<div class="row flexbox">
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/company/greeting/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_01.jpg" class="img-responsive"></a></div><div class="textBox">代表挨拶<span>Message</span></div></div></div>
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/global/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_02.jpg" class="img-responsive"></a></div><div class="textBox">グローバルネットワーク<span>Gloobal Network</span></div></div></div>
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/csr/environment/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_03.jpg" class="img-responsive"></a></div><div class="textBox">環境への取り組みについて<span>The Commitment to the Environment</span></div></div></div>
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/products/leadfree/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_09.jpg" class="img-responsive"></a></div><div class="textBox">非鉛快削鋼シリーズ<span>Lead-free free cutting steel Series  </span></div></div></div>
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/products/catalogue/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_05.jpg" class="img-responsive"></a></div><div class="textBox">製品カタログ<span>Product catalog</span></div></div></div>
-				<div class="col-xs-6 col-sm-4 col-md-4"><div class="box"><div class="imgBox"><a href="/recruit/ourwork/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/contents_Interview.jpg" class="img-responsive"></a></div><div class="textBox">社員紹介<span>Interview</span></div></div></div>
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="box">
+						<div class="imgBox">
+							<a href="/company/greeting/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_01.jpg" class="img-responsive"></a>
+						</div>
+						<div class="textBox">代表挨拶<span>Message</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="box">
+						<div class="imgBox">
+							<a href="/global/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_02.jpg" class="img-responsive"></a>
+						</div>
+						<div class="textBox">グローバルネットワーク<span>Gloobal Network</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="box">
+						<div class="imgBox">
+							<a href="/csr/environment/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_03.jpg" class="img-responsive"></a>
+						</div>
+						<div class="textBox">環境への取り組みについて<span>The Commitment to the Environment</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="box">
+						<div class="imgBox">
+							<a href="/products/products/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_04.jpg" class="img-responsive"></a>
+						</div>
+						<div class="textBox">製品紹介<span>Product introduction</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="box">
+						<div class="imgBox">
+							<a href="/products/catalogue/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/l_img_05.jpg" class="img-responsive"></a>
+						</div>
+						<div class="textBox">製品カタログ<span>Product catalog</span></div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<div class="box">
+						<div class="imgBox">
+							<a href="/recruit/ourwork/"><img src="<?php echo get_template_directory_uri(); ?>/images/front-page/contents_Interview.jpg" class="img-responsive"></a>
+						</div>
+						<div class="textBox">社員紹介<span>Interview</span></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
