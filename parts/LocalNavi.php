@@ -11,12 +11,13 @@
 	<li><a href="/company/characterprofile/">マスコットキャラクター</a></li>
 	<li><a href="/company/outline/#groupLink">大同特殊鋼グループ</a></li>
 </ul>
-<?php elseif (is_page(array('products','stainless','structual','tool','leadfree','bis','residual-stress','brand','specification','stock','simulation','catalogue'))) : ?>
+<?php elseif (is_page(array('products','stainless','structual','tool','leadfree','bis','residual-stress','brand','specification','stock','simulation','catalogue','pbfreesus'))) : ?>
 <h2><a href="/products/">製品紹介</a></h2>
 <ul class="sideMenu">
 	<li><a href="/products/stainless/">ステンレス鋼</a></li>
 	<li><a href="/products/structual/">快削鋼および合金鋼</a></li>
 	<li><a href="/products/tool/">工具鋼</a></li>
+	<li><a href="/products/pbfreesus/">切削加工の常識を変える鋼</a></li>
 	<li><a href="/products/leadfree/">非鉛快削鋼シリーズ</a></li>
 	<li><a href="/products/bis/">インド向BISライセンス取得</a></li>
 	<li><a href="/products/residual-stress/">「残留応力」低減磨棒のご提供</a></li>
