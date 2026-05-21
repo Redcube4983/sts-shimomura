@@ -9,6 +9,7 @@
 	padding:  0px;
   }
 }
+
 /* commons */
 .leadBox { 
 	font-size:1.8rem;
@@ -28,6 +29,9 @@
 .copy { 
 	font-size:1.4rem; 
 	line-height: 1.8;
+}
+.red {
+	color:#E60012;
 }
 .modal-footer {
     text-align: center;
@@ -632,6 +636,7 @@
 
 /* products */
 .products .productTbl td { font-size:11px;vertical-align:middle;height:41px; }
+.products .productTbl td img{ width: 100%; }
 .products .productTbl td a { font-size:12px;font-weight:bold; }
 .products .productTbl td.grey { background:#f9f9f9; }
 .products .productTbl th { font-size:11px;text-align:center;vertical-align:middle;background:#CCC; }
@@ -647,7 +652,37 @@
     padding: 0 0 0 0 !important;
     margin: 10px 0 0 0 !important;
 }
-
+.contact-wrapper {
+	width: 100%;
+	height: 80px;
+	border: solid 1.7px #00a1ff;
+	display: flex;
+	flex-flow: nowrap;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.8rem;
+	margin: 32px 0 0 0;
+	@media (max-width: 1023px){
+		flex-flow: column;
+		font-size: 1.5rem;
+		align-items: inherit;
+		padding: 12px;
+	}
+	li {
+		&:first-child {
+			margin-right: 24px;
+		}
+		p {
+			text-align: left;
+			margin: 0;
+		}
+	}
+	span {
+		color: #00a1ff;
+		font-weight: bold;
+		margin-right: 24px;
+	}
+}
 @media (max-width: 1023px){
 	.cataBlock .box img { margin:0 auto;width:100%; }
 	.cataBlock .box:nth-child(2) { box-sizing:border-box;border-left:none;border-right:none;padding:0; }
@@ -834,7 +869,20 @@
 
 
 .whiteBorderR { border-right:10px solid #fff; }
-.blueBtn { width:100%; background:#118EFF;padding:10px 0;text-align:center;display:block;color:#fff;text-decoration:none;}
+.blueBtn { 
+	width: 260px;
+	height: 40px;
+	background: #00a1ff;
+	color: #fff;
+	border-radius: 10px;
+	font-size: 1.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	text-decoration: none;
+}
+// .blueBtn { width:100%; background:#118EFF;padding:10px 0;text-align:center;display:block;color:#fff;text-decoration:none;}
 .blueBtn:hover {text-decoration:none;color:#fff;background:#00A3FF;}
 
 
