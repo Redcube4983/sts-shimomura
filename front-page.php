@@ -9,7 +9,7 @@ Template Name: front-page
 	<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper p-swiper mySwiper">
     <div class="swiper-wrapper">
 	<div class="swiper-slide">
-        <a class="swiper-link" href="/global/">
+        <a class="swiper-link" href="/products/pbfreesus/">
 			<picture>
 				<source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/main_02_bg.jpg" type="image/jpg">
 				<source srcset="<?php echo get_template_directory_uri(); ?>/images/front-page/sp_main_02n.jpg" type="image/jpg">
@@ -17,7 +17,7 @@ Template Name: front-page
 			</picture>	
 		</a>
 		<div class="copyWrapper">
-			<a class="slider__textArea" href="/global/">
+			<a class="slider__textArea" href="/products/pbfreesus/">
 				<h2 class="slider__title__en">Exceptional Machinability</h2>
 				<h3 class="slider__title">切削加工の常識を変える<br>下村のPbフリー超快削ステンレス鋼・SGF06E</h3>
 				<p class="slider__text">ステンレス鋼でありながら、真鍮材料に匹敵する被削性を実現。<br>加工の容易化や環境負荷対応など、お客様に様々なメリットをお届けします。</p>
