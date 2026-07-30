@@ -18,9 +18,9 @@ Template Name: front-page
 		</a>
 		<div class="copyWrapper">
 			<a class="slider__textArea" href="/products/pbfreesus/">
-				<h2 class="slider__title__en">Exceptional Machinability</h2>
+				<h2 class="slider__title__en">Exceptional Machinability</h2>	
 				<h3 class="slider__title">切削加工の常識を変える<br>下村のPbフリー超快削ステンレス鋼・SGF06E</h3>
-				<p class="slider__text">ステンレス鋼でありながら、真鍮材料に匹敵する被削性を実現。<br>加工の容易化や環境負荷対応など、お客様に様々なメリットをお届けします。</p>
+				<p class="slider__text">ステンレス鋼でありながら、快削黄銅に匹敵する被削性を実現。<br>加工の容易化や環境負荷対応など、お客様に様々なメリットをお届けします。</p>
 				<span class="slider__block">切削加工の常識を変える鋼</span>
 			</a>
 		</div>

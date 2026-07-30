@@ -671,6 +671,8 @@
 	li {
 		&:first-child {
 			margin-right: 24px;
+			display: flex;
+			flex-flow: wrap;
 		}
 		p {
 			text-align: left;
@@ -680,7 +682,18 @@
 	span {
 		color: #00a1ff;
 		font-weight: bold;
-		margin-right: 24px;
+		margin: 0 24px 0;
+	}
+	span.blueText {
+		margin: 0;
+		@media (min-width: 768px){
+			margin: inherit;
+		}
+	}
+	span.box {
+		color: #00a1ff;
+		font-weight: bold;
+		margin: 0 24px 0;
 	}
 }
 @media (max-width: 1023px){
