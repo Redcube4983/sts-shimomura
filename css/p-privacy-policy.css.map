@@ -1,1 +1,1 @@
-{"version":3,"sources":["../scss/project/p-privacy-policy.scss"],"names":[],"mappings":"AACA,kBACI,UAAA,CACA,oBACI,gBAAA,CACA,yBAFJ,oBAGQ,gBAAA,CAAA","file":"p-privacy-policy.css","sourcesContent":["@charset \"utf-8\";\n.p-privacy-policy{\n    width: 100%;\n    p{\n        font-size: 1.4rem;\n        @media (min-width: 920px){\n            font-size: 1.6rem;\n        }\n    }\n}"]}
+{"version":3,"sources":["../scss/project/p-privacy-policy.scss"],"names":[],"mappings":"AACA,kBACI,UAAA,CACA,oBACI,gBAAA,CACA,yBAFJ,oBAGQ,gBAAA,CAAA","file":"p-privacy-policy.css"}

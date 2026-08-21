@@ -41,7 +41,7 @@
     display: block;
     width: 100%;
     height: 88px;
-    background-color:#6CA1FF;
+    background-color:#0b3177;
     mix-blend-mode: overlay;
     opacity: 0.8;
     z-index: 1;
@@ -52,11 +52,14 @@
     margin: 0 0 0 30px;
     position: relative;
     z-index: 2;
+    @media (min-width: 1024px){
+        margin: 0 0 0 20px;
+    }
 }
 @media (min-width: 480px) {
 #pageContents .greeting .copyBox #copyBoxtop img{
     width: 334px;
-    height: 48px;
+    // height: 48px;
     margin: 0 0 0 30px;
     position: relative;
     z-index: 2;
@@ -110,11 +113,21 @@
     color: #fff;
     line-height: 2;
     margin: 0 30px 0 30px;
+    text-align: justify;
+    padding-bottom: 20px;
     @media (min-width: 1024px) {
         color: #fff;
         line-height: 2;
-        margin: 0 0 0 30px;
+        margin: 0 0 0 20px;
     }
+}
+#pageContents .greeting .copy .name-area {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+}
+#pageContents .greeting .copy .name-area .president_name{
+    padding-bottom: 0 !important;
 }
 #pageContents .greeting .band img {
 	width: 100%;
@@ -144,6 +157,7 @@
 @media (min-width: 1024px) {
      #pageContents .greeting .copy {
 		width: calc(100% - 330px);
+        padding-bottom: 40px;
 	}
 }
 .president-image {
@@ -162,7 +176,8 @@
 }
 @media (min-width: 1024px) {
     .president-image img {
-    width: auto;    
+    width: 100%;
+    height: auto;    
 }
 }
 .greeting .imgBox { margin:50px 0; }
