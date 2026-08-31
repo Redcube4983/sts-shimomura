@@ -38,7 +38,7 @@
 #pageContents .greeting .copyBox #copyBoxtop::before {
     position: absolute;
     content: "";
-    display: block;
+    display: none;
     width: 100%;
     height: 88px;
     background-color:#0b3177;
@@ -114,7 +114,7 @@
     line-height: 2;
     margin: 0 30px 0 30px;
     text-align: justify;
-    padding-bottom: 20px;
+    text-shadow: 0 0 5px #000;
     @media (min-width: 1024px) {
         color: #fff;
         line-height: 2;
