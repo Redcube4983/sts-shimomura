@@ -29,8 +29,7 @@
 }
 #pageContents .greeting .copyBox #copyBoxtop {
     position: relative;
-    height: 200px;
-    padding: 56px 0;
+    padding: 40px 0;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
@@ -73,6 +72,7 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        position: relative;
     }
 }
 #pageContents .greeting .bgimg {
@@ -118,7 +118,7 @@
     @media (min-width: 1024px) {
         color: #fff;
         line-height: 2;
-        margin: 0 0 0 20px;
+        margin: 0 0 20px 20px;
     }
 }
 #pageContents .greeting .copy .name-area {
@@ -157,7 +157,6 @@
 @media (min-width: 1024px) {
      #pageContents .greeting .copy {
 		width: calc(100% - 330px);
-        padding-bottom: 40px;
 	}
 }
 .president-image {
@@ -169,17 +168,15 @@
 @media (min-width: 1024px) {
     .president-image {
     width: 330px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 }
 .president-image img {
     width: auto;
 }
-@media (min-width: 1024px) {
-    .president-image img {
-    width: 100%;
-    height: auto;    
-}
-}
+
 .greeting .imgBox { margin:50px 0; }
 
 #pageContents .greeting .dot_tracking {
